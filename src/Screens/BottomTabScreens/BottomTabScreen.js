@@ -1,0 +1,174 @@
+/* eslint-disable react-native/no-inline-styles */
+import {View, TouchableOpacity, Platform} from 'react-native';
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+
+import DashboardScreen from './DashboardScreen';
+import {SIZES} from '../../../constant/theme';
+import Favourites from './FavouritesScreen';
+import FavouritesScreen from './FavouritesScreen';
+import AddPetScreen from './AddPetScreen';
+import ProfileScreen from './ProfileScreen';
+import TransactionScreen from './TransactionScreen';
+import {
+  AddIcon,
+  HomeIcon,
+  HomeIconFocused,
+  LikedIcon,
+  LikedIconFocused,
+  ProfileIcon,
+  ProfileIconFocused,
+  TransactionIcon,
+} from '../SvgComponent/BottomSvgComponent';
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const CustomTabBarButton = ({children, onPress, accessibilityState}) => {
+  const isFocused = accessibilityState.selected;
+
+  return (
+    <TouchableOpacity
+      activeOpacity={1}
+      style={{
+        marginTop: -13,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 70,
+        height: 70,
+
+        marginHorizontal: SIZES.width * 0.01,
+      }}
+      onPress={onPress}>
+      <View
+        style={{
+          width: 50,
+          height: 70,
+          backgroundColor: 'transparent',
+        }}>
+        {children}
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+const Homestack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const FavouriteStack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="FavouritesScreen" component={FavouritesScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const AddPetStack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="AddPetScreen" component={AddPetScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const Profilestack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const TransactionStack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="TransactionScreen" component={TransactionScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const BottomTabScreen = () => {
+  return (
+    <Tab.Navigator
+      initialRouteName="DashboardScreen"
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: true,
+        tabBarStyle: {
+          position: 'relative',
+          alignItems: 'center',
+          height: SIZES.height * 0.1,
+          borderRadius: 0,
+          // borderTopWidth: 0,
+          elevation: Platform.OS === 'ios' ? 3 : 20,
+          paddingHorizontal: SIZES.width * 0.028,
+          shadowOffset: {
+            shadowOffset: {
+              width: 0,
+              height: Platform.OS === 'ios' ? -10 : -20,
+            },
+          },
+          shadowOpacity: Platform.OS === 'ios' ? 0.09 : 0.3,
+          shadowRadius: 10,
+          boxShadow: '0px 1px 25px 6px rgba(0, 0, 0, 0.06)',
+        },
+      }}>
+      <Tab.Screen
+        name="Homestack"
+        component={Homestack}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({color, size, focused}) =>
+            focused ? <HomeIconFocused /> : <HomeIcon />,
+        }}
+      />
+      <Tab.Screen
+        name="FavouriteStack"
+        component={FavouriteStack}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({color, size, focused}) =>
+            focused ? <LikedIconFocused /> : <LikedIcon />,
+        }}
+      />
+      <Tab.Screen
+        name="AddPetStack"
+        component={AddPetStack}
+        options={{
+          tabBarShowLabel: false,
+          tabBarVisible: false,
+          tabBarHideOnKeyboard: true,
+          tabBarIcon: ({color, size, focused}) =>
+            focused ? <AddIcon /> : <AddIcon />,
+          tabBarButton: props => <CustomTabBarButton {...props} />,
+        }}
+      />
+      <Tab.Screen
+        name="TransactionStack"
+        component={TransactionStack}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({color, size, focused}) =>
+            focused ? <TransactionIcon /> : <TransactionIcon />,
+        }}
+      />
+      <Tab.Screen
+        name="Profilestack"
+        component={Profilestack}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({color, size, focused}) =>
+            focused ? <ProfileIconFocused /> : <ProfileIcon />,
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
+
+export default BottomTabScreen;

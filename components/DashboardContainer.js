@@ -1,0 +1,59 @@
+/* eslint-disable react-native/no-inline-styles */
+import {StyleSheet, Text, View, Image} from 'react-native';
+import React from 'react';
+import image from '../constant/image';
+import {BellIcon} from '../src/Screens/SvgComponent/Logocomponent';
+
+const DashboardContainer = () => {
+  return (
+    <View style={styles.container}>
+      <View style={{width: '20%'}}>
+        <Image
+          source={image.Profile}
+          style={{width: 60, height: 60, resizeMode: 'cover', borderRadius: 32}}
+        />
+      </View>
+      <View style={{width: '70%'}}>
+        <Text style={styles.title}>Welcome Kairav</Text>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={styles.description}>your total saving</Text>
+          <Text style={[styles.title, {marginTop: 3}]}> 1,205.00</Text>
+        </View>
+      </View>
+      <View
+        style={{
+          width: '10%',
+          height: 54,
+          alignItems: 'center',
+        }}>
+        <BellIcon />
+      </View>
+    </View>
+  );
+};
+
+export default DashboardContainer;
+
+const styles = StyleSheet.create({
+  container: {
+    height: 150,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  title: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: '700',
+    lineHeight: 25,
+    fontFamily: 'Visby-Medium',
+    textAlign: 'left',
+  },
+  description: {
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 20,
+    fontFamily: 'Visby-Medium',
+    paddingTop: 5,
+    color: '#fff',
+  },
+});
