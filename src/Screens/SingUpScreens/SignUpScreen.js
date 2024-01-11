@@ -27,7 +27,7 @@ const SignUpScreen = () => {
 
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      navigation.navigate('DashboardScreen');
+      navigation.navigate('BottomTabScreen');
     } catch (error) {
       console.error('Verification failed', error);
     } finally {

@@ -195,3 +195,65 @@ export const pet = [
   {id: '5', name: 'Fish'},
   {id: '6', name: 'Reptile'},
 ];
+
+export const fav = [
+  {id: '1', name: 'Supplies'},
+  {id: '2', name: 'Care'},
+  {id: '3', name: 'Grooming'},
+  {id: '4', name: 'Boarding'},
+  {id: '5', name: 'Transport'},
+  {id: '6', name: 'Discover'},
+];
+
+export const supples = [
+  {
+    id: '1',
+    name: 'Lintbells YuMOVE Joint Care Supplement for Dogs',
+    type: 'Healthcare',
+    price: 'AED 121.05',
+    offer: '15% Off',
+    image: require('../assets/images/supplies1.jpeg'),
+    like: true,
+  },
+  {
+    id: '2',
+    name: 'Beaphar Fiprotec Spot -On Flea & Tick Treatment',
+    type: 'Healthcare',
+    price: 'AED 72.05',
+    offer: '15% Off',
+    image: require('../assets/images/supplies2.jpeg'),
+    like: true,
+  },
+  {
+    id: '3',
+    name: 'Burgess Sensitive Adult Salmon Dry Dog Food',
+    type: 'Dry Food',
+    price: 'AED 49.00',
+    offer: '15% Off',
+    image: require('../assets/images/supplies3.jpeg'),
+    like: true,
+  },
+];
+
+export const Care = [
+  {
+    id: '1',
+    name: 'Modern Vet Hospital',
+    status: 'Open',
+    rating: '7.5 (300)',
+    offer: '15% Off',
+    image: require('../assets/images/care-1.png'),
+    distance: '4.2km',
+    like: true,
+  },
+  {
+    id: '2',
+    name: 'Blue Oasis  Verterinary Clinic',
+    status: 'Open',
+    rating: '7.5 (300)',
+    offer: '15% Off',
+    image: require('../assets/images/care-2.png'),
+    distance: '4.2km',
+    like: true,
+  },
+];
