@@ -1,14 +1,66 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
+import ProfileBackButton from '../../../components/ProfileBackButton';
+import ProfileImageContainer from '../../../components/ProfileImageContainer';
+import Subscription from '../../../components/Subscription';
+import YourPet from '../../../components/YourPet';
+import {PetData} from '../../../constant/data';
+import InnerSectionProfile from '../../../components/InnerSectionProfile';
+import SupportProfile from '../../../components/SupportProfile';
 
 const ProfileScreen = () => {
   return (
-    <View>
-      <Text>ProfileScreen</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
+      <ScrollView>
+        <View style={styles.mainContainer}>
+          <ProfileBackButton placeholder={'Profile'} />
+          <View>
+            <ProfileImageContainer />
+          </View>
+          <View>
+            <Subscription />
+          </View>
+          <View style={{marginTop: 25}}>
+            <Text style={styles.title}>Your Pets</Text>
+            <YourPet data={PetData} />
+          </View>
+          <View style={{marginTop: 10}}>
+            <Text style={styles.title}>Account Setting</Text>
+            <InnerSectionProfile />
+          </View>
+          <View style={{marginTop: 20}}>
+            <Text style={styles.title}>Support</Text>
+            <SupportProfile />
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 export default ProfileScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  constainer: {
+    flex: 1,
+    backgroundColor: '#F6F6F6',
+  },
+  mainContainer: {
+    paddingHorizontal: 16,
+    marginBottom: 50,
+  },
+  title: {
+    color: '#8C8C8C',
+    fontSize: 12,
+    fontWeight: '600',
+    fontFamily: 'Visby-Medium',
+  },
+});

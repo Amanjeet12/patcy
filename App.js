@@ -16,6 +16,9 @@ import SignUpOtpScreen from './src/Screens/SingUpScreens/SingUpOtpScreen';
 import SingUpVerifiedScreen from './src/Screens/SingUpScreens/SingUpVerifiedScreen';
 import SingUpCompleteScreen from './src/Screens/SingUpScreens/SingUpCompleteScreen';
 import BottomTabScreen from './src/Screens/BottomTabScreens/BottomTabScreen';
+import EditScreen from './src/Screens/BottomTabScreens/ProfileScreens/EditScreen';
+import SubscriptionScreen from './src/Screens/BottomTabScreens/ProfileScreens/SubscriptionScreen';
+import AboutScreen from './src/Screens/BottomTabScreens/ProfileScreens/AboutScreen';
 
 const Stack = createStackNavigator();
 
@@ -131,6 +134,21 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="BottomTabScreen"
           component={BottomTabScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="EditScreen"
+          component={EditScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SubscriptionScreen"
+          component={SubscriptionScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="AboutScreen"
+          component={AboutScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

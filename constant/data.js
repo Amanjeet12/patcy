@@ -251,9 +251,61 @@ export const Care = [
     name: 'Blue Oasis  Verterinary Clinic',
     status: 'Open',
     rating: '7.5 (300)',
-    offer: '15% Off',
+    // offer: '15% Off',
     image: require('../assets/images/care-2.png'),
     distance: '4.2km',
     like: true,
+  },
+];
+
+export const Grooming = [
+  {
+    id: '1',
+    name: 'Wooferine Pet Grooming Salon',
+    status: 'Closed',
+    rating: '8.5 (1000)',
+    offer: '15% Off',
+    image: require('../assets/images/groom-1.png'),
+    distance: '4.2km',
+    like: true,
+  },
+];
+
+export const PetData = [
+  {
+    id: '1',
+    name: 'Calico',
+    year: '1 Year',
+    image: require('../assets/images/pet1.png'),
+  },
+  {
+    id: '2',
+    name: 'Finly',
+    year: '3 Year',
+    image: require('../assets/images/pet-2.jpeg'),
+  },
+  {
+    id: '3',
+    name: 'Cling',
+    year: '2 Year',
+    image: require('../assets/images/pet-3.png'),
+  },
+  {
+    id: '4',
+    name: 'Calico',
+    year: '1 Year',
+    image: require('../assets/images/pet1.png'),
+  },
+  {
+    id: '5',
+    name: 'Finly',
+    year: '3 Year',
+    image: require('../assets/images/pet-2.jpeg'),
+  },
+  {
+    id: '6',
+    name: 'Cling',
+    year: '2 Year',
+    image: require('../assets/images/pet-3.png'),
   },
 ];

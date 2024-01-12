@@ -3,7 +3,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Backbutton = () => {
+const Backbutton = ({placeholder}) => {
   const navigation = useNavigation();
 
   return (

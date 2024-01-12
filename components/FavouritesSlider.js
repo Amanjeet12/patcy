@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -9,7 +9,11 @@ import {
 import {COLORS} from '../constant/theme';
 
 const FavouritesSlider = ({data, onSelectItem}) => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(0); // Initialize with 0 for the first item
+
+  useEffect(() => {
+    onSelectItem(data[selectedItem]);
+  }, [data, onSelectItem, selectedItem]);
 
   const handleItemClick = index => {
     setSelectedItem(index);

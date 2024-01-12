@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -8,7 +9,6 @@ import {
   Image,
 } from 'react-native';
 import {SIZES} from '../constant/theme';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import Like from 'react-native-vector-icons/FontAwesome';
 import UnLike from 'react-native-vector-icons/FontAwesome';
 import Add from 'react-native-vector-icons/Ionicons';
@@ -36,6 +36,22 @@ const CommonDesignContainer = ({data}) => {
             borderRadius: 10,
           }}
         />
+        {item.offer ? (
+          <View style={styles.OfferContainer}>
+            <Text
+              style={[
+                styles.title,
+                {
+                  paddingHorizontal: 10,
+                  paddingVertical: 4,
+                  backgroundColor: '#FFC6C6',
+                  borderRadius: 32,
+                },
+              ]}>
+              {item.offer}
+            </Text>
+          </View>
+        ) : null}
       </View>
       <View style={{padding: 10}}>
         <Text style={[styles.title, {color: '#000', fontWeight: '600'}]}>
@@ -49,7 +65,14 @@ const CommonDesignContainer = ({data}) => {
             </Text>
           </View>
 
-          <Text style={[styles.title, {fontWeight: '600', color: '#1EAD24'}]}>
+          <Text
+            style={[
+              styles.title,
+              {
+                fontWeight: '600',
+                color: item.status === 'Closed' ? 'red' : '#1EAD24',
+              },
+            ]}>
             {item.status}
           </Text>
         </View>
@@ -128,4 +151,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   flexBoxContainer: {flexDirection: 'row', alignItems: 'center', gap: 5},
+  OfferContainer: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+  },
 });

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -85,14 +86,14 @@ const SuppliesContainer = ({data}) => {
   );
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={item => item.id}
         numColumns={2} // Display two items in each row
       />
-    </ScrollView>
+    </View>
   );
 };
 

@@ -41,7 +41,7 @@ const Appointment = ({data}) => {
           <TouchableOpacity onPress={() => handleBellIconClick(index)}>
             <Icon
               name={bellIcons[index] ? 'bell' : 'bell-fill'}
-              size={24}
+              size={16}
               color={bellIcons[index] ? '#F84040' : '#F84040'} // Change color when filled
             />
           </TouchableOpacity>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   appointmentContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 10,
+    marginVertical: 5,
     backgroundColor: '#fff',
     marginHorizontal: 16,
     height: 82,
