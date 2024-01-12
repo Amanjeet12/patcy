@@ -170,6 +170,7 @@ const BottomTabScreen = () => {
           component={TransactionStack}
           options={{
             tabBarShowLabel: false,
+            tabBarHideOnKeyboard: true,
             tabBarIcon: ({color, size, focused}) =>
               focused ? <TransactionIcon /> : <TransactionIcon />,
           }}

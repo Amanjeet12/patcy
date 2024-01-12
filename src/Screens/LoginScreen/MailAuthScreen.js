@@ -25,7 +25,7 @@ const MailAuthScreen = () => {
     setIsLoading(true);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       navigation.navigate('DashboardScreen');
     } catch (error) {
       console.error('Verification failed', error);

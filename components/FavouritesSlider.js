@@ -49,6 +49,7 @@ const FavouritesSlider = ({data, onSelectItem}) => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
+    marginTop: 10,
   },
   petItem: {
     backgroundColor: '#fff',

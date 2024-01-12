@@ -309,3 +309,42 @@ export const PetData = [
     image: require('../assets/images/pet-3.png'),
   },
 ];
+
+export const TransactionData = [
+  {id: '1', name: 'Saving'},
+  {id: '2', name: 'Rewards'},
+  {id: '3', name: 'BNPL'},
+];
+
+export const Tranaction = [
+  {
+    id: '1',
+    name: 'Paw Peace Domestic Pets Groom...',
+    type: 'In-store Grooming',
+    timing: '12pm',
+    date: 'Mon, 18 Dec 2023',
+    actuallPrice: 'AED 123',
+    discount: 'AED 5',
+    image: require('../assets/images/care-1.png'),
+  },
+  {
+    id: '2',
+    name: 'Pet Zone',
+    type: 'Petcare',
+    timing: '12pm',
+    date: 'Mon, 18 Dec 2023',
+    actuallPrice: 'AED 123',
+    discount: 'AED 5',
+    image: require('../assets/images/petzoashop.png'),
+  },
+  {
+    id: '3',
+    name: 'Rancho Relaxo Hotel',
+    type: 'Boarding',
+    timing: '12pm',
+    date: 'Mon, 18 Dec 2023',
+    actuallPrice: 'AED 123',
+    discount: 'AED 5',
+    image: require('../assets/images/groom-1.png'),
+  },
+];
