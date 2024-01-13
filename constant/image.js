@@ -12,6 +12,10 @@ const Profile2 = require('../assets/images/profile-2.png');
 const Profile3 = require('../assets/images/profile-3.png');
 const Barcode = require('../assets/images/barcode.png');
 const Card = require('../assets/images/card.png');
+const Map = require('../assets/images/map.png');
+const Cat1 = require('../assets/images/pet1.png');
+const Cat2 = require('../assets/images/pet-2.jpeg');
+const Cat3 = require('../assets/images/pet-3.png');
 
 export default {
   Dog,
@@ -28,4 +32,8 @@ export default {
   Profile3,
   Barcode,
   Card,
+  Map,
+  Cat1,
+  Cat2,
+  Cat3,
 };

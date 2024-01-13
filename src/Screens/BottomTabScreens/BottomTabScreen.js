@@ -29,6 +29,7 @@ import {
 } from '../SvgComponent/BottomSvgComponent';
 
 import {useIsFocused} from '@react-navigation/native';
+import BoardingScreen from './HomeScreens/BoardingScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -63,8 +64,57 @@ const CustomTabBarButton = ({children, onPress, accessibilityState}) => {
 
 const Homestack = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        animationTypeForReplace: 'push',
+        gestureEnabled: false,
+        gestureDirection: 'horizontal',
+        transitionSpec: {
+          open: {
+            animation: 'timing',
+            config: {
+              duration: 400,
+            },
+          },
+          close: {
+            animation: 'timing',
+            config: {
+              duration: 400,
+            },
+          },
+        },
+        cardStyleInterpolator: ({current, next, layouts}) => {
+          return {
+            cardStyle: {
+              transform: [
+                {
+                  translateX: current.progress.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [layouts.screen.width, 0],
+                  }),
+                },
+                {
+                  translateX: next
+                    ? next.progress.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0, -layouts.screen.width],
+                      })
+                    : 0,
+                },
+              ],
+            },
+            // Exclude FlatList components from the animation
+            overflow: 'visible',
+          };
+        },
+      }}>
       <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
+      <Stack.Screen
+        options={{animation: 'slide_from_right'}}
+        name="BoardingScreen"
+        component={BoardingScreen}
+      />
     </Stack.Navigator>
   );
 };

@@ -188,12 +188,12 @@ export const doctorData = [
 ];
 
 export const pet = [
-  {id: '1', name: 'Dog'},
-  {id: '2', name: 'Cat'},
-  {id: '3', name: 'Bird'},
-  {id: '4', name: 'Small Pet'},
-  {id: '5', name: 'Fish'},
-  {id: '6', name: 'Reptile'},
+  {id: '1', name: 'Dog', image: require('../assets/images/pet1.png')},
+  {id: '2', name: 'Cat', image: require('../assets/images/pet1.png')},
+  {id: '3', name: 'Bird', image: require('../assets/images/pet1.png')},
+  {id: '4', name: 'Small Pet', image: require('../assets/images/pet1.png')},
+  {id: '5', name: 'Fish', image: require('../assets/images/pet1.png')},
+  {id: '6', name: 'Reptile', image: require('../assets/images/pet1.png')},
 ];
 
 export const fav = [
@@ -346,5 +346,59 @@ export const Tranaction = [
     actuallPrice: 'AED 123',
     discount: 'AED 5',
     image: require('../assets/images/groom-1.png'),
+  },
+];
+
+export const boardingFilter = [
+  {
+    id: '1',
+    image: require('../assets/images/daily.png'),
+    name: 'Daily',
+  },
+  {
+    id: '2',
+    image: require('../assets/images/weekly.png'),
+    name: 'Weekly',
+  },
+  {
+    id: '3',
+    image: require('../assets/images/monthly.png'),
+    name: 'Monthly',
+  },
+];
+
+export const BigSlider = [
+  {
+    id: '1',
+    image: require('../assets/images/Big-1.jpeg'),
+  },
+  {
+    id: '2',
+    image: require('../assets/images/Big-2.jpeg'),
+  },
+  {
+    id: '3',
+    image: require('../assets/images/Big-3.jpeg'),
+  },
+];
+
+export const Services = [
+  {
+    id: '1',
+    name: 'Standard Boarding 30+ Nights',
+    price: 'AED 70',
+    image: require('../assets/images/pet1.png'),
+  },
+  {
+    id: '2',
+    name: 'Standard Boarding 14+ Nights',
+    price: 'AED 442',
+    image: require('../assets/images/pet-2.jpeg'),
+  },
+  {
+    id: '3',
+    name: 'Standard Boarding 30+ Nights | 2 Pets Sharing',
+    price: 'AED 450',
+    image: require('../assets/images/pet-3.png'),
   },
 ];

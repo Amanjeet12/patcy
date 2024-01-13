@@ -19,6 +19,9 @@ import BottomTabScreen from './src/Screens/BottomTabScreens/BottomTabScreen';
 import EditScreen from './src/Screens/BottomTabScreens/ProfileScreens/EditScreen';
 import SubscriptionScreen from './src/Screens/BottomTabScreens/ProfileScreens/SubscriptionScreen';
 import AboutScreen from './src/Screens/BottomTabScreens/ProfileScreens/AboutScreen';
+import BoardingInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/BoardingInnerScreen';
+import SelectServiceComponent from './components/HomeScreenComponent/SelectServiceComponent';
+import CheckoutScreen from './src/Screens/BottomTabScreens/HomeScreens/CheckoutScreen';
 
 const Stack = createStackNavigator();
 
@@ -149,6 +152,21 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="AboutScreen"
           component={AboutScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="BoardingInnerScreen"
+          component={BoardingInnerScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SelectServiceComponent"
+          component={SelectServiceComponent}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="CheckoutScreen"
+          component={CheckoutScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

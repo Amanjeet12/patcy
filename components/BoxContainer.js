@@ -1,11 +1,29 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const BoxContainer = ({data}) => {
+  const navigation = useNavigation();
+
+  const screenMapping = {
+    Supplies: '',
+    Care: '',
+    Grooming: '',
+    Boarding: 'BoardingScreen',
+    Transport: '',
+    Discover: '',
+  };
+
+  const handleBoxPress = item => {
+    const screenName = screenMapping[item.title] || 'DefaultScreen';
+    navigation.navigate(screenName);
+  };
+
   const renderBox = item => (
     <TouchableOpacity
       key={item.id}
-      style={[styles.box, {backgroundColor: item.backgroundColor}]}>
+      style={[styles.box, {backgroundColor: item.backgroundColor}]}
+      onPress={() => handleBoxPress(item)}>
       <Image source={item.image} style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>
     </TouchableOpacity>
