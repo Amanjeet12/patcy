@@ -1,21 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useRef, useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  ScrollView,
-  Image,
-  Animated,
-} from 'react-native';
-import {SIZES} from '../constant/theme';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {SIZES} from '../../constant/theme';
 import Like from 'react-native-vector-icons/FontAwesome';
 import UnLike from 'react-native-vector-icons/FontAwesome';
 import Add from 'react-native-vector-icons/Ionicons';
 import Minus from 'react-native-vector-icons/AntDesign';
-const SuppliesContainer = ({data}) => {
+import {useNavigation} from '@react-navigation/native';
+
+const HomeScreenSuppliesItem = ({data}) => {
+  const navigation = useNavigation();
   const [likedItems, setLikedItems] = useState(data.map(item => item.id));
   const [activeItems, setActiveItems] = useState([]);
   const [itemsData, setItemsData] = useState(data);
@@ -55,11 +49,18 @@ const SuppliesContainer = ({data}) => {
     setItemsData(updatedData);
   };
 
-  const renderItem = ({item}) => {
+  const handleNavigation = itemId => {
+    navigation.navigate('SuppliesInnerScreen');
+  };
+
+  const renderItem = item => {
     const isActive = activeItems.includes(item.id);
 
     return (
-      <View style={styles.itemContainer}>
+      <TouchableOpacity
+        style={styles.itemContainer}
+        key={item.id}
+        onPress={() => handleNavigation(item.id)}>
         <View style={styles.flexBox}>
           <View>
             <Text
@@ -139,29 +140,21 @@ const SuppliesContainer = ({data}) => {
             )}
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={itemsData}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-        numColumns={2} // Display two items in each row
-      />
-    </View>
-  );
+  return <View style={styles.container}>{itemsData.map(renderItem)}</View>;
 };
 
-export default SuppliesContainer;
+export default HomeScreenSuppliesItem;
 
 const styles = StyleSheet.create({
   container: {
-    // padding: 16,
-    paddingBottom: 200,
-    paddingHorizontal: 10,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    paddingLeft: 12,
+    marginTop: 10,
   },
   itemContainer: {
     width: SIZES.width / 2 - 30, // Adjusted width

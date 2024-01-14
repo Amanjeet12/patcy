@@ -31,6 +31,7 @@ import {
 import {useIsFocused} from '@react-navigation/native';
 import BoardingScreen from './HomeScreens/BoardingScreen';
 import PetCareScreen from '../BottomTabScreens/HomeScreens/PetCareScreen';
+import SuppliesScreen from './HomeScreens/SuppliesScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -121,6 +122,11 @@ const Homestack = () => {
         name="PetCareScreen"
         component={PetCareScreen}
       />
+      <Stack.Screen
+        options={{animation: 'slide_from_right'}}
+        name="SuppliesScreen"
+        component={SuppliesScreen}
+      />
     </Stack.Navigator>
   );
 };
@@ -194,6 +200,7 @@ const BottomTabScreen = () => {
           component={Homestack}
           options={{
             tabBarShowLabel: false,
+            tabBarHideOnKeyboard: true,
             tabBarIcon: ({color, size, focused}) =>
               focused ? <HomeIconFocused /> : <HomeIcon />,
           }}

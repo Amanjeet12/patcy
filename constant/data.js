@@ -214,6 +214,7 @@ export const supples = [
     offer: '15% Off',
     image: require('../assets/images/supplies1.jpeg'),
     like: true,
+    quantity: 0,
   },
   {
     id: '2',
@@ -223,6 +224,7 @@ export const supples = [
     offer: '15% Off',
     image: require('../assets/images/supplies2.jpeg'),
     like: true,
+    quantity: 0,
   },
   {
     id: '3',
@@ -232,6 +234,7 @@ export const supples = [
     offer: '15% Off',
     image: require('../assets/images/supplies3.jpeg'),
     like: true,
+    quantity: 0,
   },
 ];
 

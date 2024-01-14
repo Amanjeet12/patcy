@@ -6,7 +6,7 @@ const BoxContainer = ({data}) => {
   const navigation = useNavigation();
 
   const screenMapping = {
-    Supplies: '',
+    Supplies: 'SuppliesScreen',
     Care: 'PetCareScreen',
     Grooming: '',
     Boarding: 'BoardingScreen',

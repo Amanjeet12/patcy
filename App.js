@@ -26,6 +26,9 @@ import PaymentScreen from './src/Screens/BottomTabScreens/HomeScreens/PaymentScr
 import PetCareInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/PetCareInnerScreen';
 import SelectServiceForCareComponent from './components/HomeScreenComponent/SelectServiceForCareComponent';
 import AppointmentScreen from './src/Screens/BottomTabScreens/HomeScreens/AppointmentScreen';
+import SuppliesInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/SuppliesInnerScreen';
+import ViewOrderScreen from './src/Screens/BottomTabScreens/HomeScreens/ViewOrderScreen';
+import SuppliesCheckoutScreen from './src/Screens/BottomTabScreens/HomeScreens/SuppliesCheckoutScreen';
 
 const Stack = createStackNavigator();
 
@@ -191,6 +194,21 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="AppointmentScreen"
           component={AppointmentScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SuppliesInnerScreen"
+          component={SuppliesInnerScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="ViewOrderScreen"
+          component={ViewOrderScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SuppliesCheckoutScreen"
+          component={SuppliesCheckoutScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
