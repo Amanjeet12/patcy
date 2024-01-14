@@ -402,3 +402,42 @@ export const Services = [
     image: require('../assets/images/pet-3.png'),
   },
 ];
+
+export const CareFilter = [
+  {id: '1', name: 'Dentistry', image: require('../assets/images/dental.png')},
+  {id: '2', name: 'Eye Care', image: require('../assets/images/eye.png')},
+  {id: '3', name: 'Vaccination', image: require('../assets/images/health.png')},
+];
+
+export const ServicesCare = [
+  {
+    id: '1',
+    name: 'Teeth Cleaning',
+    price: 'AED 70',
+    image: require('../assets/images/pet1.png'),
+  },
+  {
+    id: '2',
+    name: 'Dental Scaling',
+    price: 'AED 442',
+    image: require('../assets/images/pet-2.jpeg'),
+  },
+  {
+    id: '3',
+    name: 'Irrigation & Antiseptic Rinse',
+    price: 'AED 450',
+    image: require('../assets/images/pet-3.png'),
+  },
+  {
+    id: '4',
+    name: 'Dental Charting',
+    price: 'AED 450',
+    image: require('../assets/images/pet-2.jpeg'),
+  },
+  {
+    id: '5',
+    name: 'Polishing',
+    price: 'AED 450',
+    image: require('../assets/images/pet1.png'),
+  },
+];

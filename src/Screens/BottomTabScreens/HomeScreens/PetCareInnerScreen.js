@@ -22,20 +22,37 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {useRoute} from '@react-navigation/native';
 import HomeBottomContainer from '../../../../components/HomeScreenComponent/HomeBottomContainer';
 import BottomPriceChecker from '../../../../components/HomeScreenComponent/BottomPriceChecker';
+import HomeScreenSingleDateSelecter from '../../../../components/HomeScreenComponent/HomeScreenSingleDateSelecter';
 
-const BoardingInnerScreen = () => {
+const PetCareInnerScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const selectedService = route.params?.selectedService || null;
-  console.log(selectedService);
-
   const [active, setActive] = useState('active');
+
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  const timeSlots = [
+    '10:00 AM',
+    '12:00 PM',
+    '2:00 PM',
+    '4:00 PM',
+    '6:00 PM',
+    '8:00 PM',
+    '10:00 PM',
+    '12:00 AM',
+    '2:00 AM',
+  ];
+
+  const handleTimeSelection = time => {
+    setSelectedTime(time);
+  };
   const handleLikeToggle = item => {
     setActive(item);
   };
 
   const handleNavigation = () => {
-    navigation.navigate('SelectServiceComponent');
+    navigation.navigate('SelectServiceForCareComponent');
   };
   return (
     <SafeAreaView style={styles.container}>
@@ -43,7 +60,7 @@ const BoardingInnerScreen = () => {
       <ScrollView>
         <HomeScreenBackButton
           placeholder={''}
-          screen={'View Booking'}
+          screen={'View Appointments'}
           title={'AppointmentScreen'}
         />
         <View>
@@ -51,7 +68,7 @@ const BoardingInnerScreen = () => {
         </View>
         <View style={styles.nameContainer}>
           <View style={{gap: 3.5}}>
-            <Text style={styles.title}>Churchwoods Pet Daycare</Text>
+            <Text style={styles.title}>Aloropi Vet Center (Dogs & Cats)</Text>
             <View style={styles.flexBox}>
               <Text style={[styles.description, {color: '#1EAD24'}]}>open</Text>
               <Text style={[styles.description, {color: '#8C8C8C'}]}>
@@ -62,7 +79,7 @@ const BoardingInnerScreen = () => {
             <View style={styles.flexBox}>
               <RedLocation />
               <Text style={[styles.description, {color: '#8C8C8C'}]}>
-                Alansri Street 13, Plot M35,
+                34 Al Marija St - Al Jubail - Sharjah
               </Text>
             </View>
           </View>
@@ -92,7 +109,22 @@ const BoardingInnerScreen = () => {
                   backgroundColor: '#fff',
                 },
               ]}>
-              Weekly Booking
+              Clinic visit
+            </Text>
+            <Text
+              style={[
+                styles.title,
+                {
+                  fontSize: 12,
+                  lineHeight: 25,
+                  paddingHorizontal: 10,
+                  borderWidth: 0.5,
+                  borderColor: '#FFC6C6',
+                  borderRadius: 7,
+                  backgroundColor: '#fff',
+                },
+              ]}>
+              Home visit
             </Text>
           </View>
           <View>
@@ -118,14 +150,52 @@ const BoardingInnerScreen = () => {
             style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
             Booking Date
           </Text>
-          <HomeScreenDateSelecter />
-        </View>
-        <View style={styles.bookingDateContainer}>
-          <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
-            Pet Size
-          </Text>
-          <PetSize />
+          <HomeScreenSingleDateSelecter />
+          <View
+            style={{
+              backgroundColor: '#fff',
+              marginTop: -5,
+              paddingBottom: 10,
+              borderBottomRightRadius: 10,
+              borderBottomLeftRadius: 10,
+              paddingHorizontal: 10,
+            }}>
+            <Text
+              style={[
+                styles.description,
+                {
+                  color: '#8C8C8C',
+                  marginBottom: 10,
+                  paddingLeft: 5,
+                  fontSize: 10,
+                },
+              ]}>
+              Available Date
+            </Text>
+            <View style={styles.container3}>
+              {timeSlots.map((time, index) => (
+                <View key={index} style={styles.timeSlotContainer}>
+                  <TouchableOpacity
+                    onPress={() => handleTimeSelection(time)}
+                    style={[
+                      styles.timeSlot,
+                      {
+                        backgroundColor:
+                          selectedTime === time ? '#FF6347' : '#fff',
+                      },
+                    ]}>
+                    <Text
+                      style={[
+                        styles.timeText,
+                        {color: selectedTime === time ? '#fff' : '#000'},
+                      ]}>
+                      {time}
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              ))}
+            </View>
+          </View>
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
@@ -154,7 +224,7 @@ const BoardingInnerScreen = () => {
   );
 };
 
-export default BoardingInnerScreen;
+export default PetCareInnerScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -222,5 +292,25 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     marginTop: 20,
+  },
+  container3: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  timeSlotContainer: {
+    marginVertical: 5,
+  },
+  timeSlot: {
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 8,
+    marginLeft: 5,
+    borderWidth: 0.5,
+    borderColor: '#FFC6C6',
+  },
+  timeText: {
+    fontFamily: 'Visby-Medium',
+    color: '#212121',
+    fontSize: 10,
   },
 });

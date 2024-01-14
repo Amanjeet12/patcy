@@ -4,7 +4,7 @@ import Button from '../Button';
 import {Backbutton} from '../../src/Screens/SvgComponent/Logocomponent';
 import {useNavigation} from '@react-navigation/native';
 
-const HomeScreenBackButton = ({placeholder, icon, screen}) => {
+const HomeScreenBackButton = ({placeholder, icon, screen, title}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.maincontainer}>
@@ -18,7 +18,7 @@ const HomeScreenBackButton = ({placeholder, icon, screen}) => {
           <Text style={styles.title}>{placeholder ? placeholder : null}</Text>
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(title)}>
         <Text style={styles.textContainer}>{screen}</Text>
       </TouchableOpacity>
     </View>

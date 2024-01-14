@@ -28,8 +28,7 @@ const CheckoutScreen = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const [showGroomingDetails, setShowGroomingDetails] = useState(false);
-
-  const services = [
+  const [services, setServices] = useState([
     {
       id: 1,
       category: 'Grooming',
@@ -51,14 +50,21 @@ const CheckoutScreen = () => {
       details: 'AED 12',
       image: image.Cat3,
     },
-    // Add more services if needed
-  ];
+  ]);
 
   const handleCategoryClick = category => {
     setShowGroomingDetails(
       category === 'Grooming' ? !showGroomingDetails : false,
     );
   };
+
+  const handleCancelClick = id => {
+    // Remove the item with the specified ID from the services array
+    setServices(prevServices =>
+      prevServices.filter(service => service.id !== id),
+    );
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
@@ -112,7 +118,7 @@ const CheckoutScreen = () => {
               </View>
             </View>
           </View>
-          <View style={[styles.flexBox, {marginTop: 10}]}>
+          <View style={[styles.flexBox, {marginTop: 10, paddingHorizontal: 0}]}>
             <Text style={styles.text}>
               Date:{' '}
               <Text style={[styles.text, {color: '#F84040'}]}>
@@ -124,13 +130,13 @@ const CheckoutScreen = () => {
               <Text style={[styles.text, {color: '#F84040'}]}>2:00 pm</Text>
             </Text>
           </View>
-          <View style={styles.colorContainer}>
+          <TouchableOpacity style={styles.colorContainer}>
             <PromoCode />
             <Text style={[styles.text, {color: '#000'}]}>
               Have a promo code?
             </Text>
-          </View>
-          <View style={{marginTop: 20}}>
+          </TouchableOpacity>
+          <View style={{marginTop: 25}}>
             <Text style={styles.text}>Appointment Details</Text>
             <View
               style={[
@@ -143,7 +149,9 @@ const CheckoutScreen = () => {
                 <Text style={styles.text}>Grooming</Text>
                 <View
                   style={{flexDirection: 'row', alignItems: 'center', gap: 5}}>
-                  <Text style={[styles.text, {color: '#000'}]}>3 items</Text>
+                  <Text style={[styles.text, {color: '#000'}]}>
+                    {services.length} items
+                  </Text>
                   {showGroomingDetails ? <ArrowUp /> : <ArrowDown />}
                 </View>
               </TouchableOpacity>
@@ -192,7 +200,8 @@ const CheckoutScreen = () => {
                           width: '15%',
                           justifyContent: 'center',
                           alignItems: 'center',
-                        }}>
+                        }}
+                        onPress={() => handleCancelClick(service.id)}>
                         <RedCancel />
                       </TouchableOpacity>
                     </View>
@@ -241,7 +250,7 @@ const CheckoutScreen = () => {
         </View>
       </ScrollView>
       <View style={{paddingHorizontal: 16, bottom: 10}}>
-        <Button placeholder={'Place Order'} />
+        <Button placeholder={'Place Order'} screen={'PaymentScreen'} />
       </View>
     </SafeAreaView>
   );
@@ -287,7 +296,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 15,
     gap: 10,
-    marginTop: 20,
+    marginTop: 35,
   },
 
   serviceItem: {

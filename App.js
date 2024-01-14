@@ -22,6 +22,10 @@ import AboutScreen from './src/Screens/BottomTabScreens/ProfileScreens/AboutScre
 import BoardingInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/BoardingInnerScreen';
 import SelectServiceComponent from './components/HomeScreenComponent/SelectServiceComponent';
 import CheckoutScreen from './src/Screens/BottomTabScreens/HomeScreens/CheckoutScreen';
+import PaymentScreen from './src/Screens/BottomTabScreens/HomeScreens/PaymentScreen';
+import PetCareInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/PetCareInnerScreen';
+import SelectServiceForCareComponent from './components/HomeScreenComponent/SelectServiceForCareComponent';
+import AppointmentScreen from './src/Screens/BottomTabScreens/HomeScreens/AppointmentScreen';
 
 const Stack = createStackNavigator();
 
@@ -167,6 +171,26 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="CheckoutScreen"
           component={CheckoutScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="PaymentScreen"
+          component={PaymentScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="PetCareInnerScreen"
+          component={PetCareInnerScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SelectServiceForCareComponent"
+          component={SelectServiceForCareComponent}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="AppointmentScreen"
+          component={AppointmentScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

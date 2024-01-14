@@ -30,6 +30,7 @@ import {
 
 import {useIsFocused} from '@react-navigation/native';
 import BoardingScreen from './HomeScreens/BoardingScreen';
+import PetCareScreen from '../BottomTabScreens/HomeScreens/PetCareScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -114,6 +115,11 @@ const Homestack = () => {
         options={{animation: 'slide_from_right'}}
         name="BoardingScreen"
         component={BoardingScreen}
+      />
+      <Stack.Screen
+        options={{animation: 'slide_from_right'}}
+        name="PetCareScreen"
+        component={PetCareScreen}
       />
     </Stack.Navigator>
   );

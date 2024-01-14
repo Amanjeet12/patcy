@@ -7,7 +7,7 @@ const BoxContainer = ({data}) => {
 
   const screenMapping = {
     Supplies: '',
-    Care: '',
+    Care: 'PetCareScreen',
     Grooming: '',
     Boarding: 'BoardingScreen',
     Transport: '',

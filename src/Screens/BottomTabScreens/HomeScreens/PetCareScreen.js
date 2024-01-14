@@ -9,7 +9,7 @@ import {
 import React from 'react';
 import HomeScreenBackButton from '../../../../components/HomeScreenComponent/HomeScreenBackButton';
 import HomeScreenPetSlider from '../../../../components/HomeScreenComponent/HomeScreenPetSlider';
-import {Care, boardingFilter, pet} from '../../../../constant/data';
+import {Care, CareFilter, boardingFilter, pet} from '../../../../constant/data';
 import HomeScreenFilter from '../../../../components/HomeScreenComponent/HomeScreenFilter';
 import Searchbar from '../../../../components/Searchbar';
 import {FilterIcon} from '../../SvgComponent/Logocomponent';
@@ -17,22 +17,22 @@ import FilterIconComponent from '../../../../components/HomeScreenComponent/Filt
 import CommonDesignContainer from '../../../../components/CommonDesignContainer';
 import BoardingScrollComponent from '../../../../components/HomeScreenComponent/BoardingScrollComponent';
 
-const BoardingScreen = () => {
+const PetCareScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View>
           <HomeScreenBackButton
-            placeholder={'Boarding'}
-            screen={'View Booking'}
+            placeholder={'Pet Care'}
+            screen={'View Appointments'}
             title={'AppointmentScreen'}
           />
           <View>
             <HomeScreenPetSlider data={pet} />
           </View>
           <View style={{marginTop: 25}}>
-            <HomeScreenFilter data={boardingFilter} />
+            <HomeScreenFilter data={CareFilter} />
           </View>
           <View
             style={{
@@ -50,7 +50,7 @@ const BoardingScreen = () => {
           <View>
             <BoardingScrollComponent
               data={Care}
-              screen={'BoardingInnerScreen'}
+              screen={'PetCareInnerScreen'}
             />
           </View>
         </View>
@@ -59,7 +59,7 @@ const BoardingScreen = () => {
   );
 };
 
-export default BoardingScreen;
+export default PetCareScreen;
 
 const styles = StyleSheet.create({
   container: {

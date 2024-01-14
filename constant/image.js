@@ -16,6 +16,9 @@ const Map = require('../assets/images/map.png');
 const Cat1 = require('../assets/images/pet1.png');
 const Cat2 = require('../assets/images/pet-2.jpeg');
 const Cat3 = require('../assets/images/pet-3.png');
+const ApplePay = require('../assets/images/applepay.png');
+const bank = require('../assets/images/bank.png');
+const Cash = require('../assets/images/cashdeliviery.png');
 
 export default {
   Dog,
@@ -36,4 +39,7 @@ export default {
   Cat1,
   Cat2,
   Cat3,
+  ApplePay,
+  bank,
+  Cash,
 };

@@ -7,7 +7,7 @@ import Like from 'react-native-vector-icons/FontAwesome';
 import UnLike from 'react-native-vector-icons/FontAwesome';
 import {Location, Star} from '../../src/Screens/SvgComponent/Logocomponent';
 
-const CommonDesignContainer = ({data}) => {
+const CommonDesignContainer = ({data, screen}) => {
   const [likedItems, setLikedItems] = useState(data.map(item => item.id));
   const navigation = useNavigation(); // Get the navigation object using the hook
 
@@ -20,7 +20,7 @@ const CommonDesignContainer = ({data}) => {
   };
 
   const handleItemPress = itemId => {
-    navigation.navigate('BoardingInnerScreen', {itemId});
+    navigation.navigate(screen, {itemId});
   };
 
   const renderItems = () => {
