@@ -1,10 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import image from '../constant/image';
 import {BellIcon} from '../src/Screens/SvgComponent/Logocomponent';
+import {useNavigation} from '@react-navigation/native';
 
 const DashboardContainer = () => {
+  const Navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={{width: '20%'}}>
@@ -20,14 +22,15 @@ const DashboardContainer = () => {
           <Text style={[styles.title, {marginTop: 3}]}> 1,205.00</Text>
         </View>
       </View>
-      <View
+      <TouchableOpacity
         style={{
           width: '10%',
           height: 54,
           alignItems: 'center',
-        }}>
+        }}
+        onPress={() => Navigation.navigate('NotificationScreen')}>
         <BellIcon />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

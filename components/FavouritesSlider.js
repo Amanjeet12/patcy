@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     borderColor: '#FFC6C6',
     paddingHorizontal: 25,
     borderRadius: 32,
-    paddingVertical: 7,
+    paddingVertical: 5,
   },
   text: {
     color: '#121212',

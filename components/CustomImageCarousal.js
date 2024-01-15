@@ -47,7 +47,7 @@ const CustomImageCarousal = ({data, autoPlay, pagination}) => {
           _offSet = Math.floor(_offSet + SIZE);
         }
         scrollViewRef.current.scrollTo({x: _offSet, y: 0});
-      }, 2000);
+      }, 3000);
     } else {
       clearInterval(interval.current);
     }
@@ -67,8 +67,8 @@ const CustomImageCarousal = ({data, autoPlay, pagination}) => {
         onMomentumScrollEnd={() => {
           setIsAutoPlay(autoPlay);
         }}
-        scrollEventThrottle={16}
-        decelerationRate="fast"
+        scrollEventThrottle={10}
+        decelerationRate="normal"
         snapToInterval={SIZE}
         horizontal
         bounces={false}

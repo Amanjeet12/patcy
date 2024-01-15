@@ -70,14 +70,14 @@ const PriceCalculater = () => {
         {liked === false ? (
           <Like
             name="heart-o"
-            size={16}
+            size={20}
             color={'#000'}
             onPress={handleLikeToggle}
           />
         ) : (
           <UnLike
             name="heart"
-            size={16}
+            size={20}
             color={'#F84040'}
             onPress={handleLikeToggle}
           />

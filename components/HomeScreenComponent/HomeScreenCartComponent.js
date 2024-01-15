@@ -22,7 +22,8 @@ const HomeScreenCartComponent = ({placeholder, icon, screen, title}) => {
         <TouchableOpacity onPress={() => console.log('enter')}>
           <Text style={styles.textContainer}>{screen}</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('ViewOrderScreen')}>
           <Image
             source={icon}
             style={{width: 21, height: 15, resizeMode: 'contain'}}

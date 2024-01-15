@@ -11,7 +11,7 @@ import {
 import React, {useState} from 'react';
 import HomeScreenBackButton from '../../../../components/HomeScreenComponent/HomeScreenBackButton';
 import HomeScreenBigImageSlider from '../../../../components/HomeScreenComponent/HomeScreenBigImageSlider';
-import {BigSlider} from '../../../../constant/data';
+import {BigSlider, BigSliderC} from '../../../../constant/data';
 import {Location, RedLocation, Star} from '../../SvgComponent/Logocomponent';
 import UnLike from 'react-native-vector-icons/FontAwesome';
 import Like from 'react-native-vector-icons/FontAwesome';
@@ -64,7 +64,7 @@ const PetCareInnerScreen = () => {
           title={'AppointmentScreen'}
         />
         <View>
-          <HomeScreenBigImageSlider data={BigSlider} />
+          <HomeScreenBigImageSlider data={BigSliderC} />
         </View>
         <View style={styles.nameContainer}>
           <View style={{gap: 3.5}}>
@@ -78,15 +78,16 @@ const PetCareInnerScreen = () => {
             </View>
             <View style={styles.flexBox}>
               <RedLocation />
-              <Text style={[styles.description, {color: '#8C8C8C'}]}>
+              <Text
+                style={[styles.description, {color: '#8C8C8C', paddingTop: 3}]}>
                 34 Al Marija St - Al Jubail - Sharjah
               </Text>
             </View>
           </View>
-          <View style={styles.whiteContainer}>
+          <View style={[styles.whiteContainer, {height: 55}]}>
             <View style={styles.flexBox}>
               <Star />
-              <Text>5.0</Text>
+              <Text style={styles.text}>5.0</Text>
             </View>
             <Text style={[styles.description, {fontSize: 10}]}>
               150 Reviews
@@ -175,23 +176,31 @@ const PetCareInnerScreen = () => {
             <View style={styles.container3}>
               {timeSlots.map((time, index) => (
                 <View key={index} style={styles.timeSlotContainer}>
-                  <TouchableOpacity
-                    onPress={() => handleTimeSelection(time)}
-                    style={[
-                      styles.timeSlot,
-                      {
-                        backgroundColor:
-                          selectedTime === time ? '#FF6347' : '#fff',
-                      },
-                    ]}>
-                    <Text
+                  {time === '2:00 PM' || time === '6:00 PM' ? (
+                    <View
+                      style={[styles.timeSlot, {backgroundColor: '#E2E2E2'}]}>
+                      <Text style={styles.timeText}>{time}</Text>
+                    </View>
+                  ) : (
+                    <TouchableOpacity
+                      onPress={() => handleTimeSelection(time)}
                       style={[
-                        styles.timeText,
-                        {color: selectedTime === time ? '#fff' : '#000'},
-                      ]}>
-                      {time}
-                    </Text>
-                  </TouchableOpacity>
+                        styles.timeSlot,
+                        {
+                          backgroundColor:
+                            selectedTime === time ? '#FF6347' : '#fff',
+                        },
+                      ]}
+                      disabled={false}>
+                      <Text
+                        style={[
+                          styles.timeText,
+                          {color: selectedTime === time ? '#fff' : '#000'},
+                        ]}>
+                        {time}
+                      </Text>
+                    </TouchableOpacity>
+                  )}
                 </View>
               ))}
             </View>

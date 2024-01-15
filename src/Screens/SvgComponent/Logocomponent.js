@@ -116,7 +116,7 @@ export const EyeOff = () => {
 
 export const BellIcon = () => {
   return (
-    <TouchableOpacity>
+    <View>
       <Svg
         width="20"
         height="22"
@@ -128,7 +128,7 @@ export const BellIcon = () => {
           fill="white"
         />
       </Svg>
-    </TouchableOpacity>
+    </View>
   );
 };
 

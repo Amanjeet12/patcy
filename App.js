@@ -30,6 +30,10 @@ import SuppliesInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/Supp
 import ViewOrderScreen from './src/Screens/BottomTabScreens/HomeScreens/ViewOrderScreen';
 import SuppliesCheckoutScreen from './src/Screens/BottomTabScreens/HomeScreens/SuppliesCheckoutScreen';
 import RedeemCodeScreen from './src/Screens/BottomTabScreens/HomeScreens/RedeemCodeScreen';
+import GroomingInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/GroomingInnerScreen';
+import SelectServiceForGroomComponent from './components/HomeScreenComponent/SelectServiceForGroomComponent';
+import SuccessfullScreen from './src/Screens/BottomTabScreens/SuccessfullScreen';
+import NotificationScreen from './src/Screens/BottomTabScreens/NotificationScreen';
 
 const Stack = createStackNavigator();
 
@@ -215,6 +219,26 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="RedeemCodeScreen"
           component={RedeemCodeScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="GroomingInnerScreen"
+          component={GroomingInnerScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SelectServiceForGroomComponent"
+          component={SelectServiceForGroomComponent}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="SuccessfullScreen"
+          component={SuccessfullScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="NotificationScreen"
+          component={NotificationScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

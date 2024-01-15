@@ -68,7 +68,9 @@ const InnerSectionProfile = () => {
         </View>
       </TouchableOpacity>
       <View style={styles.Border} />
-      <TouchableOpacity style={styles.flexBox}>
+      <TouchableOpacity
+        style={styles.flexBox}
+        onPress={() => navigation.navigate('NotificationScreen')}>
         <View style={styles.innerContainer}>
           <Notifications />
           <Text style={styles.title}> Notifications</Text>
@@ -176,7 +178,7 @@ export default InnerSectionProfile;
 
 const styles = StyleSheet.create({
   container: {
-    height: 190,
+    // height: 190,
     backgroundColor: '#fff',
     marginTop: 10,
     borderRadius: 10,
@@ -191,7 +193,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 45,
+    height: 35,
+    marginVertical: 3,
   },
   innerContainer: {flexDirection: 'row', alignItems: 'center', gap: 10},
   title: {

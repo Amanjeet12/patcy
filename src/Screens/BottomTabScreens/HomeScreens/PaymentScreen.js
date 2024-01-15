@@ -59,9 +59,9 @@ const PaymentScreen = () => {
                   AED 1,000.69
                 </Text>
                 <LinearGradient
-                  colors={['#D9D9D9', '#f84b4b']}
+                  colors={['#D9D9D9', '#f68585']}
                   start={{x: 0, y: 0}}
-                  end={{x: 0.5, y: 0.5}}
+                  end={{x: 1, y: 0.5}}
                   style={{
                     height: 50,
                     alignItems: 'center',
@@ -70,6 +70,12 @@ const PaymentScreen = () => {
                     borderRadius: 12,
                     width: '100%',
                   }}>
+                  <View style={{position: 'absolute', top: -20}}>
+                    <Image
+                      source={image.Upper}
+                      style={{width: 30, height: 30, resizeMode: 'contain'}}
+                    />
+                  </View>
                   <Text style={[styles.text, {fontSize: 14}]}>
                     Woah! you’re saving AED 25.69
                   </Text>

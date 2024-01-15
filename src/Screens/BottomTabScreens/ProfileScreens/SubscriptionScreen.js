@@ -72,6 +72,14 @@ const SubscriptionScreen = () => {
               businesses.
             </Text>
           </View>
+          <View style={{alignItems: 'center', marginTop: 20, marginBottom: 50}}>
+            <Text style={styles.redText}>
+              4 interest-free instalments every month{' '}
+            </Text>
+            <Text style={styles.redText}>
+              USD 25 with our Buy Now Pay Later Partner is available{' '}
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>

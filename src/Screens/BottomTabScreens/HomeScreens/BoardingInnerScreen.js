@@ -12,7 +12,7 @@ import React, {useState} from 'react';
 import HomeScreenBackButton from '../../../../components/HomeScreenComponent/HomeScreenBackButton';
 import HomeScreenBigImageSlider from '../../../../components/HomeScreenComponent/HomeScreenBigImageSlider';
 import {BigSlider} from '../../../../constant/data';
-import {Location, RedLocation, Star} from '../../SvgComponent/Logocomponent';
+import {RedLocation, Star} from '../../SvgComponent/Logocomponent';
 import UnLike from 'react-native-vector-icons/FontAwesome';
 import Like from 'react-native-vector-icons/FontAwesome';
 import HomeScreenDateSelecter from '../../../../components/HomeScreenComponent/HomeScreenDateSelecter';
@@ -61,15 +61,16 @@ const BoardingInnerScreen = () => {
             </View>
             <View style={styles.flexBox}>
               <RedLocation />
-              <Text style={[styles.description, {color: '#8C8C8C'}]}>
+              <Text
+                style={[styles.description, {color: '#8C8C8C', paddingTop: 3}]}>
                 Alansri Street 13, Plot M35,
               </Text>
             </View>
           </View>
-          <View style={styles.whiteContainer}>
+          <View style={[styles.whiteContainer, {height: 55}]}>
             <View style={styles.flexBox}>
               <Star />
-              <Text>5.0</Text>
+              <Text style={styles.description}>5.0</Text>
             </View>
             <Text style={[styles.description, {fontSize: 10}]}>
               150 Reviews
@@ -99,14 +100,14 @@ const BoardingInnerScreen = () => {
             {active === 'active' ? (
               <UnLike
                 name="heart"
-                size={16}
+                size={20}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle('Inactive')}
               />
             ) : (
               <Like
                 name="heart-o"
-                size={16}
+                size={20}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle('active')}
               />

@@ -17,6 +17,7 @@ import {COLORS} from '../../../constant/theme';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useNavigation} from '@react-navigation/native';
 import RBSheet from 'react-native-raw-bottom-sheet';
+import BackChecker from '../../../components/BackChecker';
 
 const DividerContainer = ({left, right}) => {
   return (
@@ -64,10 +65,8 @@ const AddPetScreen = ({navigation}) => {
   };
   const handleCloseNavigation = () => {
     if (refRBSheet.current) {
-      refRBSheet.current.close(() => {
-        // This callback will be executed after the sheet is closed
-        navigation.navigate('BottomTabScreen');
-      });
+      refRBSheet.current.close();
+      navigation.navigate('SuccessfullScreen');
     }
   };
 
@@ -81,7 +80,7 @@ const AddPetScreen = ({navigation}) => {
         showsVerticalScrollIndicator={false}>
         <View>
           <View style={styles.mainContainer}>
-            <Backbutton />
+            <BackChecker placeholder={'Add Pet'} />
           </View>
           <View style={{marginTop: 5}}>
             <View style={{paddingHorizontal: 16}}>
@@ -129,7 +128,7 @@ const AddPetScreen = ({navigation}) => {
                 <CommonContainer placeholder={'Enter the age'} />
               </View>
             </View>
-            <View style={styles.buttonContainer}>
+            <View style={[styles.buttonContainer, {marginBottom: 50}]}>
               <TouchableOpacity
                 style={styles.button}
                 onPress={() => handleOpenBottomSheet()}>

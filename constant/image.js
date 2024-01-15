@@ -20,6 +20,8 @@ const ApplePay = require('../assets/images/applepay.png');
 const bank = require('../assets/images/bank.png');
 const Cash = require('../assets/images/cashdeliviery.png');
 const Cart = require('../assets/images/cart.png');
+const Upper = require('../assets/images/upper.png');
+const Clipboard = require('../assets/images/clipboard.png');
 
 export default {
   Dog,
@@ -44,4 +46,6 @@ export default {
   bank,
   Cash,
   Cart,
+  Upper,
+  Clipboard,
 };

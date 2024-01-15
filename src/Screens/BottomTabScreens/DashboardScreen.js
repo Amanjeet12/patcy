@@ -28,7 +28,7 @@ import Appointment from '../../../components/Appointment';
 const DashboardScreen = () => {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={'#F84040'} barStyle={'dark-content'} />
+      <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={styles.mainContainer}>
           <DashboardContainer />

@@ -12,7 +12,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import DashboardScreen from './DashboardScreen';
 import {SIZES} from '../../../constant/theme';
-import Favourites from './FavouritesScreen';
 import FavouritesScreen from './FavouritesScreen';
 import AddPetScreen from './AddPetScreen';
 import ProfileScreen from './ProfileScreen';
@@ -25,6 +24,7 @@ import {
   LikedIconFocused,
   ProfileIcon,
   ProfileIconFocused,
+  TransactionFocusedIcon,
   TransactionIcon,
 } from '../SvgComponent/BottomSvgComponent';
 
@@ -32,6 +32,7 @@ import {useIsFocused} from '@react-navigation/native';
 import BoardingScreen from './HomeScreens/BoardingScreen';
 import PetCareScreen from '../BottomTabScreens/HomeScreens/PetCareScreen';
 import SuppliesScreen from './HomeScreens/SuppliesScreen';
+import GroomingScreen from './HomeScreens/GroomingScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -106,7 +107,6 @@ const Homestack = () => {
                 },
               ],
             },
-            // Exclude FlatList components from the animation
             overflow: 'visible',
           };
         },
@@ -127,6 +127,11 @@ const Homestack = () => {
         name="SuppliesScreen"
         component={SuppliesScreen}
       />
+      <Stack.Screen
+        options={{animation: 'slide_from_right'}}
+        name="GroomingScreen"
+        component={GroomingScreen}
+      />
     </Stack.Navigator>
   );
 };
@@ -142,6 +147,7 @@ const FavouriteStack = () => {
 const AddPetStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+      {/* <Stack.Screen name="AddScreen" component={AddScreen} /> */}
       <Stack.Screen name="AddPetScreen" component={AddPetScreen} />
     </Stack.Navigator>
   );
@@ -171,6 +177,7 @@ const BottomTabScreen = () => {
       style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : -SIZES.width * 0.245}>
+      <StatusBar backgroundColor={'#000'} barStyle={'light-content'} />
       <Tab.Navigator
         initialRouteName="DashboardScreen"
         screenOptions={{
@@ -221,7 +228,7 @@ const BottomTabScreen = () => {
           component={AddPetStack}
           options={{
             tabBarShowLabel: false,
-            tabBarStyle: {display: 'none'},
+            // tabBarStyle: {display: 'none'},
             tabBarHideOnKeyboard: true,
             tabBarIcon: ({color, size, focused}) =>
               focused ? <AddIcon /> : <AddIcon />,

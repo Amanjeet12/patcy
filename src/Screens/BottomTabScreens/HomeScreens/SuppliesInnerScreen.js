@@ -11,9 +11,8 @@ import React, {useState} from 'react';
 import HomeScreenCartComponent from '../../../../components/HomeScreenComponent/HomeScreenCartComponent';
 import image from '../../../../constant/image';
 import HomeScreenImageSlider from '../../../../components/HomeScreenComponent/HomeScreenImageSlider';
-import {BigSlider, boardingFilter} from '../../../../constant/data';
+import {BigSlider, BigSliderS, boardingFilter} from '../../../../constant/data';
 import {RedLocation, Star} from '../../SvgComponent/Logocomponent';
-import HomeScreenFilter from '../../../../components/HomeScreenComponent/HomeScreenFilter';
 import HomeScreenSizeSlider from '../../../../components/HomeScreenComponent/HomeScreenSizeSlider';
 import PriceCalculater from '../../../../components/PriceCalculater';
 import Button from '../../../../components/Button';
@@ -56,7 +55,7 @@ const SuppliesInnerScreen = () => {
           icon={image.Cart}
         />
         <View>
-          <HomeScreenImageSlider data={BigSlider} />
+          <HomeScreenImageSlider data={BigSliderS} />
         </View>
         <View style={styles.nameContainer}>
           <View style={{gap: 5, width: '80%'}}>
@@ -65,10 +64,10 @@ const SuppliesInnerScreen = () => {
             </Text>
             <Text style={styles.description}>Healthcare</Text>
           </View>
-          <View style={styles.whiteContainer}>
+          <View style={[styles.whiteContainer, {height: 55}]}>
             <View style={styles.flexBox}>
               <Star />
-              <Text>5.0</Text>
+              <Text style={styles.text}>5.0</Text>
             </View>
             <Text style={[styles.description, {fontSize: 10}]}>
               150 Reviews
@@ -176,5 +175,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
+  },
+  text: {
+    fontSize: 12,
+    fontWeight: '600',
+    fontFamily: 'Visby-Medium',
+    color: '#212121',
   },
 });

@@ -141,7 +141,7 @@ const OnboardingScreen = () => {
       <View style={styles.footerContainer}>
         <TouchableOpacity onPress={skip}>
           <Text style={[styles.title, {fontSize: 16, color: COLORS.primary}]}>
-            skip
+            Skip
           </Text>
         </TouchableOpacity>
         <View style={styles.svgContainer}>

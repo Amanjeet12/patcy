@@ -8,13 +8,16 @@ const BoxContainer = ({data}) => {
   const screenMapping = {
     Supplies: 'SuppliesScreen',
     Care: 'PetCareScreen',
-    Grooming: '',
+    Grooming: 'GroomingScreen',
     Boarding: 'BoardingScreen',
     Transport: '',
     Discover: '',
   };
 
   const handleBoxPress = item => {
+    if (item.title === 'Transport' || item.title === 'Discover') {
+      return;
+    }
     const screenName = screenMapping[item.title] || 'DefaultScreen';
     navigation.navigate(screenName);
   };

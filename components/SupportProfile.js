@@ -26,7 +26,7 @@ const SupportProfile = () => {
           <Arrow />
         </View>
       </TouchableOpacity>
-      <View style={styles.Border} />
+      <View style={styles.Border}></View>
       <TouchableOpacity style={styles.flexBox}>
         <View style={styles.innerContainer}>
           <Support />
@@ -36,7 +36,9 @@ const SupportProfile = () => {
           <Arrow />
         </View>
       </TouchableOpacity>
-      <View style={styles.Border} />
+      <View style={styles.Border}></View>
+
+      {/* <View style={styles.Border} /> */}
       <TouchableOpacity style={styles.flexBox}>
         <View style={styles.innerContainer}>
           <FAQ />
@@ -46,7 +48,9 @@ const SupportProfile = () => {
           <Arrow />
         </View>
       </TouchableOpacity>
-      <View style={styles.Border} />
+      <View style={styles.Border}></View>
+
+      {/* <View style={styles.Border} /> */}
       <TouchableOpacity
         style={styles.flexBox}
         onPress={() => navigation.navigate('AboutScreen')}>
@@ -66,7 +70,7 @@ export default SupportProfile;
 
 const styles = StyleSheet.create({
   container: {
-    height: 190,
+    // height: 190,
     backgroundColor: '#fff',
     marginTop: 10,
     borderRadius: 10,
@@ -81,7 +85,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 45,
+    height: 35,
+    marginVertical: 3,
   },
   innerContainer: {flexDirection: 'row', alignItems: 'center', gap: 10},
   title: {

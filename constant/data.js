@@ -52,7 +52,7 @@ export const box = [
     id: '4',
     image: require('../assets/images/house.png'),
     title: 'Boarding',
-    backgroundColor: '#FFE7E7',
+    backgroundColor: '#FEF6E1',
   },
   {
     id: '5',
@@ -64,7 +64,7 @@ export const box = [
     id: '6',
     image: require('../assets/images/cat.png'),
     title: 'Discover',
-    backgroundColor: '#FFE7E7',
+    backgroundColor: '#FFE8D4',
   },
 ];
 
@@ -264,11 +264,31 @@ export const Care = [
 export const Grooming = [
   {
     id: '1',
-    name: 'Wooferine Pet Grooming Salon',
-    status: 'Closed',
-    rating: '8.5 (1000)',
-    offer: '15% Off',
-    image: require('../assets/images/groom-1.png'),
+    name: 'Paw Peace Domestic Pets Grooming',
+    status: 'Open',
+    rating: '7.5 (300)',
+    // offer: '15% Off',
+    image: require('../assets/images/groomSlider-1.png'),
+    distance: '4.2km',
+    like: true,
+  },
+  {
+    id: '2',
+    name: 'Paw Peace Domestic Pets Grooming',
+    status: 'Open',
+    rating: '7.5 (300)',
+    // offer: '15% Off',
+    image: require('../assets/images/groomSlider-2.png'),
+    distance: '4.2km',
+    like: true,
+  },
+  {
+    id: '3',
+    name: 'Blue Oasis  Verterinary Clinic',
+    status: 'Open',
+    rating: '7.5 (300)',
+    // offer: '15% Off',
+    image: require('../assets/images/groomSlider-3.png'),
     distance: '4.2km',
     like: true,
   },
@@ -382,6 +402,53 @@ export const BigSlider = [
   {
     id: '3',
     image: require('../assets/images/Big-3.jpeg'),
+  },
+];
+
+export const BigSliderS = [
+  {
+    id: '1',
+    image: require('../assets/images/supplies.jpeg'),
+  },
+  {
+    id: '2',
+    image: require('../assets/images/supplies-1.jpeg'),
+  },
+  {
+    id: '3',
+    image: require('../assets/images/supplies-2.jpeg'),
+  },
+  {
+    id: '4',
+    image: require('../assets/images/supplies-3.jpeg'),
+  },
+];
+export const BigSliderC = [
+  {
+    id: '1',
+    image: require('../assets/images/care-1.png'),
+  },
+  {
+    id: '2',
+    image: require('../assets/images/care-2.png'),
+  },
+  {
+    id: '3',
+    image: require('../assets/images/care-3.png'),
+  },
+];
+export const BigSliderG = [
+  {
+    id: '1',
+    image: require('../assets/images/groomSlider-1.png'),
+  },
+  {
+    id: '2',
+    image: require('../assets/images/groomSlider-2.png'),
+  },
+  {
+    id: '3',
+    image: require('../assets/images/groomSlider-3.png'),
   },
 ];
 
@@ -508,5 +575,40 @@ export const ProductSpecification = [
   {
     id: '3',
     title: 'cho seeds',
+  },
+];
+
+export const GroomingFilter = [
+  {
+    id: '1',
+    name: 'In-store Grooming',
+    image: require('../assets/images/groom-22.png'),
+  },
+  {
+    id: '2',
+    name: 'Mobile Grooming',
+    image: require('../assets/images/groom-11.png'),
+  },
+];
+
+export const Notifications = [
+  {
+    id: '1',
+    image: require('../assets/images/notification-1.png'),
+    title:
+      'You just booked an appointment with Wooferine Pet Grooming Salon, on 10 Feb 2023 at 4pm',
+    timing: 'Yesterday',
+  },
+  {
+    id: '2',
+    image: require('../assets/images/notification-2.png'),
+    title: 'Your pet supplies order was completed, delivery on 01 Feb 2024',
+    timing: 'Yesterday',
+  },
+  {
+    id: '3',
+    image: require('../assets/images/notification-3.png'),
+    title: 'Your pet supplies delivery was completed',
+    timing: 'Yesterday',
   },
 ];

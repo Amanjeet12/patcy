@@ -57,7 +57,9 @@ const CommonDesignContainer = ({data, screen}) => {
           ) : null}
         </View>
         <View style={{padding: 10}}>
-          <Text style={[styles.title, {color: '#000', fontWeight: '600'}]}>
+          <Text
+            style={[styles.title, {color: '#000', fontWeight: '600'}]}
+            numberOfLines={1}>
             {item.name}
           </Text>
           <View style={[styles.flexBoxContainer, {gap: 20, marginTop: 5}]}>

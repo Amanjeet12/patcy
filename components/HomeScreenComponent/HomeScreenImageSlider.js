@@ -59,10 +59,10 @@ const HomeScreenImageSlider = ({data}) => {
           renderItem={renderItem}
           style={styles.thumbnailContainer}
         />
-        <TouchableOpacity style={{position: 'absolute', left: 30, top: 40}}>
+        <TouchableOpacity style={{position: 'absolute', left: 10, top: 40}}>
           <ArrowLeft />
         </TouchableOpacity>
-        <TouchableOpacity style={{position: 'absolute', right: 30, top: 40}}>
+        <TouchableOpacity style={{position: 'absolute', right: 10, top: 40}}>
           <ArrowRight />
         </TouchableOpacity>
       </View>
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   thumbnail: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
     marginRight: 10,
     justifyContent: 'center',
     borderRadius: 10,

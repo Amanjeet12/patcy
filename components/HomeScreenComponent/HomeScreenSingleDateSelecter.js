@@ -44,7 +44,7 @@ const HomeScreenSingleDateSelecter = () => {
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={370}
+        height={400}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
@@ -59,8 +59,18 @@ const HomeScreenSingleDateSelecter = () => {
           <Calendar
             style={{
               borderColor: 'gray',
-              height: 350,
+              height: 380,
               margin: 10,
+            }}
+            theme={{
+              backgroundColor: '#ffffff',
+              calendarBackground: '#ffffff',
+              textSectionTitleColor: 'grey',
+              selectedDayBackgroundColor: 'red',
+              selectedDayTextColor: '#ffffff',
+              todayTextColor: 'red',
+              dayTextColor: '#2d4150',
+              textDisabledColor: '#ACACAC',
             }}
             onDayPress={day => handleDayPress(day, 'checkIn')}
           />

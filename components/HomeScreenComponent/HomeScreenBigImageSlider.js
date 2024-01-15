@@ -4,6 +4,7 @@ import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 
 const HomeScreenBigImageSlider = ({data}) => {
   const totalImages = data.length;
+  console.log(data);
 
   return (
     <View>
