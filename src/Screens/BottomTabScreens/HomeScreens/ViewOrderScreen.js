@@ -21,11 +21,29 @@ import {Forwardlogo} from '../../SvgComponent/Logocomponent';
 
 const ViewOrderScreen = () => {
   const navigation = useNavigation();
+  const [suppless, setSuppless] = useState(supples);
 
   const handleNavigation = () => {
     navigation.navigate('SuppliesCheckoutScreen');
   };
 
+  const increaseQuantity = itemId => {
+    setSuppless(prevSupples =>
+      prevSupples.map(item =>
+        item.id === itemId ? {...item, quantity: item.quantity + 1} : item,
+      ),
+    );
+  };
+
+  const decreaseQuantity = itemId => {
+    setSuppless(prevSupples =>
+      prevSupples.map(item =>
+        item.id === itemId && item.quantity > 1
+          ? {...item, quantity: item.quantity - 1}
+          : item,
+      ),
+    );
+  };
   const renderItem = ({item}) => {
     return (
       <View style={styles.mainContainer}>
@@ -59,17 +77,17 @@ const ViewOrderScreen = () => {
             <View style={styles.whiteButtonContainer}>
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
-                onPress={() => console.log('')}>
+                onPress={() => decreaseQuantity(item.id)}>
                 <Minus name="minus" size={16} color={'#ffc6c6'} />
               </TouchableOpacity>
             </View>
             <View style={[styles.whiteButtonContainer, {width: '30%'}]}>
-              <Text style={styles.description}>1</Text>
+              <Text style={styles.description}>{item.quantity}</Text>
             </View>
             <View style={styles.whiteButtonContainer}>
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
-                onPress={() => console.log('')}>
+                onPress={() => increaseQuantity(item.id)}>
                 <Add name="add-outline" size={16} color={'#ffc6c6'} />
               </TouchableOpacity>
             </View>
@@ -93,7 +111,7 @@ const ViewOrderScreen = () => {
         <Text style={styles.title}>(3 items)</Text>
       </View>
       <FlatList
-        data={supples}
+        data={suppless}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
         contentContainerStyle={{paddingHorizontal: 16, marginTop: 10}}

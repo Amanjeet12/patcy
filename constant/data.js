@@ -444,3 +444,69 @@ export const ServicesCare = [
     image: require('../assets/images/pet1.png'),
   },
 ];
+
+export const FilterService = [
+  {
+    id: '1',
+    name: 'Shower',
+  },
+  {
+    id: '2',
+    name: 'Hair-cut',
+  },
+  {
+    id: '3',
+    name: 'Blow dry',
+  },
+  {
+    id: '5',
+    name: 'Nail clipping',
+  },
+  {
+    id: '4',
+    name: 'Cleaning ear and eye',
+  },
+
+  {
+    id: '6',
+    name: 'Tick and flea bath',
+  },
+];
+
+export const ProductFeatures = [
+  {
+    id: '1',
+    title: 'Improves bad breath',
+  },
+  {
+    id: '2',
+    title: 'Removes tartar and plaque',
+  },
+  {
+    id: '3',
+    title: 'It helps prevent bacteria formation in the mouth',
+  },
+  {
+    id: '4',
+    title: 'Delays dental cleanings',
+  },
+  {
+    id: '5',
+    title: 'Use in dogs and cats of all ages after weaning',
+  },
+];
+
+export const ProductSpecification = [
+  {
+    id: '1',
+    title: 'Ascrophyllum nodosum',
+  },
+  {
+    id: '2',
+    title: 'Porskey',
+  },
+  {
+    id: '3',
+    title: 'cho seeds',
+  },
+];

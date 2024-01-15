@@ -9,27 +9,43 @@ const PriceCalculater = () => {
   const [count, setCount] = useState(1);
   const [disable, setDisable] = useState(false);
   const [liked, setLiked] = useState(false);
+  const [price, setPrice] = useState(72.0);
 
   const handleincrease = () => {
-    setCount(per => per + 1);
+    setCount(prevCount => {
+      const newCount = prevCount + 1;
+      if (newCount <= 5) {
+        setDisable(newCount === 5); // Disable if count is 5
+        setPrice(newCount * 72.0);
+        return newCount;
+      }
+      return prevCount; // Don't change count if it's already at the maximum
+    });
   };
+
   const handleDecrease = () => {
-    setCount(per => per - 1);
-    if (count == 1) {
-      setDisable(true);
-    }
+    setCount(prevCount => {
+      const newCount = prevCount - 1;
+      if (newCount >= 1) {
+        setDisable(false); // Enable the button if count is greater than 1
+        setPrice(newCount * 72.0);
+        return newCount;
+      }
+      return prevCount; // Don't change count if it's already at the minimum
+    });
   };
+
   const handleLikeToggle = () => {
     setLiked(!liked);
   };
+
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
         <View style={styles.whiteButtonContainer}>
           <TouchableOpacity
             style={[styles.addStyle, styles.specialStyle]}
-            onPress={() => handleDecrease()}
-            disabled={disable}>
+            onPress={handleDecrease}>
             <Minus name="minus" size={25} color={'#ffc6c6'} />
           </TouchableOpacity>
         </View>
@@ -42,28 +58,28 @@ const PriceCalculater = () => {
         <View style={styles.whiteButtonContainer}>
           <TouchableOpacity
             style={[styles.addStyle, styles.specialStyle]}
-            onPress={() => handleincrease()}>
+            onPress={handleincrease}>
             <Add name="add-outline" size={25} color={'#ffc6c6'} />
           </TouchableOpacity>
         </View>
       </View>
-      <View>
-        <Text style={styles.title}>AED 72.25 </Text>
+      <View style={{width: '50%', alignItems: 'center'}}>
+        <Text style={styles.title}>AED {price.toFixed(2)}</Text>
       </View>
-      <View>
+      <View style={{width: '20%', alignItems: 'center'}}>
         {liked === false ? (
           <Like
             name="heart-o"
             size={16}
             color={'#000'}
-            onPress={() => handleLikeToggle()}
+            onPress={handleLikeToggle}
           />
         ) : (
           <UnLike
             name="heart"
             size={16}
             color={'#F84040'}
-            onPress={() => handleLikeToggle()}
+            onPress={handleLikeToggle}
           />
         )}
       </View>
@@ -79,7 +95,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     // justifyContent: 'space-between',
-    gap: 50,
   },
   buttonContainer: {
     flexDirection: 'row',

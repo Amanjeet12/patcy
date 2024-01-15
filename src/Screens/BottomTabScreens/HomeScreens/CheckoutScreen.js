@@ -70,7 +70,7 @@ const CheckoutScreen = () => {
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={styles.mainContainer}>
-          <View>
+          <View style={{marginTop: 10}}>
             <BackChecker placeholder={'Summary'} />
           </View>
           <View

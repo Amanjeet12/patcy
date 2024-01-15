@@ -23,8 +23,10 @@ import {
 } from '../../SvgComponent/Logocomponent';
 import image from '../../../../constant/image';
 import Button from '../../../../components/Button';
+import {useNavigation} from '@react-navigation/native';
 
 const SuppliesCheckoutScreen = () => {
+  const navigation = useNavigation();
   const [selectedService, setSelectedService] = useState(null);
 
   const [showGroomingDetails, setShowGroomingDetails] = useState(false);
@@ -70,7 +72,7 @@ const SuppliesCheckoutScreen = () => {
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={styles.mainContainer}>
-          <View>
+          <View style={{marginTop: 10}}>
             <BackChecker placeholder={'Summary'} />
           </View>
           <View
@@ -125,7 +127,9 @@ const SuppliesCheckoutScreen = () => {
               </Text>
             </Text>
           </View>
-          <TouchableOpacity style={styles.colorContainer}>
+          <TouchableOpacity
+            style={styles.colorContainer}
+            onPress={() => navigation.navigate('RedeemCodeScreen')}>
             <PromoCode />
             <Text style={[styles.text, {color: '#000'}]}>
               Have a promo code?

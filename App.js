@@ -29,6 +29,7 @@ import AppointmentScreen from './src/Screens/BottomTabScreens/HomeScreens/Appoin
 import SuppliesInnerScreen from './src/Screens/BottomTabScreens/HomeScreens/SuppliesInnerScreen';
 import ViewOrderScreen from './src/Screens/BottomTabScreens/HomeScreens/ViewOrderScreen';
 import SuppliesCheckoutScreen from './src/Screens/BottomTabScreens/HomeScreens/SuppliesCheckoutScreen';
+import RedeemCodeScreen from './src/Screens/BottomTabScreens/HomeScreens/RedeemCodeScreen';
 
 const Stack = createStackNavigator();
 
@@ -209,6 +210,11 @@ const App = () => {
           options={{animation: 'slide_from_right'}}
           name="SuppliesCheckoutScreen"
           component={SuppliesCheckoutScreen}
+        />
+        <Stack.Screen
+          options={{animation: 'slide_from_right'}}
+          name="RedeemCodeScreen"
+          component={RedeemCodeScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

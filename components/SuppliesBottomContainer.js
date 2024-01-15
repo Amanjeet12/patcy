@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {ProductFeatures, ProductSpecification} from '../constant/data';
 
 const SuppliesBottomContainer = () => {
   const [activeTab, setActiveTab] = useState('description'); // 'description' or 'specification'
@@ -68,6 +69,41 @@ const SuppliesBottomContainer = () => {
                 maintain a friendly creative work environment which respects
                 diversity, ideas. Read more...
               </Text>
+            </View>
+          </View>
+          <View style={{marginTop: 20}}>
+            <Text
+              style={[
+                styles.description,
+                {color: '#8C8C8C', marginBottom: 10},
+              ]}>
+              Product Features
+            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                marginBottom: '10',
+              }}>
+              {ProductFeatures.map((item, index) => (
+                <View key={item.id} style={{marginRight: 10}}>
+                  <Text
+                    style={[
+                      styles.description,
+                      {
+                        paddingHorizontal: 10,
+                        borderWidth: 0.3,
+                        borderColor: '#FFC6C6',
+                        backgroundColor: '#fff',
+                        marginBottom: 10,
+                        paddingVertical: 3,
+                        borderRadius: 10,
+                      },
+                    ]}>
+                    {item.title}
+                  </Text>
+                </View>
+              ))}
             </View>
           </View>
           <View style={{marginTop: 20}}>
@@ -148,7 +184,42 @@ const SuppliesBottomContainer = () => {
         </>
       ) : (
         <>
-          <View style={{marginTop: 20, marginBottom: 100}}>
+          <View style={{marginTop: 20}}>
+            <Text
+              style={[
+                styles.description,
+                {color: '#8C8C8C', marginBottom: 10},
+              ]}>
+              Ingradients
+            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                marginBottom: '10',
+              }}>
+              {ProductSpecification.map((item, index) => (
+                <View key={item.id} style={{marginRight: 10}}>
+                  <Text
+                    style={[
+                      styles.description,
+                      {
+                        paddingHorizontal: 10,
+                        borderWidth: 0.3,
+                        borderColor: '#FFC6C6',
+                        backgroundColor: '#fff',
+                        marginBottom: 10,
+                        paddingVertical: 3,
+                        borderRadius: 10,
+                      },
+                    ]}>
+                    {item.title}
+                  </Text>
+                </View>
+              ))}
+            </View>
+          </View>
+          <View style={{marginTop: 20}}>
             <Text
               style={[
                 styles.description,
@@ -199,6 +270,57 @@ const SuppliesBottomContainer = () => {
                   Humidity{' '}
                 </Text>
                 <Text style={styles.description}>15%</Text>
+              </View>
+            </View>
+          </View>
+          <View style={{marginTop: 20, marginBottom: 100}}>
+            <Text
+              style={[
+                styles.description,
+                {color: '#8C8C8C', marginBottom: 10},
+              ]}>
+              Recommended Dose
+            </Text>
+            <View
+              style={{
+                backgroundColor: '#fff',
+                paddingHorizontal: 16,
+                gap: 10,
+                padding: 10,
+              }}>
+              <View style={styles.flexBox}>
+                <Text style={styles.description}>
+                  Small dogs (<Text style={{color: 'red'}}> &lt;10kg</Text>) and
+                  cats
+                </Text>
+
+                <Text style={styles.description}>5.5%</Text>
+              </View>
+              <View style={styles.border} />
+              <View style={styles.flexBox}>
+                <Text style={styles.description}>
+                  Medium dogs (
+                  <Text style={{color: 'red'}}> &lt;from 11 to 23kg</Text>)
+                </Text>
+                <Text style={styles.description}>2.8%</Text>
+              </View>
+              <View style={styles.border} />
+
+              <View style={styles.flexBox}>
+                <Text style={styles.description}>
+                  Large dogs (
+                  <Text style={{color: 'red'}}> &lt;from 24 to 34kg</Text>)
+                </Text>
+                <Text style={styles.description}>5%</Text>
+              </View>
+              <View style={styles.border} />
+
+              <View style={styles.flexBox}>
+                <Text style={styles.description}>
+                  Very large dogs(
+                  <Text style={{color: 'red'}}> &lt; 34kg)</Text>)
+                </Text>
+                <Text style={styles.description}>11%</Text>
               </View>
             </View>
           </View>
