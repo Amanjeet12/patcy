@@ -28,11 +28,11 @@ const TransactionScreen = () => {
       <View style={styles.mainContainer}>
         <BackChecker placeholder={'Transactions'} />
         <Text style={styles.title}>Your recent savings and transactions</Text>
-        <View style={{marginTop: 20, marginBottom: 10}}>
+        <View style={{marginTop: SIZES.width * 0.051, marginBottom: SIZES.width * 0.026}}>
           <Searchbar />
         </View>
       </View>
-      <View style={{marginBottom: 10}}>
+      <View style={{marginBottom: SIZES.width * 0.026}}>
         <FavouritesSlider
           data={TransactionData}
           onSelectItem={handleSelectItem}
@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   title: {
     color: '#8C8C8C',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },

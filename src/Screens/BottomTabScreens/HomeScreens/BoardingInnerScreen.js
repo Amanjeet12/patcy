@@ -67,12 +67,12 @@ const BoardingInnerScreen = () => {
               </Text>
             </View>
           </View>
-          <View style={[styles.whiteContainer, {height: 55}]}>
+          <View style={[styles.whiteContainer, {height: SIZES.width * 0.141}]}>
             <View style={styles.flexBox}>
               <Star />
               <Text style={styles.description}>5.0</Text>
             </View>
-            <Text style={[styles.description, {fontSize: 10}]}>
+            <Text style={[styles.description, {fontSize: SIZES.width * 0.026}]}>
               150 Reviews
             </Text>
           </View>
@@ -84,9 +84,9 @@ const BoardingInnerScreen = () => {
               style={[
                 styles.title,
                 {
-                  fontSize: 12,
-                  lineHeight: 25,
-                  paddingHorizontal: 10,
+                  fontSize: SIZES.width * 0.031,
+                  lineHeight: SIZES.width * 0.064,
+                  paddingHorizontal: SIZES.width * 0.026,
                   borderWidth: 0.5,
                   borderColor: '#FFC6C6',
                   borderRadius: 7,
@@ -100,14 +100,14 @@ const BoardingInnerScreen = () => {
             {active === 'active' ? (
               <UnLike
                 name="heart"
-                size={20}
+                size={SIZES.width * 0.051}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle('Inactive')}
               />
             ) : (
               <Like
                 name="heart-o"
-                size={20}
+                size={SIZES.width * 0.051}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle('active')}
               />
@@ -116,28 +116,28 @@ const BoardingInnerScreen = () => {
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
+            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
             Booking Date
           </Text>
           <HomeScreenDateSelecter />
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
+            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
             Pet Size
           </Text>
           <PetSize />
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
+            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
             Boarding Service
           </Text>
           <View style={styles.container2}>
             <TouchableOpacity
               style={styles.coloeContainer}
               onPress={() => handleNavigation()}>
-              <Icon name="options" size={20} color={'#212121'} />
+              <Icon name="options" size={SIZES.width * 0.051} color={'#212121'} />
               <Text style={styles.text}>
                 {selectedService ? selectedService.name : `Select Service`}
               </Text>
@@ -163,19 +163,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   nameContainer: {
-    paddingHorizontal: 16,
-    marginTop: 15,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginTop: SIZES.width * 0.039,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     fontWeight: '600',
     color: '#121212',
     fontFamily: 'VisbyRound-Bold',
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     color: '#121212',
     fontFamily: 'Visby-Medium',
@@ -183,45 +183,45 @@ const styles = StyleSheet.create({
   flexBox: {flexDirection: 'row', alignItems: 'center', gap: 10},
   whiteContainer: {
     alignItems: 'center',
-    gap: 5,
-    padding: 10,
+    gap: SIZES.width * 0.013,
+    padding: SIZES.width * 0.026,
     backgroundColor: '#fff',
     borderRadius: 10,
   },
   typeContainer: {
-    paddingHorizontal: 16,
-    marginTop: 20,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginTop: SIZES.width * 0.051,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   bookingDateContainer: {
-    paddingHorizontal: 16,
-    marginTop: 20,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginTop: SIZES.width * 0.051,
   },
   container2: {
-    height: 70,
+    height: SIZES.width * 0.18,
     backgroundColor: '#fff',
     borderRadius: 10,
     justifyContent: 'center',
-    paddingHorizontal: 14,
+    paddingHorizontal: SIZES.width * 0.036,
   },
   coloeContainer: {
-    height: 35,
+    height: SIZES.width * 0.0893,
     backgroundColor: '#eaeaea',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 15,
-    paddingHorizontal: 10,
+    gap: SIZES.width * 0.039,
+    paddingHorizontal: SIZES.width * 0.026,
     borderRadius: 8,
   },
   text: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
   },
   bottomContainer: {
-    marginTop: 20,
+    marginTop: SIZES.width * 0.051,
   },
 });

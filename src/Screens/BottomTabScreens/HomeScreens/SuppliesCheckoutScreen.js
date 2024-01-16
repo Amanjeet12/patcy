@@ -72,7 +72,7 @@ const SuppliesCheckoutScreen = () => {
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={styles.mainContainer}>
-          <View style={{marginTop: 10}}>
+          <View style={{marginTop: SIZES.width * 0.026}}>
             <BackChecker placeholder={'Summary'} />
           </View>
           <View
@@ -80,7 +80,7 @@ const SuppliesCheckoutScreen = () => {
               flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'space-between',
-              marginTop: 10,
+              marginTop: SIZES.width * 0.026,
             }}>
             <Text style={styles.text}>Delivery Address</Text>
             <TouchableOpacity>
@@ -93,7 +93,7 @@ const SuppliesCheckoutScreen = () => {
               </Text>
             </TouchableOpacity>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text style={styles.text}>Home</Text>
             <View style={[styles.whiteContainer, {marginTop: 10}]}>
               <View style={styles.flexBox}>
@@ -120,7 +120,7 @@ const SuppliesCheckoutScreen = () => {
               </View>
             </View>
           </View>
-          <View style={[styles.flexBox, {marginTop: 10, paddingHorizontal: 0}]}>
+          <View style={[styles.flexBox, {marginTop: SIZES.width * 0.026, paddingHorizontal: 0}]}>
             <Text style={styles.text}>
               <Text style={[styles.text, {color: '#F84040'}]}>
                 Delivery by Fri 29 Dec, 2023{' '}
@@ -135,18 +135,18 @@ const SuppliesCheckoutScreen = () => {
               Have a promo code?
             </Text>
           </TouchableOpacity>
-          <View style={{marginTop: 25}}>
+          <View style={{marginTop: SIZES.width * 0.064}}>
             <Text style={styles.text}>Appointment Details</Text>
             <TouchableOpacity
               style={[
                 styles.whiteContainer,
-                {paddingHorizontal: 15, marginTop: 10},
+                {paddingHorizontal: SIZES.width * 0.039, marginTop: SIZES.width * 0.026},
               ]}
               onPress={() => handleCategoryClick('Grooming')}>
               <View style={styles.categoryHeader}>
                 <Text style={styles.text}>Product</Text>
                 <View
-                  style={{flexDirection: 'row', alignItems: 'center', gap: 5}}>
+                  style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.013}}>
                   <Text style={[styles.text, {color: '#000'}]}>
                     {services.length} items
                   </Text>
@@ -164,7 +164,7 @@ const SuppliesCheckoutScreen = () => {
                       <View
                         style={{
                           width: '20%',
-                          height: 50,
+                          height: SIZES.width * 0.13,
                           alignItems: 'center',
                           justifyContent: 'center',
                           borderWidth: 0.5,
@@ -174,8 +174,8 @@ const SuppliesCheckoutScreen = () => {
                         <Image
                           source={service.image}
                           style={{
-                            width: 30,
-                            height: 30,
+                            width: SIZES.width * 0.077,
+                            height: SIZES.width * 0.077,
                             resizeMode: 'cover',
                             borderRadius: 50,
                           }}
@@ -186,7 +186,7 @@ const SuppliesCheckoutScreen = () => {
                           width: '56%',
                           justifyContent: 'space-around',
                           gap: 3,
-                          height: 50,
+                          height: SIZES.width * 0.13,
                         }}>
                         <Text
                           style={[
@@ -199,14 +199,14 @@ const SuppliesCheckoutScreen = () => {
                           style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            gap: 30,
+                            gap: SIZES.width * 0.077,
                           }}>
                           <Text
                             style={[
                               styles.text,
                               {
                                 fontWeight: '700',
-                                fontSize: 7,
+                                fontSize: SIZES.width * 0.018,
                                 color: '#F84040',
                               },
                             ]}>
@@ -216,7 +216,7 @@ const SuppliesCheckoutScreen = () => {
                             style={[
                               styles.text,
                               {
-                                fontSize: 7,
+                                fontSize: SIZES.width * 0.018,
                                 fontWeight: '400',
                                 color: '#8C8C8C',
                               },
@@ -246,7 +246,7 @@ const SuppliesCheckoutScreen = () => {
                 {justifyContent: 'space-between'},
               ]}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+                style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026}}>
                 <Text style={styles.text}>Delivery Fees</Text>
                 <RedService />
               </View>
@@ -260,7 +260,7 @@ const SuppliesCheckoutScreen = () => {
                 {justifyContent: 'space-between'},
               ]}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+                style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026}}>
                 <Text style={styles.text}>Service</Text>
                 <RedService />
               </View>
@@ -284,7 +284,7 @@ const SuppliesCheckoutScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <View style={{paddingHorizontal: 16, bottom: 10}}>
+      <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026}}>
         <Button placeholder={'Place Order'} screen={'PaymentScreen'} />
       </View>
     </SafeAreaView>
@@ -299,24 +299,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
-    marginBottom: 20,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginBottom: SIZES.width * 0.051,
   },
   text: {
     color: '#8C8C8C',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
   },
   flexBox: {
     flexDirection: 'row',
-    gap: 10,
-    paddingHorizontal: 15,
+    gap: SIZES.width * 0.026,
+    paddingHorizontal: SIZES.width * 0.039,
   },
   whiteContainer: {
     backgroundColor: '#fff',
-    gap: 10,
-    padding: 10,
+    gap: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
     // marginTop: 10,
   },
   border: {
@@ -325,24 +325,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFC6C6',
   },
   colorContainer: {
-    height: 40,
+    height: SIZES.width * 0.102,
     backgroundColor: '#FFC6C6',
-    borderRadius: 10,
+    borderRadius: SIZES.width * 0.026,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 15,
-    gap: 10,
-    marginTop: 35,
+    paddingHorizontal: SIZES.width * 0.039,
+    gap: SIZES.width * 0.026,
+    marginTop: SIZES.width * 0.0893,
   },
 
   serviceItem: {
-    padding: 10,
-    marginLeft: 30,
+    padding: SIZES.width * 0.026,
+    marginLeft: SIZES.width * 0.077,
     backgroundColor: '#fff',
-    marginRight: 60,
+    marginRight: SIZES.width * 0.153,
     borderRadius: 15,
     flexDirection: 'row',
-    gap: 20,
+    gap: SIZES.width * 0.051,
   },
   selectedService: {
     backgroundColor: '#e6f7ff', // Change background color for selected service

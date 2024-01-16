@@ -19,10 +19,10 @@ const RedeemCodeScreen = () => {
     <View style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <View style={styles.mainContainer}>
-        <View style={{marginTop: 10}}>
+        <View style={{marginTop: SIZES.width * 0.026}}>
           <BackChecker placeholder={'Promotions'} />
         </View>
-        <View style={{marginTop: 20}}>
+        <View style={{marginTop: SIZES.width * 0.051}}>
           <Text style={[styles.text, {color: '#8C8C8C', marginBottom: 10}]}>
             Enter code to redeem
           </Text>
@@ -38,7 +38,7 @@ const RedeemCodeScreen = () => {
               maxLength={10}
               style={{
                 color: '#000',
-                fontSize: 12,
+                fontSize: SIZES.width * 0.031,
                 fontWeight: '600',
                 fontFamily: 'Visby-Medium',
               }}
@@ -64,44 +64,44 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   text: {
     color: '#8C8C8C',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    padding: 10,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   inputContainer: {
     width: '100%',
-    height: 50,
+    height: SIZES.width * 0.13,
     borderWidth: 0.3,
     backgroundColor: '#EAEAEA',
     borderRadius: 10,
     borderColor: '#8C8C8C',
-    paddingHorizontal: 15,
+    paddingHorizontal: SIZES.width * 0.039,
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    marginVertical: SIZES.width * 0.051,
   },
   imageContainer: {
     flexDirection: 'row',
     width: '10%',
     alignItems: 'center',
-    gap: 10,
+    gap: SIZES.width * 0.026,
   },
 });

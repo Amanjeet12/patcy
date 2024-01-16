@@ -58,12 +58,12 @@ const ViewOrderScreen = () => {
           }}>
           <Image
             source={item.image}
-            style={{width: 50, height: 50, resizeMode: 'contain'}}
+            style={{width: SIZES.width * 0.13, height: SIZES.width * 0.13, resizeMode: 'contain'}}
           />
         </View>
         <View style={{width: '50%', justifyContent: 'space-between'}}>
-          <Text style={[styles.description, {fontSize: 12}]}>{item.name}</Text>
-          <Text style={[styles.title, {fontSize: 10, fontWeight: '700'}]}>
+          <Text style={[styles.description, {fontSize: SIZES.width * 0.031}]}>{item.name}</Text>
+          <Text style={[styles.title, {fontSize: SIZES.width * 0.026, fontWeight: '700'}]}>
             {item.price}
           </Text>
         </View>
@@ -78,7 +78,7 @@ const ViewOrderScreen = () => {
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
                 onPress={() => decreaseQuantity(item.id)}>
-                <Minus name="minus" size={16} color={'#ffc6c6'} />
+                <Minus name="minus" size={SIZES.width * 0.041} color={'#ffc6c6'} />
               </TouchableOpacity>
             </View>
             <View style={[styles.whiteButtonContainer, {width: '30%'}]}>
@@ -88,7 +88,7 @@ const ViewOrderScreen = () => {
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
                 onPress={() => increaseQuantity(item.id)}>
-                <Add name="add-outline" size={16} color={'#ffc6c6'} />
+                <Add name="add-outline" size={SIZES.width * 0.041} color={'#ffc6c6'} />
               </TouchableOpacity>
             </View>
           </View>
@@ -101,11 +101,11 @@ const ViewOrderScreen = () => {
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <View
         style={{
-          paddingHorizontal: 16,
-          marginTop: 10,
+          paddingHorizontal: SIZES.width * 0.041,
+          marginTop: SIZES.width * 0.026,
           flexDirection: 'row',
           alignItems: 'center',
-          gap: 5,
+          gap: SIZES.width * 0.013,
         }}>
         <BackChecker placeholder={'Your Cart'} />
         <Text style={styles.title}>(3 items)</Text>
@@ -114,7 +114,7 @@ const ViewOrderScreen = () => {
         data={suppless}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
-        contentContainerStyle={{paddingHorizontal: 16, marginTop: 10}}
+        contentContainerStyle={{paddingHorizontal: SIZES.width * 0.041, marginTop: SIZES.width * 0.026}}
       />
       <View
         style={{
@@ -122,27 +122,27 @@ const ViewOrderScreen = () => {
           height: 120,
           justifyContent: 'center',
         }}>
-        <View style={{bottom: 10, paddingHorizontal: 16, paddingTop: 10}}>
+        <View style={{bottom: SIZES.width * 0.026, paddingHorizontal: SIZES.width * 0.041, paddingTop: SIZES.width * 0.026}}>
           <View
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
-              paddingHorizontal: 5,
+              paddingHorizontal: SIZES.width * 0.013,
             }}>
             <Text
-              style={[styles.description, {fontSize: 12, fontWeight: '700'}]}>
+              style={[styles.description, {fontSize: SIZES.width * 0.031, fontWeight: '700'}]}>
               Total bill
             </Text>
-            <Text style={[styles.title, {fontSize: 12}]}>AED 2,325.00</Text>
+            <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>AED 2,325.00</Text>
           </View>
           <TouchableOpacity
             style={[
               styles.button,
               {
-                marginTop: 20,
+                marginTop: SIZES.width * 0.051,
                 flexDirection: 'row',
                 alignItems: 'center',
-                gap: 10,
+                gap: SIZES.width * 0.026,
               },
             ]}
             onPress={() => handleNavigation()}>
@@ -165,23 +165,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   title: {
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     fontWeight: '600',
     color: '#F84040',
     fontFamily: 'VisbyRound-Bold',
   },
   mainContainer: {
     backgroundColor: '#fff',
-    marginBottom: 10,
-    height: 90,
-    padding: 13,
+    marginBottom: SIZES.width * 0.026,
+    height: SIZES.width * 0.23,
+    padding: SIZES.width * 0.034,
     flexDirection: 'row',
-    borderRadius: 10,
-    gap: 20,
+    borderRadius: SIZES.width * 0.026,
+    gap: SIZES.width * 0.051,
   },
   addStyle: {
-    width: 20,
-    height: 20,
+    width: SIZES.width * 0.051,
+    height: SIZES.width * 0.051,
     backgroundColor: '#8c8c8c',
     borderRadius: 32,
     alignItems: 'center',
@@ -192,12 +192,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ffc6c6',
     borderRadius: 12,
-    width: 60,
-    height: 20,
+    width: SIZES.width * 0.153,
+    height: SIZES.width * 0.051,
   },
   specialStyle: {
-    width: 15,
-    height: 15,
+    width: SIZES.width * 0.039,
+    height: SIZES.width * 0.039,
     borderRadius: 30,
     backgroundColor: '#fff',
   },
@@ -208,22 +208,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   description: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     color: '#000',
     fontFamily: 'Visby-Medium',
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: '#D52C17',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },

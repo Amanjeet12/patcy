@@ -58,18 +58,18 @@ const SuppliesInnerScreen = () => {
           <HomeScreenImageSlider data={BigSliderS} />
         </View>
         <View style={styles.nameContainer}>
-          <View style={{gap: 5, width: '80%'}}>
+          <View style={{gap: SIZES.width * 0.013, width: '80%'}}>
             <Text style={styles.title}>
               Wild Balance Bye Bye Plaque Supplement for Dogs & Cats
             </Text>
             <Text style={styles.description}>Healthcare</Text>
           </View>
-          <View style={[styles.whiteContainer, {height: 55}]}>
+          <View style={[styles.whiteContainer, {height: SIZES.width * 0.141}]}>
             <View style={styles.flexBox}>
               <Star />
               <Text style={styles.text}>5.0</Text>
             </View>
-            <Text style={[styles.description, {fontSize: 10}]}>
+            <Text style={[styles.description, {fontSize: SIZES.width * 0.026}]}>
               150 Reviews
             </Text>
           </View>
@@ -78,13 +78,13 @@ const SuppliesInnerScreen = () => {
           <View
             style={[
               styles.flexBox,
-              {marginTop: 25, paddingHorizontal: 16, gap: 5},
+              {marginTop: SIZES.width * 0.064, paddingHorizontal: SIZES.width * 0.041, gap: SIZES.width * 0.013},
             ]}>
             <Text style={[styles.description, {color: '#F84040'}]}>Size :</Text>
             <HomeScreenSizeSlider data={data} />
           </View>
         </View>
-        <View style={{marginTop: 20}}>
+        <View style={{marginTop: SIZES.width * 0.051}}>
           <PriceCalculater />
         </View>
         <View>
@@ -93,7 +93,7 @@ const SuppliesInnerScreen = () => {
       </ScrollView>
 
       {active === true ? (
-        <View style={{paddingHorizontal: 16, bottom: 10}}>
+        <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026}}>
           <TouchableOpacity
             style={[
               styles.button,
@@ -101,7 +101,7 @@ const SuppliesInnerScreen = () => {
                 backgroundColor: '#D52C17',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                paddingHorizontal: 16,
+                paddingHorizontal: SIZES.width * 0.041,
               },
             ]}
             onPress={() => handleNavigation()}>
@@ -114,7 +114,7 @@ const SuppliesInnerScreen = () => {
           </TouchableOpacity>
         </View>
       ) : (
-        <View style={{paddingHorizontal: 16, bottom: 10, gap: 10}}>
+        <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026, gap: SIZES.width * 0.026}}>
           <Button placeholder={'Buy Now'} />
           <TouchableOpacity
             style={styles.button}
@@ -137,47 +137,47 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   nameContainer: {
-    paddingHorizontal: 16,
-    marginTop: 15,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginTop: SIZES.width * 0.039,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     fontWeight: '600',
     color: '#121212',
     fontFamily: 'VisbyRound-Bold',
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
-  flexBox: {flexDirection: 'row', alignItems: 'center', gap: 10},
+  flexBox: {flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026},
   whiteContainer: {
     alignItems: 'center',
-    gap: 5,
-    padding: 10,
+    gap: SIZES.width * 0.013,
+    padding: SIZES.width * 0.026,
     backgroundColor: '#fff',
     borderRadius: 10,
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: '#FFC6C6',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    padding: 10,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   text: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',

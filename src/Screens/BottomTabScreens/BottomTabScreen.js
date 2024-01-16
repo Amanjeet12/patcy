@@ -44,19 +44,18 @@ const CustomTabBarButton = ({children, onPress, accessibilityState}) => {
     <TouchableOpacity
       activeOpacity={1}
       style={{
-        marginTop: -13,
+        marginTop: -SIZES.width * 0.034,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 70,
-        height: 70,
-
+        width: SIZES.width * 0.18,
+        height: SIZES.width * 0.18,
         marginHorizontal: SIZES.width * 0.01,
       }}
       onPress={onPress}>
       <View
         style={{
-          width: 50,
-          height: 70,
+          width: SIZES.width * 0.13,
+          height: SIZES.width * 0.18,
           backgroundColor: 'transparent',
         }}>
         {children}

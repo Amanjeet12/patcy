@@ -28,15 +28,15 @@ const ProfileScreen = () => {
           <View>
             <Subscription />
           </View>
-          <View style={{marginTop: 25}}>
+          <View style={{marginTop: SIZES.width * 0.064}}>
             <Text style={styles.title}>Your Pets</Text>
             <YourPet data={PetData} />
           </View>
-          <View style={{marginTop: 10}}>
+          <View style={{marginTop: SIZES.width * 0.026}}>
             <Text style={styles.title}>Account Setting</Text>
             <InnerSectionProfile />
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text style={styles.title}>Support</Text>
             <SupportProfile />
           </View>
@@ -54,12 +54,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
-    marginBottom: 50,
+    paddingHorizontal: SIZES.width * 0.041,
+    marginBottom: SIZES.width * 0.13,
   },
   title: {
     color: '#8C8C8C',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },

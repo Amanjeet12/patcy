@@ -40,13 +40,13 @@ const SuppliesScreen = () => {
         <View>
           <HomeScreenPetSlider data={pet} />
         </View>
-        <View style={{marginTop: 25}}>
+        <View style={{marginTop: SIZES.width * 0.064}}>
           <HomeScreenFilter data={boardingFilter} />
         </View>
         <View
           style={{
-            marginTop: 25,
-            paddingHorizontal: 16,
+            marginTop: SIZES.width * 0.064,
+            paddingHorizontal: SIZES.width * 0.041,
             flexDirection: 'row',
           }}>
           <View style={{width: '85%'}}>

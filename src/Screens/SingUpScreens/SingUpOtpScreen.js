@@ -41,18 +41,18 @@ const SignUpOtpScreen = () => {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
         disabled={isLoading}>
-        <Icon name="arrowleft" size={20} color={'#121212'} />
+        <Icon name="arrowleft" size={SIZES.width * 0.051} color={'#121212'} />
       </TouchableOpacity>
-      <View style={{marginTop: 30}}>
+      <View style={{marginTop: SIZES.width * 0.077}}>
         <Text style={styles.title}>Enter OTP</Text>
         <Text style={styles.description}>
           We just sent an OTP to the mobile number provided
         </Text>
       </View>
-      <View style={{marginTop: 35}}>
+      <View style={{marginTop: SIZES.width * 0.0893}}>
         <OtpContainer />
         <TouchableOpacity
-          style={{alignItems: 'flex-end', marginTop: 20}}
+          style={{alignItems: 'flex-end', marginTop: SIZES.width * 0.051}}
           onPress={() => console.log('enter')}>
           <Text style={styles.textTitle}>Send the code again</Text>
         </TouchableOpacity>
@@ -80,54 +80,54 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F6F6F6',
-    marginHorizontal: 16,
+    marginHorizontal: SIZES.width * 0.041,
   },
   backButton: {
-    width: 30,
-    height: 30,
+    width: SIZES.width * 0.077,
+    height: SIZES.width * 0.077,
     backgroundColor: 'white',
-    marginTop: 20,
+    marginTop: SIZES.width * 0.051,
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     color: '#121212',
-    fontSize: 24,
+    fontSize: SIZES.width * 0.062,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   description: {
     color: '#121212',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
-    paddingTop: 10,
+    paddingTop: SIZES.width * 0.026,
   },
   textTitle: {
     color: COLORS.primary,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    padding: 10,
-    marginTop: 35,
+    padding: SIZES.width * 0.026,
+    marginTop: SIZES.width * 0.0893,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   modalContent: {
     backgroundColor: 'rgba(255, 255, 255, 0.70)',
-    padding: 20,
+    padding: SIZES.width * 0.051,
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,

@@ -16,14 +16,14 @@ const AppointmentScreen = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <View>
-        <View style={{marginTop: 10, marginHorizontal: 16}}>
+        <View style={{marginTop: SIZES.width * 0.026, marginHorizontal: SIZES.width * 0.041}}>
           <BackChecker placeholder={'Appontments'} />
         </View>
         <View
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            marginHorizontal: 16,
+            marginHorizontal: SIZES.width * 0.041,
           }}>
           <TouchableOpacity style={styles.boxContainer}>
             <Text style={styles.text}>Upcoming Appointments</Text>
@@ -34,7 +34,7 @@ const AppointmentScreen = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{marginTop: 15}}>
+        <View style={{marginTop: SIZES.width * 0.039}}>
           <Appointment data={doctorData} />
         </View>
       </View>
@@ -50,22 +50,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   boxContainer: {
-    height: 45,
+    height: SIZES.width * 0.115,
     backgroundColor: '#fff',
     width: '52%',
     justifyContent: 'center',
     padding: 3,
-    paddingHorizontal: 5,
+    paddingHorizontal: SIZES.width * 0.013,
   },
   text: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
     backgroundColor: '#FFC6C6',
-    paddingHorizontal: 30,
+    paddingHorizontal: SIZES.width * 0.077,
     textAlign: 'center',
-    paddingVertical: 10,
+    paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },
 });

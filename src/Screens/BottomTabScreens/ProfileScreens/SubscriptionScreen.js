@@ -25,13 +25,13 @@ const SubscriptionScreen = () => {
             <TouchableOpacity
               style={styles.backButton}
               onPress={() => navigation.goBack()}>
-              <Icon name="arrowleft" size={24} color={'#121212'} />
+              <Icon name="arrowleft" size={SIZES.width * 0.062} color={'#121212'} />
             </TouchableOpacity>
           </View>
           <View style={styles.ImageContainer}>
             <PetCareComponent />
             <Text style={styles.description}>Upgrade to</Text>
-            <PetcyRedLogo width={80} height={40} />
+            <PetcyRedLogo width={SIZES.width * 0.205} height={SIZES.width * 0.102} />
             <Text style={styles.subscription}>Subscription</Text>
           </View>
           <View style={styles.offerContainer}>
@@ -41,18 +41,18 @@ const SubscriptionScreen = () => {
                 <Text
                   style={[
                     styles.description,
-                    {paddingTop: 0, color: '#000', fontSize: 12},
+                    {paddingTop: 0, color: '#000', fontSize: SIZES.width * 0.031},
                   ]}>
                   / year
                 </Text>
               </View>
               <View
-                style={{width: '100%', paddingHorizontal: 20, paddingTop: 10}}>
+                style={{width: '100%', paddingHorizontal: SIZES.width * 0.051, paddingTop: SIZES.width * 0.026}}>
                 <Button placeholder={'Subscribe Now'} />
               </View>
               <View style={styles.innerTextContainer}>
                 <Text
-                  style={[styles.description, {fontSize: 12, paddingTop: 0}]}>
+                  style={[styles.description, {fontSize: SIZES.width * 0.031, paddingTop: 0}]}>
                   No hidden charges, No commitments!
                 </Text>
               </View>
@@ -94,15 +94,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   backContainer: {
-    height: 60,
+    height: SIZES.width * 0.153,
     justifyContent: 'center',
   },
   backButton: {
-    width: 30,
-    height: 30,
+    width: SIZES.width * 0.077,
+    height: SIZES.width * 0.077,
     backgroundColor: 'white',
     borderRadius: 20,
     alignItems: 'center',
@@ -114,26 +114,26 @@ const styles = StyleSheet.create({
   description: {
     color: '#000',
     textAlign: 'center',
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
-    paddingTop: 20,
+    paddingTop: SIZES.width * 0.051,
   },
   subscription: {
     color: '#000',
-    fontSize: 24,
+    fontSize: SIZES.width * 0.062,
     fontWeight: '600',
     textAlign: 'center',
     fontFamily: 'Visby-Medium',
-    marginTop: -5,
+    marginTop: -SIZES.width * 0.013,
   },
   offerContainer: {
-    height: 200,
-    marginTop: 20,
-    paddingVertical: 10,
+    height: SIZES.width * 0.51,
+    marginTop: SIZES.width * 0.051,
+    paddingVertical: SIZES.width * 0.026,
   },
   whiteContainer: {
-    height: 170,
+    height: SIZES.width * 0.44,
     backgroundColor: '#fff',
     borderRadius: 16,
     alignItems: 'center',
@@ -148,28 +148,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   SpecialText: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     color: '#000',
-    paddingHorizontal: 18,
-    paddingVertical: 5,
+    paddingHorizontal: SIZES.width * 0.046,
+    paddingVertical: SIZES.width * 0.013,
     backgroundColor: '#FFC6C6',
-    borderRadius: 12,
+    borderRadius: SIZES.width * 0.031,
     fontFamily: 'Visby-Medium',
   },
   flexBox: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
+    gap: SIZES.width * 0.013,
   },
   price: {
     color: '#F84040',
-    fontSize: 25,
+    fontSize: SIZES.width * 0.064,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   innerTextContainer: {
-    height: 25,
+    height: SIZES.width * 0.064,
     position: 'absolute',
     bottom: 0,
     width: '100%',
@@ -181,26 +181,26 @@ const styles = StyleSheet.create({
   },
   redText: {
     color: '#F84040',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
   },
   whiteTextContainer: {
-    height: 120,
+    height: SIZES.width * 0.31,
     borderWidth: 1,
     borderColor: '#FFC6C6',
     backgroundColor: '#fff',
     borderRadius: 10,
-    paddingHorizontal: 80,
-    paddingVertical: 15,
-    marginTop: 10,
+    paddingHorizontal: SIZES.width * 0.205,
+    paddingVertical: SIZES.width * 0.039,
+    marginTop: SIZES.width * 0.026,
     alignItems: 'center',
   },
   blackText: {
     color: '#000',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
-    lineHeight: 18,
+    lineHeight: SIZES.width * 0.046,
     fontFamily: 'Visby-Medium',
   },
 });

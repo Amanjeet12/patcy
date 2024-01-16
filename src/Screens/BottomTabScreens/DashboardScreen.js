@@ -37,32 +37,32 @@ const DashboardScreen = () => {
           style={{
             backgroundColor: '#F6F6F6',
             flex: 1,
-            borderTopLeftRadius: 40,
-            borderTopRightRadius: 40,
+            borderTopLeftRadius: SIZES.width * 0.102,
+            borderTopRightRadius: SIZES.width * 0.102,
           }}>
-          <View style={{marginTop: 30, paddingHorizontal: 16}}>
+          <View style={{marginTop: SIZES.width * 0.077, paddingHorizontal: SIZES.width * 0.041}}>
             <Text style={styles.title}>Pet Services</Text>
             <BoxContainer data={box} />
           </View>
-          <View style={{marginVertical: 25}}>
+          <View style={{marginVertical: SIZES.width * 0.064}}>
             <CustomImageCarousal
               data={NormalSlider}
               autoPlay={true}
               pagination={false}
             />
           </View>
-          <View style={{marginVertical: 20}}>
-            <View style={{marginHorizontal: 16, marginBottom: 10}}>
+          <View style={{marginVertical: SIZES.width * 0.051}}>
+            <View style={{marginHorizontal: SIZES.width * 0.041, marginBottom: SIZES.width * 0.026}}>
               <Text style={styles.title}>Top Deals</Text>
             </View>
             <ImageSlider images={data2} />
           </View>
 
-          <View style={{marginVertical: 10}}>
+          <View style={{marginVertical: SIZES.width * 0.026}}>
             <View
               style={{
-                marginHorizontal: 16,
-                marginBottom: 10,
+                marginHorizontal: SIZES.width * 0.041,
+                marginBottom: SIZES.width * 0.026,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
@@ -73,17 +73,17 @@ const DashboardScreen = () => {
             </View>
             <ImageSlider2 images={data3} />
           </View>
-          <View style={{marginVertical: 20}}>
-            <View style={{marginHorizontal: 16, marginBottom: 10}}>
+          <View style={{marginVertical: SIZES.width * 0.051}}>
+            <View style={{marginHorizontal: SIZES.width * 0.041, marginBottom: SIZES.width * 0.026}}>
               <Text style={styles.title}>Featured Stores</Text>
             </View>
             <StoreContainer data={store} />
           </View>
-          <View style={{marginVertical: 10}}>
+          <View style={{marginVertical: SIZES.width * 0.026}}>
             <View
               style={{
-                marginHorizontal: 16,
-                marginBottom: 10,
+                marginHorizontal: SIZES.width * 0.041,
+                marginBottom: SIZES.width * 0.026,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
@@ -108,17 +108,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#F84040',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   title: {
     color: '#000',
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '700',
     fontFamily: 'Visby-Medium',
   },
   description: {
     color: COLORS.primary,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '700',
     fontFamily: 'Visby-Medium',
   },

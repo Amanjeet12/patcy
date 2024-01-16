@@ -18,7 +18,7 @@ const AboutScreen = () => {
           <BackChecker placeholder={'About Petcy'} />
 
           <View>
-            <View style={{paddingVertical: 20}}>
+            <View style={{paddingVertical: SIZES.width * 0.051}}>
               <Text style={styles.redText}>
                 Welcome to Petcy: Your Pet Reward Platform!
               </Text>
@@ -56,16 +56,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
     color: '#000',
   },
   redText: {
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
     color: '#D52C17',

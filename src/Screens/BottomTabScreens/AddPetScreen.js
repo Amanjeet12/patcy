@@ -82,36 +82,36 @@ const AddPetScreen = ({navigation}) => {
           <View style={styles.mainContainer}>
             <BackChecker placeholder={'Add Pet'} />
           </View>
-          <View style={{marginTop: 5}}>
-            <View style={{paddingHorizontal: 16}}>
+          <View style={{marginTop: SIZES.width * 0.013}}>
+            <View style={{paddingHorizontal: SIZES.width * 0.041}}>
               <Text style={styles.title}>Provide the details of your pet</Text>
               <ImageUploader />
             </View>
             <View style={{}}>
-              <Text style={[styles.title, {paddingHorizontal: 16}]}>
+              <Text style={[styles.title, {paddingHorizontal: SIZES.width * 0.041}]}>
                 Choose a pet
               </Text>
               <PetList data={pet} onSelectItem={handleSelectItem} />
             </View>
             <View style={styles.padding}>
               <Text style={styles.title}>What’s your pet’s name?</Text>
-              <View style={{marginTop: 5}}>
+              <View style={{marginTop: SIZES.width * 0.013}}>
                 <CommonContainer placeholder={'Enter pet name'} />
               </View>
             </View>
             <View style={styles.padding}>
               <Text style={styles.title}>What’s your pet’s name?</Text>
-              <View style={{marginTop: 5}}>
+              <View style={{marginTop: SIZES.width * 0.013}}>
                 <CommonContainer placeholder={'Enter pet name'} />
               </View>
             </View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.title, {paddingHorizontal: 16}]}>
                 Choose pet's gender
               </Text>
               <PetList data={Gender} onSelectItem={handleSelectItemGender} />
             </View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.title, {paddingHorizontal: 16}]}>
                 What is your pet size?
               </Text>
@@ -124,7 +124,7 @@ const AddPetScreen = ({navigation}) => {
             </View>
             <View style={styles.padding}>
               <Text style={styles.title}>Vaccination details</Text>
-              <View style={{marginTop: 5}}>
+              <View style={{marginTop: SIZES.width * 0.013}}>
                 <CommonContainer placeholder={'Enter the age'} />
               </View>
             </View>
@@ -149,8 +149,8 @@ const AddPetScreen = ({navigation}) => {
           },
           draggableIcon: {
             backgroundColor: '#D9D9D9',
-            width: 80,
-            height: 5,
+            width: SIZES.width * 0.205,
+            height: SIZES.width * 0.013,
           },
         }}>
         <View style={styles.bottomSheetContainer}>
@@ -159,7 +159,7 @@ const AddPetScreen = ({navigation}) => {
               Confirm pet details
             </Text>
           </View>
-          <View style={{paddingHorizontal: 16}}>
+          <View style={{paddingHorizontal: SIZES.width * 0.041}}>
             <DividerContainer left={'Pet Type'} right={'Dog'} />
             <DividerContainer left={'Pet Name'} right={'Winner'} />
             <DividerContainer left={'Pet Age'} right={'8 Years'} />
@@ -172,8 +172,8 @@ const AddPetScreen = ({navigation}) => {
             style={{
               position: 'absolute',
               width: '100%',
-              bottom: 80,
-              paddingHorizontal: 16,
+              bottom: SIZES.width * 0.205,
+              paddingHorizontal: SIZES.width * 0.041,
             }}>
             <TouchableOpacity
               style={[styles.button, {backgroundColor: '#FFC6C6'}]}
@@ -187,8 +187,8 @@ const AddPetScreen = ({navigation}) => {
             style={{
               position: 'absolute',
               width: '100%',
-              bottom: 20,
-              paddingHorizontal: 16,
+              bottom: SIZES.width * 0.051,
+              paddingHorizontal: SIZES.width * 0.041,
             }}>
             <TouchableOpacity
               style={styles.button}
@@ -210,40 +210,40 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   title: {
     color: '#8C8C8C',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   flexContainer: {
-    marginTop: 5,
-    paddingHorizontal: 16,
+    marginTop: SIZES.width * 0.013,
+    paddingHorizontal: SIZES.width * 0.041,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 20,
+    gap: SIZES.width * 0.051,
   },
-  padding: {marginTop: 20, paddingHorizontal: 16},
+  padding: {marginTop: SIZES.width * 0.051, paddingHorizontal: SIZES.width * 0.041},
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    padding: 10,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   buttonContainer: {
-    marginHorizontal: 16,
-    marginBottom: 30,
-    marginTop: 20,
+    marginHorizontal: SIZES.width * 0.041,
+    marginBottom: SIZES.width * 0.077,
+    marginTop: SIZES.width * 0.051,
   },
   contentContainer: {
     flex: 1,
@@ -253,16 +253,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleContainer: {
-    height: 50,
+    height: SIZES.width * 0.13,
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 0.3,
     borderBottomColor: '#8C8C8C',
-    marginHorizontal: 16,
+    marginHorizontal: SIZES.width * 0.041,
   },
   divider: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 16,
+    marginTop: SIZES.width * 0.041,
   },
 });

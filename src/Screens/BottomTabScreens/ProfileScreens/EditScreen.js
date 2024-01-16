@@ -46,23 +46,23 @@ const EditScreen = () => {
           </View>
           <View style={styles.padding}>
             <Text style={styles.title}>What’s your pet’s name?</Text>
-            <View style={{marginTop: 5}}>
+            <View style={{marginTop: SIZES.width * 0.013}}>
               <CommonContainer placeholder={'Enter your name'} />
             </View>
           </View>
           <View style={styles.padding}>
             <Text style={styles.title}>Email Address</Text>
-            <View style={{marginTop: 5}}>
+            <View style={{marginTop: SIZES.width * 0.013}}>
               <CommonContainer placeholder={'Enter Email address'} />
             </View>
           </View>
           <View style={styles.padding}>
             <Text style={styles.title}>Mobile No</Text>
-            <View style={{marginTop: 10}}>
+            <View style={{marginTop: SIZES.width * 0.026}}>
               <FlagContainer />
             </View>
           </View>
-          <View style={{marginTop: 25, marginBottom: 50}}>
+          <View style={{marginTop: SIZES.width * 0.064, marginBottom: SIZES.width * 0.13}}>
             <Button placeholder={'Update'} />
           </View>
         </View>
@@ -79,30 +79,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   imageContainer: {
-    width: 70,
-    height: 70,
+    width: SIZES.width * 0.18,
+    height: SIZES.width * 0.18,
     borderRadius: 32,
   },
   cameraContainer: {
     position: 'absolute',
-    width: 25,
-    height: 25,
+    width: SIZES.width * 0.064,
+    height: SIZES.width * 0.064,
     borderRadius: 32,
     backgroundColor: '#D92A12',
     borderWidth: 2,
     borderColor: '#fff',
-    bottom: -5,
+    bottom: -SIZES.width * 0.013,
     right: 0,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  padding: {marginTop: 20},
+  padding: {marginTop: SIZES.width * 0.051},
   title: {
     color: '#8C8C8C',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },

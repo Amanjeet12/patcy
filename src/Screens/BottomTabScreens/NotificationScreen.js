@@ -57,33 +57,33 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   notificationItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 15,
+    paddingVertical: SIZES.width * 0.039,
     borderBottomWidth: 0.5,
     borderBottomColor: '#8C8C8C',
   },
   notificationImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 20,
-    marginRight: 10,
-    marginTop: 10,
+    width: SIZES.width * 0.13,
+    height: SIZES.width * 0.13,
+    borderRadius: SIZES.width * 0.051,
+    marginRight: SIZES.width * 0.026,
+    marginTop: SIZES.width * 0.026,
   },
   notificationText: {
     flex: 1,
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
     color: '#000',
   },
   lastThreeWords: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
     color: 'red', // Change the color to your desired color
