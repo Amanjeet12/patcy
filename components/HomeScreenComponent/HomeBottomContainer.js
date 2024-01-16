@@ -1,6 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import image from '../../constant/image';
+import {SIZES} from '../../constant/theme';
 
 const HomeBottomContainer = () => {
   return (
@@ -19,14 +21,26 @@ const HomeBottomContainer = () => {
       </View>
       <View style={styles.bookingDateContainer}>
         <Text
-          style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
+          style={[
+            styles.description,
+            {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+          ]}>
           Details
         </Text>
-        <View style={{backgroundColor: '#fff', padding: 15, borderRadius: 10}}>
+        <View
+          style={{
+            backgroundColor: '#fff',
+            padding: SIZES.width * 0.039,
+            borderRadius: 10,
+          }}>
           <Text
             style={[
               styles.description,
-              {fontSize: 10, color: '#8C8C8C', lineHeight: 16},
+              {
+                fontSize: SIZES.width * 0.026,
+                color: '#8C8C8C',
+                lineHeight: SIZES.width * 0.041,
+              },
             ]}>
             PAWPEACE is a full-service animal care facility dedicated to
             consistently providing high customer satisfaction by rendering
@@ -38,10 +52,17 @@ const HomeBottomContainer = () => {
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: 10}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Location
           </Text>
-          <Text style={[styles.description, {color: '#000', marginBottom: 10}]}>
+          <Text
+            style={[
+              styles.description,
+              {color: '#000', marginBottom: SIZES.width * 0.026},
+            ]}>
             34 Al Marija St - Al Jubail - Sharjah - United Arab Emirates{' '}
           </Text>
           <View>
@@ -60,34 +81,34 @@ export default HomeBottomContainer;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 20,
+    marginBottom: SIZES.width * 0.051,
     marginTop: 1,
   },
   boxContainer: {
-    height: 45,
+    height: SIZES.width * 0.115,
     backgroundColor: '#fff',
     width: '52%',
     justifyContent: 'center',
-    padding: 3,
+    padding: SIZES.width * 0.009,
   },
   text: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
     backgroundColor: '#FFC6C6',
-    paddingHorizontal: 35,
+    paddingHorizontal: SIZES.width * 0.0893,
     textAlign: 'center',
-    paddingVertical: 10,
+    paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
   bookingDateContainer: {
-    marginTop: 20,
+    marginTop: SIZES.width * 0.051,
   },
 });

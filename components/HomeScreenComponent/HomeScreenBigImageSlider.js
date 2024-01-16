@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenBigImageSlider = ({data}) => {
   const totalImages = data.length;
@@ -16,7 +17,10 @@ const HomeScreenBigImageSlider = ({data}) => {
           <View
             key={item.id}
             style={{
-              marginRight: index === totalImages - 1 ? 16 : 10,
+              marginRight:
+                index === totalImages - 1
+                  ? SIZES.width * 0.041
+                  : SIZES.width * 0.026,
             }}>
             <Image
               key={item.id}
@@ -35,13 +39,13 @@ export default HomeScreenBigImageSlider;
 const styles = StyleSheet.create({
   scrollView: {
     flexDirection: 'row',
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   image: {
-    width: 300,
-    height: 250,
+    width: SIZES.width * 0.78,
+    height: SIZES.width * 0.64,
     resizeMode: 'cover',
-    marginRight: 10,
+    marginRight: SIZES.width * 0.026,
     borderRadius: 10,
   },
 });

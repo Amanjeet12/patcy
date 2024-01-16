@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {COLORS} from '../../constant/theme';
+import {COLORS, SIZES} from '../../constant/theme';
 import {useNavigation} from '@react-navigation/native';
 
 const BottomPriceChecker = ({data}) => {
@@ -11,7 +11,11 @@ const BottomPriceChecker = ({data}) => {
     navigation.navigate('CheckoutScreen');
   };
   return (
-    <View style={[styles.container, {height: data ? 100 : 80}]}>
+    <View
+      style={[
+        styles.container,
+        {height: data ? SIZES.width * 0.26 : SIZES.width * 0.205},
+      ]}>
       <View
         style={{
           flexDirection: 'row',
@@ -46,22 +50,22 @@ const BottomPriceChecker = ({data}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
+    height: SIZES.width * 0.26,
     backgroundColor: '#fff',
-    paddingHorizontal: 16,
-    gap: 10,
-    paddingTop: 10,
+    paddingHorizontal: SIZES.width * 0.041,
+    gap: SIZES.width * 0.026,
+    paddingTop: SIZES.width * 0.026,
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
   },

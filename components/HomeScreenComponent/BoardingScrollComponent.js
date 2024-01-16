@@ -29,7 +29,7 @@ const CommonDesignContainer = ({data, screen}) => {
         key={item.id}
         style={styles.itemContainer}
         onPress={() => handleItemPress(item.id)}>
-        <View style={{width: '100%', height: 110}}>
+        <View style={{width: '100%', height: SIZES.width * 0.281}}>
           <Image
             source={item.image}
             style={{
@@ -45,8 +45,8 @@ const CommonDesignContainer = ({data, screen}) => {
                 style={[
                   styles.title,
                   {
-                    paddingHorizontal: 10,
-                    paddingVertical: 4,
+                    paddingHorizontal: SIZES.width * 0.026,
+                    paddingVertical: SIZES.width * 0.01,
                     backgroundColor: '#FFC6C6',
                     borderRadius: 32,
                   },
@@ -56,13 +56,17 @@ const CommonDesignContainer = ({data, screen}) => {
             </View>
           ) : null}
         </View>
-        <View style={{padding: 10}}>
+        <View style={{padding: SIZES.width * 0.026}}>
           <Text
             style={[styles.title, {color: '#000', fontWeight: '600'}]}
             numberOfLines={1}>
             {item.name}
           </Text>
-          <View style={[styles.flexBoxContainer, {gap: 20, marginTop: 5}]}>
+          <View
+            style={[
+              styles.flexBoxContainer,
+              {gap: SIZES.width * 0.051, marginTop: SIZES.width * 0.013},
+            ]}>
             <View style={styles.flexBoxContainer}>
               <Location />
               <Text
@@ -82,7 +86,7 @@ const CommonDesignContainer = ({data, screen}) => {
               {item.status}
             </Text>
           </View>
-          <View style={[styles.flexBox, {marginTop: 3}]}>
+          <View style={[styles.flexBox, {marginTop: SIZES.width * 0.009}]}>
             <View style={styles.flexBoxContainer}>
               <Star />
               <Text style={styles.title}>{item.rating}</Text>
@@ -113,27 +117,25 @@ const CommonDesignContainer = ({data, screen}) => {
   return <View style={styles.container}>{renderItems()}</View>;
 };
 
-export default CommonDesignContainer;
-
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10,
-    paddingHorizontal: 10,
+    marginTop: SIZES.width * 0.026,
+    paddingHorizontal: SIZES.width * 0.026,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
   itemContainer: {
     width: SIZES.width / 2 - 30,
-    height: 180,
+    height: SIZES.width * 0.46,
     backgroundColor: '#fff',
-    borderRadius: 10,
-    margin: 10,
+    borderRadius: SIZES.width * 0.026,
+    margin: SIZES.width * 0.026,
   },
   title: {
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     textAlign: 'left',
   },
@@ -145,7 +147,9 @@ const styles = StyleSheet.create({
   flexBoxContainer: {flexDirection: 'row', alignItems: 'center', gap: 5},
   OfferContainer: {
     position: 'absolute',
-    top: 10,
-    left: 10,
+    top: SIZES.width * 0.026,
+    left: SIZES.width * 0.026,
   },
 });
+
+export default CommonDesignContainer;

@@ -3,12 +3,18 @@ import React from 'react';
 import Button from '../Button';
 import {Backbutton} from '../../src/Screens/SvgComponent/Logocomponent';
 import {useNavigation} from '@react-navigation/native';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenBackButton = ({placeholder, icon, screen, title}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.maincontainer}>
-      <View style={{flexDirection: 'row', alignItems: 'center', gap: 17}}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: SIZES.width * 0.044,
+        }}>
         <TouchableOpacity
           style={styles.whiteButton}
           onPress={() => navigation.goBack()}>
@@ -29,15 +35,15 @@ export default HomeScreenBackButton;
 
 const styles = StyleSheet.create({
   maincontainer: {
-    height: 80,
+    height: SIZES.width * 0.205,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
     justifyContent: 'space-between',
   },
   whiteButton: {
-    width: 30,
-    height: 30,
+    width: SIZES.width * 0.077,
+    height: SIZES.width * 0.077,
     borderRadius: 32,
     backgroundColor: '#fff',
     justifyContent: 'center',
@@ -45,16 +51,16 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#121212',
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
   },
   textContainer: {
     fontFamily: 'Visby-Medium',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '500',
     color: '#000',
-    padding: 10,
+    padding: SIZES.width * 0.026,
     borderWidth: 0.5,
     borderRadius: 5,
     borderColor: '#D52C17',

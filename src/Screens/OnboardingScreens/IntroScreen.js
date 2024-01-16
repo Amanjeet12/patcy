@@ -1,10 +1,11 @@
 import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import image from '../../../constant/image';
 import Button from '../../../components/Button';
 
 const IntroScreen = () => {
+  console.log(SIZES.width * 0.64);
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle={'dark-content'} />
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   mainContainer: {
-    marginTop: 55,
+    marginTop: SIZES.width * 0.141,
   },
   textContainer: {
     marginHorizontal: 16,

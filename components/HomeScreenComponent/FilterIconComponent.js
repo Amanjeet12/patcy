@@ -86,21 +86,21 @@ const FilterIconComponent = () => {
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={SIZES.height - 20}
+        height={SIZES.height - SIZES.width * 0.051}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
           },
           draggableIcon: {
             backgroundColor: '#D9D9D9',
-            width: 80,
-            height: 5,
+            width: SIZES.width * 0.205,
+            height: SIZES.width * 0.013,
           },
         }}>
         <View style={styles.mainContainer}>
           <View>
             <Text style={styles.title}>Filter</Text>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.text, {color: '#8C8C8C'}]}>
                 Grooming Service
               </Text>
@@ -130,7 +130,7 @@ const FilterIconComponent = () => {
           </View>
           <View style={styles.borderColor} />
           <View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.text, {color: '#8C8C8C'}]}>
                 Availability
               </Text>
@@ -139,13 +139,13 @@ const FilterIconComponent = () => {
                   styles.flexContainer,
                   {justifyContent: 'space-between'},
                 ]}>
-                <Text style={[styles.title, {fontSize: 12}]}>
+                <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>
                   Filter by availabilty
                 </Text>
                 <TouchableOpacity
                   style={{
-                    width: 25,
-                    height: 25,
+                    width: SIZES.width * 0.064,
+                    height: SIZES.width * 0.064,
                     borderWidth: 1,
                     borderColor: 'red',
                     backgroundColor: availabilty === true ? 'red' : '#fff',
@@ -160,20 +160,20 @@ const FilterIconComponent = () => {
           </View>
           <View style={styles.borderColor} />
           <View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.text, {color: '#8C8C8C'}]}>Distance</Text>
               <View
                 style={[
                   styles.flexContainer,
                   {justifyContent: 'space-between'},
                 ]}>
-                <Text style={[styles.title, {fontSize: 12}]}>
+                <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>
                   Filter by distance
                 </Text>
                 <TouchableOpacity
                   style={{
-                    width: 25,
-                    height: 25,
+                    width: SIZES.width * 0.064,
+                    height: SIZES.width * 0.064,
                     borderWidth: 1,
                     borderColor: 'red',
                     backgroundColor: distance === true ? 'red' : '#fff',
@@ -188,19 +188,23 @@ const FilterIconComponent = () => {
           </View>
           <View style={styles.borderColor} />
           <View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.text, {color: '#8C8C8C'}]}>Price range</Text>
               <View
                 style={[
                   styles.flexContainer,
                   {justifyContent: 'space-between'},
                 ]}>
-                <Text style={[styles.title, {fontSize: 12}]}>AED 10</Text>
-                <Text style={[styles.title, {fontSize: 12}]}>AED 10,000</Text>
+                <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>
+                  AED 10
+                </Text>
+                <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>
+                  AED 10,000
+                </Text>
               </View>
               <View>
                 <Slider
-                  style={{width: '100%', height: 40}}
+                  style={{width: '100%', height: SIZES.width * 0.102}}
                   values={0.5}
                   onValuesChange={handleSliderChange}
                   minimumValue={0}
@@ -214,7 +218,7 @@ const FilterIconComponent = () => {
           </View>
           <View style={styles.borderColor} />
           <View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: SIZES.width * 0.051}}>
               <Text style={[styles.text, {color: '#8C8C8C'}]}>Rating</Text>
               <View style={styles.flexContainer}>
                 {data.map((item, index) => (
@@ -224,8 +228,8 @@ const FilterIconComponent = () => {
                       styles.boxContainer,
                       {
                         backgroundColor: rating === item.id ? 'red' : '#FFF0F0',
-                        paddingHorizontal: 15,
-                        paddingVertical: 10,
+                        paddingHorizontal: SIZES.width * 0.039,
+                        paddingVertical: SIZES.width * 0.026,
                       },
                     ]}
                     onPress={() => handleRating(item.id)}>
@@ -253,7 +257,12 @@ const FilterIconComponent = () => {
             <CloseButton />
           </TouchableOpacity>
         </View>
-        <View style={{width: '100%', bottom: 10, paddingHorizontal: 16}}>
+        <View
+          style={{
+            width: '100%',
+            bottom: SIZES.width * 0.026,
+            paddingHorizontal: SIZES.width * 0.041,
+          }}>
           <TouchableOpacity
             style={styles.button}
             onPress={() => handleCloseBottomSheet()}>
@@ -269,12 +278,12 @@ export default FilterIconComponent;
 
 const styles = StyleSheet.create({
   container: {
-    height: 40,
+    height: SIZES.width * 0.102,
     justifyContent: 'center',
     alignItems: 'center',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
     flex: 1,
   },
   flexDireaction: {
@@ -282,12 +291,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#000',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   title: {
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
     color: '#121212',
@@ -296,39 +305,39 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     flexWrap: 'wrap',
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
   },
   boxContainer: {
-    marginLeft: 10,
+    marginLeft: SIZES.width * 0.026,
     borderWidth: 0.3,
     borderColor: 'red',
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-    borderRadius: 3,
-    marginBottom: 10,
+    paddingHorizontal: SIZES.width * 0.026,
+    paddingVertical: SIZES.width * 0.009,
+    borderRadius: SIZES.width * 0.009,
+    marginBottom: SIZES.width * 0.026,
   },
   borderColor: {
     height: 0.5,
     backgroundColor: '#FFC6C6',
-    marginTop: 20,
+    marginTop: SIZES.width * 0.051,
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   closeButton: {
-    width: 30,
-    height: 30,
+    width: SIZES.width * 0.077,
+    height: SIZES.width * 0.077,
     borderRadius: 32,
     backgroundColor: '#F6F6F6',
     alignItems: 'center',
@@ -336,7 +345,7 @@ const styles = StyleSheet.create({
   },
   closeButtonContainer: {
     position: 'absolute',
-    top: 20,
-    right: 25,
+    top: SIZES.width * 0.051,
+    right: SIZES.width * 0.064,
   },
 });
