@@ -39,29 +39,29 @@ const styles = StyleSheet.create({
     marginTop: SIZES.width * 0.141,
   },
   textContainer: {
-    marginHorizontal: 16,
+    marginHorizontal: SIZES.width * 0.041,
   },
   title: {
     color: COLORS.primary,
-    fontSize: 36,
+    fontSize: SIZES.width * 0.09,
     fontWeight: '600',
-    lineHeight: 36,
+    lineHeight: SIZES.width * 0.09,
     fontFamily: 'Visby-Medium',
   },
   description: {
     color: COLORS.black,
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '500',
-    lineHeight: 22,
+    lineHeight: SIZES.width * 0.057,
     fontFamily: 'Visby-Medium',
-    marginTop: 19,
+    marginTop: SIZES.width * 0.049,
   },
   imageContainer: {
     position: 'relative',
     width: '100%',
     height: 400,
     overflow: 'hidden',
-    marginTop: 30,
+    marginTop: SIZES.width * 0.077,
   },
   image: {
     width: '100%',
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 200,
   },
   buttonContainer: {
-    marginHorizontal: 16,
-    marginTop: 50,
+    marginHorizontal: SIZES.width * 0.041,
+    marginTop: SIZES.width * 0.13,
   },
 });
