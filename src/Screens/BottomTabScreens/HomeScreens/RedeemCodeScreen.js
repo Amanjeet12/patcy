@@ -9,7 +9,7 @@ import React from 'react';
 import BackChecker from '../../../../components/BackChecker';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import {COLORS} from '../../../../constant/theme';
+import {COLORS, SIZES} from '../../../../constant/theme';
 import {Redeem, Search} from '../../SvgComponent/Logocomponent';
 import {TextInput} from 'react-native-gesture-handler';
 

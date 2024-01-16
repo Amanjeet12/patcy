@@ -33,7 +33,12 @@ const PaymentScreen = () => {
             <LinearGradient
               colors={['rgba(0, 0, 0, 0.5)', 'rgba(0, 0, 0, 0.5)']}
               style={styles.gradient}>
-              <View style={{position: 'absolute', top: SIZES.width * 0.077, left: SIZES.width * 0.041}}>
+              <View
+                style={{
+                  position: 'absolute',
+                  top: SIZES.width * 0.077,
+                  left: SIZES.width * 0.041,
+                }}>
                 <TouchableOpacity
                   style={styles.backButton}
                   onPress={() => navigation.goBack()}>
@@ -51,11 +56,21 @@ const PaymentScreen = () => {
                 <Text
                   style={[
                     styles.text,
-                    {fontSize: SIZES.width * 0.046, textDecorationLine: 'line-through'},
+                    {
+                      fontSize: SIZES.width * 0.046,
+                      textDecorationLine: 'line-through',
+                    },
                   ]}>
                   AED 1,025.69
                 </Text>
-                <Text style={[styles.text, {fontSize: SIZES.width * 0.102, paddingTop: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {
+                      fontSize: SIZES.width * 0.102,
+                      paddingTop: SIZES.width * 0.026,
+                    },
+                  ]}>
                   AED 1,000.69
                 </Text>
                 <LinearGradient
@@ -70,10 +85,15 @@ const PaymentScreen = () => {
                     borderRadius: 12,
                     width: '100%',
                   }}>
-                  <View style={{position: 'absolute', top: -SIZES.width * 0.051}}>
+                  <View
+                    style={{position: 'absolute', top: -SIZES.width * 0.051}}>
                     <Image
                       source={image.Upper}
-                      style={{width: SIZES.width * 0.077, height: SIZES.width * 0.077, resizeMode: 'contain'}}
+                      style={{
+                        width: SIZES.width * 0.077,
+                        height: SIZES.width * 0.077,
+                        resizeMode: 'contain',
+                      }}
                     />
                   </View>
                   <Text style={[styles.text, {fontSize: SIZES.width * 0.036}]}>
@@ -83,7 +103,11 @@ const PaymentScreen = () => {
               </View>
             </LinearGradient>
           </View>
-          <View style={{marginHorizontal: SIZES.width * 0.041, marginVertical: SIZES.width * 0.064}}>
+          <View
+            style={{
+              marginHorizontal: SIZES.width * 0.041,
+              marginVertical: SIZES.width * 0.064,
+            }}>
             <Text style={styles.title}>Payment Methods</Text>
           </View>
           <View style={{marginHorizontal: SIZES.width * 0.041}}>
@@ -93,7 +117,11 @@ const PaymentScreen = () => {
             <View style={styles.whiteContainer}>
               <Image
                 source={image.Card}
-                style={{width: SIZES.width * 0.051, height: SIZES.width * 0.051, resizeMode: 'contain'}}
+                style={{
+                  width: SIZES.width * 0.051,
+                  height: SIZES.width * 0.051,
+                  resizeMode: 'contain',
+                }}
               />
               <Text style={[styles.text, {color: '#000'}]}>
                 **** **** **** *980
@@ -105,16 +133,28 @@ const PaymentScreen = () => {
               <AddPaymentIcon />
 
               <View style={{gap: 3}}>
-                <Text style={[styles.text, {color: '#F84040', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#F84040', fontSize: SIZES.width * 0.026},
+                  ]}>
                   Add New Card{' '}
                 </Text>
-                <Text style={[styles.text, {color: '#8C8C8C', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#8C8C8C', fontSize: SIZES.width * 0.026},
+                  ]}>
                   Save and pay via cards{' '}
                 </Text>
               </View>
             </View>
           </View>
-          <View style={{marginHorizontal: SIZES.width * 0.041, marginTop: SIZES.width * 0.064}}>
+          <View
+            style={{
+              marginHorizontal: SIZES.width * 0.041,
+              marginTop: SIZES.width * 0.064,
+            }}>
             <Text style={[styles.text, {color: '#8C8C8C'}]}>Upi</Text>
             <View style={styles.whiteContainer}>
               <Image
@@ -132,29 +172,53 @@ const PaymentScreen = () => {
             <View style={[styles.whiteContainer, {height: SIZES.width * 0.13}]}>
               <AddPaymentIcon />
               <View style={{gap: 3}}>
-                <Text style={[styles.text, {color: '#F84040', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#F84040', fontSize: SIZES.width * 0.026},
+                  ]}>
                   Add New UPI ID{' '}
                 </Text>
-                <Text style={[styles.text, {color: '#8C8C8C', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#8C8C8C', fontSize: SIZES.width * 0.026},
+                  ]}>
                   You need to have a registered UPI ID{' '}
                 </Text>
               </View>
             </View>
           </View>
-          <View style={{marginHorizontal: SIZES.width * 0.041, marginTop: SIZES.width * 0.064}}>
+          <View
+            style={{
+              marginHorizontal: SIZES.width * 0.041,
+              marginTop: SIZES.width * 0.064,
+            }}>
             <Text style={[styles.text, {color: '#8C8C8C'}]}>
               More Payment Options
             </Text>
             <View style={[styles.whiteContainer, {height: SIZES.width * 0.13}]}>
               <Image
                 source={image.bank}
-                style={{width: SIZES.width * 0.039, height: SIZES.width * 0.039, resizeMode: 'contain'}}
+                style={{
+                  width: SIZES.width * 0.039,
+                  height: SIZES.width * 0.039,
+                  resizeMode: 'contain',
+                }}
               />
               <View style={{gap: 3}}>
-                <Text style={[styles.text, {color: '#000', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#000', fontSize: SIZES.width * 0.026},
+                  ]}>
                   NetWorking
                 </Text>
-                <Text style={[styles.text, {color: '#8C8C8C', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#8C8C8C', fontSize: SIZES.width * 0.026},
+                  ]}>
                   Select from a list of banks{' '}
                 </Text>
               </View>
@@ -164,13 +228,25 @@ const PaymentScreen = () => {
             <View style={[styles.whiteContainer, {height: SIZES.width * 0.13}]}>
               <Image
                 source={image.Cash}
-                style={{width: SIZES.width * 0.051, height: SIZES.width * 0.051, resizeMode: 'cover'}}
+                style={{
+                  width: SIZES.width * 0.051,
+                  height: SIZES.width * 0.051,
+                  resizeMode: 'cover',
+                }}
               />
               <View style={{gap: 3}}>
-                <Text style={[styles.text, {color: '#000', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#000', fontSize: SIZES.width * 0.026},
+                  ]}>
                   Cash on delivery{' '}
                 </Text>
-                <Text style={[styles.text, {color: '#8C8C8C', fontSize: SIZES.width * 0.026}]}>
+                <Text
+                  style={[
+                    styles.text,
+                    {color: '#8C8C8C', fontSize: SIZES.width * 0.026},
+                  ]}>
                   You need to have a registered UPI ID{' '}
                 </Text>
               </View>
@@ -178,7 +254,11 @@ const PaymentScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026}}>
+      <View
+        style={{
+          paddingHorizontal: SIZES.width * 0.041,
+          bottom: SIZES.width * 0.026,
+        }}>
         <Button placeholder={'Place Order'} screen={'BottomTabScreen'} />
       </View>
     </SafeAreaView>
