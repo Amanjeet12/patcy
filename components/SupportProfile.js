@@ -12,6 +12,7 @@ import {
   Support,
 } from '../src/Screens/SvgComponent/Logocomponent';
 import {useNavigation} from '@react-navigation/native';
+import {SIZES} from '../constant/theme';
 
 const SupportProfile = () => {
   const navigation = useNavigation();
@@ -22,7 +23,7 @@ const SupportProfile = () => {
           <Application />
           <Text style={styles.title}>How application works</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -32,7 +33,7 @@ const SupportProfile = () => {
           <Support />
           <Text style={styles.title}>Support & FAQ</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -44,7 +45,7 @@ const SupportProfile = () => {
           <FAQ />
           <Text style={styles.title}>Give us feedback</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -58,7 +59,7 @@ const SupportProfile = () => {
           <Aboutus />
           <Text style={styles.title}>About us</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -72,10 +73,10 @@ const styles = StyleSheet.create({
   container: {
     // height: 190,
     backgroundColor: '#fff',
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
     borderRadius: 10,
-    padding: 5,
-    paddingHorizontal: 10,
+    padding: SIZES.width * 0.013,
+    paddingHorizontal: SIZES.width * 0.026,
   },
   Border: {
     height: 0.5,
@@ -85,14 +86,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 35,
+    height: SIZES.width * 0.0893,
     marginVertical: 3,
   },
-  innerContainer: {flexDirection: 'row', alignItems: 'center', gap: 10},
+  innerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SIZES.width * 0.026,
+  },
   title: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
-    lineHeight: 14,
+    lineHeight: SIZES.width * 0.036,
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },

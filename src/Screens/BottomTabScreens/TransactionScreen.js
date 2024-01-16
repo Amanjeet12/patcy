@@ -13,6 +13,7 @@ import Searchbar from '../../../components/Searchbar';
 import FavouritesSlider from '../../../components/FavouritesSlider';
 import {Tranaction, TransactionData, fav} from '../../../constant/data';
 import TransactionSlider from '../../../components/TransactionSlider';
+import {SIZES} from '../../../constant/theme';
 
 const TransactionScreen = () => {
   const navigation = useNavigation();
@@ -28,7 +29,11 @@ const TransactionScreen = () => {
       <View style={styles.mainContainer}>
         <BackChecker placeholder={'Transactions'} />
         <Text style={styles.title}>Your recent savings and transactions</Text>
-        <View style={{marginTop: SIZES.width * 0.051, marginBottom: SIZES.width * 0.026}}>
+        <View
+          style={{
+            marginTop: SIZES.width * 0.051,
+            marginBottom: SIZES.width * 0.026,
+          }}>
           <Searchbar />
         </View>
       </View>

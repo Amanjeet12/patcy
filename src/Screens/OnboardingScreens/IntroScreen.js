@@ -5,7 +5,7 @@ import image from '../../../constant/image';
 import Button from '../../../components/Button';
 
 const IntroScreen = () => {
-  console.log(SIZES.width * 0.64);
+  console.log(SIZES.width * 0.31);
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle={'dark-content'} />

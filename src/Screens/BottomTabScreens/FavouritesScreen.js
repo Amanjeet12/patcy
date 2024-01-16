@@ -13,6 +13,7 @@ import Searchbar from '../../../components/Searchbar';
 import FavouritesSlider from '../../../components/FavouritesSlider';
 import DividerFavourites from '../../../components/DividerFavourites';
 import {fav, pet} from '../../../constant/data';
+import {SIZES} from '../../../constant/theme';
 
 const FavouritesScreen = () => {
   const navigation = useNavigation();
@@ -28,7 +29,11 @@ const FavouritesScreen = () => {
       <View style={styles.mainContainer}>
         <BackChecker placeholder={'Favouties'} />
         <Text style={styles.title}>Pet products and centers you liked</Text>
-        <View style={{marginTop: SIZES.width * 0.051, marginBottom: SIZES.width * 0.026}}>
+        <View
+          style={{
+            marginTop: SIZES.width * 0.051,
+            marginBottom: SIZES.width * 0.026,
+          }}>
           <Searchbar />
         </View>
       </View>

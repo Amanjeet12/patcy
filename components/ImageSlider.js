@@ -15,9 +15,9 @@ const ImageSlider = ({images}) => {
   const scrollViewRef = useRef(null);
   const totalImages = images.length;
   const imageWidth = SIZES.width / 2; // Set the width of each image
-  const imageHeight = 107; // Set the height of each image
-  const spacing = 10; // Set the spacing between two images
-  const paddingRightForFirstImage = 16; // Set the right padding for the first image
+  const imageHeight = SIZES.width * 0.28; // Set the height of each image
+  const spacing = SIZES.width * 0.026; // Set the spacing between two images
+  const paddingRightForFirstImage = SIZES.width * 0.041; // Set the right padding for the first image
 
   return (
     <View style={styles.sliderContainer}>
@@ -63,7 +63,7 @@ const ImageSlider = ({images}) => {
 const styles = StyleSheet.create({
   sliderContainer: {
     width: '100%',
-    height: 107,
+    height: SIZES.width * 0.28,
     position: 'relative',
   },
   image: {
@@ -82,11 +82,11 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    padding: 10,
+    padding: SIZES.width * 0.026,
   },
   title: {
     color: 'white',
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '700',
     textAlign: 'left',
     fontFamily: 'Visby-Medium',
@@ -94,9 +94,9 @@ const styles = StyleSheet.create({
   description: {
     fontFamily: 'Visby-Medium',
     color: 'white',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     textAlign: 'left',
-    marginTop: 5,
+    marginTop: SIZES.width * 0.013,
   },
 });
 

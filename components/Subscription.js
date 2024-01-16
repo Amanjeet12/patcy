@@ -1,15 +1,25 @@
+/* eslint-disable react-native/no-inline-styles */
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import image from '../constant/image';
+import {SIZES} from '../constant/theme';
 
 const DisplayContainer = ({title, description, icon}) => {
   return (
     <View style={styles.flexBox}>
-      <View style={[styles.flexBox, {paddingVertical: 0, gap: 10}]}>
+      <View
+        style={[
+          styles.flexBox,
+          {paddingVertical: 0, gap: SIZES.width * 0.026},
+        ]}>
         <Image
           source={icon}
-          style={{width: 15, height: 15, resizeMode: 'contain'}}
+          style={{
+            width: SIZES.width * 0.039,
+            height: SIZES.width * 0.039,
+            resizeMode: 'contain',
+          }}
         />
         <Text style={styles.title}>{title}</Text>
       </View>
@@ -54,24 +64,24 @@ const styles = StyleSheet.create({
   container: {
     height: 120,
     width: '100%',
-    borderRadius: 10,
-    paddingHorizontal: 15,
-    paddingVertical: 5,
+    borderRadius: SIZES.width * 0.026,
+    paddingHorizontal: SIZES.width * 0.039,
+    paddingVertical: SIZES.width * 0.013,
   },
   flexBox: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 10,
+    paddingVertical: SIZES.width * 0.026,
     alignItems: 'center',
   },
   title: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '700',
     color: '#121212',
     fontFamily: 'Visby-Medium',

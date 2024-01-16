@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderColor: '#EAEAEA',
     color: '#000',
     backgroundColor: '#EAEAEA',
-    fontSize: 16, // Initial font size
+    fontSize: SIZES.width * 0.041, // Initial font size
   },
 
   underlineStyleHighLighted: {

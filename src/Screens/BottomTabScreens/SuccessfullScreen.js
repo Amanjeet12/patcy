@@ -34,7 +34,12 @@ const SuccessfullScreen = () => {
           profile page
         </Text>
       </View>
-      <View style={{position: 'absolute', width: '100%', bottom: SIZES.width * 0.064}}>
+      <View
+        style={{
+          position: 'absolute',
+          width: '100%',
+          bottom: SIZES.width * 0.064,
+        }}>
         <TouchableOpacity style={styles.button} onPress={() => handleVerify()}>
           <Text style={styles.buttonText}>Back to dashboard</Text>
         </TouchableOpacity>

@@ -16,7 +16,7 @@ import {supples} from '../../../../constant/data';
 import Add from 'react-native-vector-icons/Ionicons';
 import Minus from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import {COLORS} from '../../../../constant/theme';
+import {COLORS, SIZES} from '../../../../constant/theme';
 import {Forwardlogo} from '../../SvgComponent/Logocomponent';
 
 const ViewOrderScreen = () => {
@@ -58,12 +58,22 @@ const ViewOrderScreen = () => {
           }}>
           <Image
             source={item.image}
-            style={{width: SIZES.width * 0.13, height: SIZES.width * 0.13, resizeMode: 'contain'}}
+            style={{
+              width: SIZES.width * 0.13,
+              height: SIZES.width * 0.13,
+              resizeMode: 'contain',
+            }}
           />
         </View>
         <View style={{width: '50%', justifyContent: 'space-between'}}>
-          <Text style={[styles.description, {fontSize: SIZES.width * 0.031}]}>{item.name}</Text>
-          <Text style={[styles.title, {fontSize: SIZES.width * 0.026, fontWeight: '700'}]}>
+          <Text style={[styles.description, {fontSize: SIZES.width * 0.031}]}>
+            {item.name}
+          </Text>
+          <Text
+            style={[
+              styles.title,
+              {fontSize: SIZES.width * 0.026, fontWeight: '700'},
+            ]}>
             {item.price}
           </Text>
         </View>
@@ -78,7 +88,11 @@ const ViewOrderScreen = () => {
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
                 onPress={() => decreaseQuantity(item.id)}>
-                <Minus name="minus" size={SIZES.width * 0.041} color={'#ffc6c6'} />
+                <Minus
+                  name="minus"
+                  size={SIZES.width * 0.041}
+                  color={'#ffc6c6'}
+                />
               </TouchableOpacity>
             </View>
             <View style={[styles.whiteButtonContainer, {width: '30%'}]}>
@@ -88,7 +102,11 @@ const ViewOrderScreen = () => {
               <TouchableOpacity
                 style={[styles.addStyle, styles.specialStyle]}
                 onPress={() => increaseQuantity(item.id)}>
-                <Add name="add-outline" size={SIZES.width * 0.041} color={'#ffc6c6'} />
+                <Add
+                  name="add-outline"
+                  size={SIZES.width * 0.041}
+                  color={'#ffc6c6'}
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -114,7 +132,10 @@ const ViewOrderScreen = () => {
         data={suppless}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
-        contentContainerStyle={{paddingHorizontal: SIZES.width * 0.041, marginTop: SIZES.width * 0.026}}
+        contentContainerStyle={{
+          paddingHorizontal: SIZES.width * 0.041,
+          marginTop: SIZES.width * 0.026,
+        }}
       />
       <View
         style={{
@@ -122,7 +143,12 @@ const ViewOrderScreen = () => {
           height: 120,
           justifyContent: 'center',
         }}>
-        <View style={{bottom: SIZES.width * 0.026, paddingHorizontal: SIZES.width * 0.041, paddingTop: SIZES.width * 0.026}}>
+        <View
+          style={{
+            bottom: SIZES.width * 0.026,
+            paddingHorizontal: SIZES.width * 0.041,
+            paddingTop: SIZES.width * 0.026,
+          }}>
           <View
             style={{
               flexDirection: 'row',
@@ -130,10 +156,15 @@ const ViewOrderScreen = () => {
               paddingHorizontal: SIZES.width * 0.013,
             }}>
             <Text
-              style={[styles.description, {fontSize: SIZES.width * 0.031, fontWeight: '700'}]}>
+              style={[
+                styles.description,
+                {fontSize: SIZES.width * 0.031, fontWeight: '700'},
+              ]}>
               Total bill
             </Text>
-            <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>AED 2,325.00</Text>
+            <Text style={[styles.title, {fontSize: SIZES.width * 0.031}]}>
+              AED 2,325.00
+            </Text>
           </View>
           <TouchableOpacity
             style={[

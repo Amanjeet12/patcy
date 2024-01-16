@@ -1,6 +1,7 @@
 import {StyleSheet, Image, View} from 'react-native';
 import React, {useLayoutEffect, useState} from 'react';
 import Animated, {useAnimatedStyle, interpolate} from 'react-native-reanimated';
+import {SIZES} from '../constant/theme';
 
 const CustomImage = ({item, x, index, size, spacer}) => {
   const [aspectRatio, setAspectRatio] = useState(1);
@@ -43,7 +44,7 @@ export default CustomImage;
 
 const styles = StyleSheet.create({
   imageContainer: {
-    borderRadius: 10,
+    borderRadius: SIZES.width * 0.026,
     overflow: 'hidden',
   },
   image: {

@@ -10,6 +10,7 @@ import {
   Animated,
 } from 'react-native';
 import {RedAddButon} from '../src/Screens/SvgComponent/Logocomponent';
+import {SIZES} from '../constant/theme';
 
 const YourPet = ({data}) => {
   const [selectedPets, setSelectedPets] = useState([]);
@@ -97,7 +98,11 @@ const YourPet = ({data}) => {
         <Text
           style={[
             styles.petName,
-            {fontWeight: '500', paddingTop: 14, fontSize: 14},
+            {
+              fontWeight: '500',
+              paddingTop: SIZES.width * 0.036,
+              fontSize: SIZES.width * 0.036,
+            },
           ]}>
           Add new pet
         </Text>
@@ -108,18 +113,18 @@ const YourPet = ({data}) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
     flexDirection: 'row',
-    height: 150,
+    height: SIZES.width * 0.382,
   },
   petItem: {
     backgroundColor: '#fff',
-    padding: 10,
+    padding: SIZES.width * 0.026,
     borderRadius: 12,
     alignItems: 'center',
-    height: 110,
-    marginRight: 10,
-    width: 95,
+    height: SIZES.width * 0.28,
+    marginRight: SIZES.width * 0.026,
+    width: SIZES.width * 0.243,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
@@ -130,8 +135,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffc6c6',
     borderWidth: 1,
     borderColor: '#ffc6c6',
-    height: 130,
-    width: 100,
+    height: SIZES.width * 0.332,
+    width: SIZES.width * 0.26,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 3},
     shadowOpacity: 0.4,
@@ -142,54 +147,54 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   petImage: {
-    width: 50,
-    height: 50,
+    width: SIZES.width * 0.13,
+    height: SIZES.width * 0.13,
     borderRadius: 25,
-    marginBottom: 5,
+    marginBottom: SIZES.width * 0.013,
   },
   petName: {
     fontWeight: '500',
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    lineHeight: 15,
-    paddingTop: 4,
+    lineHeight: SIZES.width * 0.039,
+    paddingTop: SIZES.width * 0.01,
     textAlign: 'center',
   },
   petYear: {
     color: '#747474',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontFamily: 'Visby-Medium',
-    lineHeight: 15,
+    lineHeight: SIZES.width * 0.039,
     textAlign: 'center',
     fontWeight: '400',
   },
   viewButton: {
     backgroundColor: '#fff',
-    paddingHorizontal: 10,
+    paddingHorizontal: SIZES.width * 0.026,
     borderRadius: 32,
     marginTop: 2,
   },
   viewButtonText: {
     color: '#000',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
   },
   selectedPetItemFont: {
     fontWeight: '500',
-    fontSize: 16,
+    fontSize: SIZES.width * 0.041,
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    lineHeight: 15,
-    paddingTop: 5,
+    lineHeight: SIZES.width * 0.039,
+    paddingTop: SIZES.width * 0.013,
     textAlign: 'center',
   },
   selectedPetItemFontDes: {
     color: '#747474',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontFamily: 'Visby-Medium',
-    lineHeight: 15,
+    lineHeight: SIZES.width * 0.039,
     textAlign: 'center',
     fontWeight: '400',
     paddingVertical: 2,

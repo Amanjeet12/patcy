@@ -23,6 +23,7 @@ import {useRoute} from '@react-navigation/native';
 import HomeBottomContainer from '../../../../components/HomeScreenComponent/HomeBottomContainer';
 import BottomPriceChecker from '../../../../components/HomeScreenComponent/BottomPriceChecker';
 import HomeScreenSingleDateSelecter from '../../../../components/HomeScreenComponent/HomeScreenSingleDateSelecter';
+import {SIZES} from '../../../../constant/theme';
 
 const GroomingInnerScreen = () => {
   const navigation = useNavigation();
@@ -137,14 +138,17 @@ const GroomingInnerScreen = () => {
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Booking Date
           </Text>
           <HomeScreenSingleDateSelecter />
           <View
             style={{
               backgroundColor: '#fff',
-              marginTop: -5,
+              marginTop: -SIZES.width * 0.013,
               paddingBottom: SIZES.width * 0.026,
               borderBottomRightRadius: 10,
               borderBottomLeftRadius: 10,
@@ -198,14 +202,21 @@ const GroomingInnerScreen = () => {
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Boarding Service
           </Text>
           <View style={styles.container2}>
             <TouchableOpacity
               style={styles.coloeContainer}
               onPress={() => handleNavigation()}>
-              <Icon name="options" size={SIZES.width * 0.051} color={'#212121'} />
+              <Icon
+                name="options"
+                size={SIZES.width * 0.051}
+                color={'#212121'}
+              />
               <Text style={styles.text}>
                 {selectedService ? selectedService.name : `Select Service`}
               </Text>

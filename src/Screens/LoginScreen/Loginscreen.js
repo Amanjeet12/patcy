@@ -12,7 +12,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import FlagContainer from '../../../components/FlagContainer';
 import image from '../../../constant/image';
 import Button from '../../../components/Button';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import {useNavigation} from '@react-navigation/native';
 
 const SignInButton = ({placeholder, logo, screen}) => {
@@ -24,7 +24,11 @@ const SignInButton = ({placeholder, logo, screen}) => {
       onPress={() => (screen ? navigation.navigate(screen) : null)}>
       <Image
         source={logo}
-        style={{width: SIZES.width * 0.041, height: SIZES.width * 0.049, resizeMode: 'contain'}}
+        style={{
+          width: SIZES.width * 0.041,
+          height: SIZES.width * 0.049,
+          resizeMode: 'contain',
+        }}
       />
       <Text style={styles.boxTitle}>{placeholder}</Text>
     </TouchableOpacity>

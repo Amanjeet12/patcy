@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Button from '../Button';

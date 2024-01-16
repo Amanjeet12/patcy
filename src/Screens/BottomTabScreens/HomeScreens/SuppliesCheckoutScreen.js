@@ -24,6 +24,7 @@ import {
 import image from '../../../../constant/image';
 import Button from '../../../../components/Button';
 import {useNavigation} from '@react-navigation/native';
+import {SIZES} from '../../../../constant/theme';
 
 const SuppliesCheckoutScreen = () => {
   const navigation = useNavigation();
@@ -120,7 +121,11 @@ const SuppliesCheckoutScreen = () => {
               </View>
             </View>
           </View>
-          <View style={[styles.flexBox, {marginTop: SIZES.width * 0.026, paddingHorizontal: 0}]}>
+          <View
+            style={[
+              styles.flexBox,
+              {marginTop: SIZES.width * 0.026, paddingHorizontal: 0},
+            ]}>
             <Text style={styles.text}>
               <Text style={[styles.text, {color: '#F84040'}]}>
                 Delivery by Fri 29 Dec, 2023{' '}
@@ -140,13 +145,20 @@ const SuppliesCheckoutScreen = () => {
             <TouchableOpacity
               style={[
                 styles.whiteContainer,
-                {paddingHorizontal: SIZES.width * 0.039, marginTop: SIZES.width * 0.026},
+                {
+                  paddingHorizontal: SIZES.width * 0.039,
+                  marginTop: SIZES.width * 0.026,
+                },
               ]}
               onPress={() => handleCategoryClick('Grooming')}>
               <View style={styles.categoryHeader}>
                 <Text style={styles.text}>Product</Text>
                 <View
-                  style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.013}}>
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: SIZES.width * 0.013,
+                  }}>
                   <Text style={[styles.text, {color: '#000'}]}>
                     {services.length} items
                   </Text>
@@ -246,7 +258,11 @@ const SuppliesCheckoutScreen = () => {
                 {justifyContent: 'space-between'},
               ]}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026}}>
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: SIZES.width * 0.026,
+                }}>
                 <Text style={styles.text}>Delivery Fees</Text>
                 <RedService />
               </View>
@@ -260,7 +276,11 @@ const SuppliesCheckoutScreen = () => {
                 {justifyContent: 'space-between'},
               ]}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026}}>
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: SIZES.width * 0.026,
+                }}>
                 <Text style={styles.text}>Service</Text>
                 <RedService />
               </View>
@@ -284,7 +304,11 @@ const SuppliesCheckoutScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026}}>
+      <View
+        style={{
+          paddingHorizontal: SIZES.width * 0.041,
+          bottom: SIZES.width * 0.026,
+        }}>
         <Button placeholder={'Place Order'} screen={'PaymentScreen'} />
       </View>
     </SafeAreaView>

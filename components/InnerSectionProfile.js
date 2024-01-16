@@ -16,6 +16,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import image from '../constant/image';
+import {SIZES} from '../constant/theme';
 
 const InnerSectionProfile = () => {
   const navigation = useNavigation();
@@ -51,7 +52,7 @@ const InnerSectionProfile = () => {
           <PetcyProfile />
           <Text style={styles.title}>My petcy</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -63,7 +64,7 @@ const InnerSectionProfile = () => {
           <SubscriptionProfile />
           <Text style={styles.title}>Subscription</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -75,7 +76,7 @@ const InnerSectionProfile = () => {
           <Notifications />
           <Text style={styles.title}> Notifications</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -85,7 +86,7 @@ const InnerSectionProfile = () => {
           <ChangePassword />
           <Text style={styles.title}>Change Password</Text>
         </View>
-        <View style={{paddingRight: 10}}>
+        <View style={{paddingRight: SIZES.width * 0.026}}>
           <Arrow />
         </View>
       </TouchableOpacity>
@@ -93,21 +94,21 @@ const InnerSectionProfile = () => {
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={500}
+        height={SIZES.height * 0.65}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
           },
           draggableIcon: {
             backgroundColor: '#D9D9D9',
-            width: 80,
-            height: 5,
+            width: SIZES.width * 0.205,
+            height: SIZES.width * 0.13,
           },
         }}>
         <View style={styles.bottomContainer}>
           <View
             style={{
-              height: 50,
+              height: SIZES.width * 0.13,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
@@ -119,8 +120,8 @@ const InnerSectionProfile = () => {
               flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'space-around',
-              gap: 20,
-              marginTop: 20,
+              gap: SIZES.width * 0.051,
+              marginTop: SIZES.width * 0.051,
             }}>
             <TouchableOpacity
               style={
@@ -159,9 +160,9 @@ const InnerSectionProfile = () => {
           </View>
           <View
             style={{
-              height: 200,
-              marginTop: 50,
-              padding: 10,
+              height: SIZES.height * 0.26,
+              marginTop: SIZES.width * 0.13,
+              padding: SIZES.width * 0.026,
             }}>
             <Image
               source={activeButton === 'E Card' ? image.Card : image.Barcode}
@@ -180,10 +181,10 @@ const styles = StyleSheet.create({
   container: {
     // height: 190,
     backgroundColor: '#fff',
-    marginTop: 10,
-    borderRadius: 10,
-    padding: 5,
-    paddingHorizontal: 10,
+    marginTop: SIZES.width * 0.026,
+    borderRadius: SIZES.width * 0.026,
+    padding: SIZES.width * 0.013,
+    paddingHorizontal: SIZES.width * 0.026,
   },
   Border: {
     height: 0.5,
@@ -193,23 +194,27 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 35,
-    marginVertical: 3,
+    height: SIZES.width * 0.0893,
+    marginVertical: SIZES.width * 0.008,
   },
-  innerContainer: {flexDirection: 'row', alignItems: 'center', gap: 10},
+  innerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SIZES.width * 0.026,
+  },
   title: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
-    lineHeight: 14,
+    lineHeight: SIZES.width * 0.036,
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
   bottomContainer: {
-    paddingHorizontal: 20,
+    paddingHorizontal: SIZES.width * 0.051,
   },
   redText: {
     color: '#F84040',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
   },
@@ -221,7 +226,7 @@ const styles = StyleSheet.create({
   buttonActiveContainer: {
     backgroundColor: 'red',
     width: '50%',
-    height: 50,
+    height: SIZES.width * 0.13,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12,
@@ -229,21 +234,21 @@ const styles = StyleSheet.create({
   buttonInactiveContainer: {
     backgroundColor: '#fff',
     width: '50%',
-    height: 50,
+    height: SIZES.width * 0.13,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12,
   },
   activeText: {
     color: '#fff',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     paddingTop: 3,
   },
   inActiveText: {
     color: '#000',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     paddingTop: 3,

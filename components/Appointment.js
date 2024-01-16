@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Octicons';
 import {Clock} from '../src/Screens/SvgComponent/Logocomponent';
+import {SIZES} from '../constant/theme';
 
 const Appointment = ({data}) => {
   const [bellIcons, setBellIcons] = useState(Array(data.length).fill(false));
@@ -27,11 +28,15 @@ const Appointment = ({data}) => {
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
-                gap: 20,
-                paddingTop: 7,
+                gap: SIZES.width * 0.051,
+                paddingTop: SIZES.width * 0.018,
               }}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: SIZES.width * 0.026,
+                }}>
                 <Clock />
                 <Text style={styles.type}>{appointment.timing}</Text>
               </View>
@@ -41,7 +46,7 @@ const Appointment = ({data}) => {
           <TouchableOpacity onPress={() => handleBellIconClick(index)}>
             <Icon
               name={bellIcons[index] ? 'bell' : 'bell-fill'}
-              size={16}
+              size={SIZES.width * 0.041}
               color={bellIcons[index] ? '#F84040' : '#F84040'} // Change color when filled
             />
           </TouchableOpacity>
@@ -57,35 +62,35 @@ const styles = StyleSheet.create({
   appointmentContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 5,
+    marginVertical: SIZES.width * 0.01,
     backgroundColor: '#fff',
-    marginHorizontal: 16,
-    height: 82,
-    padding: 15,
+    marginHorizontal: SIZES.width * 0.041,
+    height: SIZES.width * 0.21,
+    padding: SIZES.width * 0.039,
     borderRadius: 10,
   },
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 12,
-    marginRight: 10,
+    width: SIZES.width * 0.13,
+    height: SIZES.width * 0.13,
+    borderRadius: SIZES.width * 0.031,
+    marginRight: SIZES.width * 0.026,
   },
   appointmentDetails: {
     flex: 1,
-    paddingLeft: 10,
+    paddingLeft: SIZES.width * 0.026,
   },
   name: {
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
-    lineHeight: 12,
+    lineHeight: SIZES.width * 0.031,
   },
   type: {
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
-    lineHeight: 12,
+    lineHeight: SIZES.width * 0.031,
   },
 });

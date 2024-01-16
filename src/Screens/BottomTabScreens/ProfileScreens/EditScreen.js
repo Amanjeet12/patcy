@@ -15,6 +15,7 @@ import CommonContainer from '../../../../components/CommonContainer';
 import FlagContainer from '../../../../components/FlagContainer';
 import Button from '../../../../components/Button';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {SIZES} from '../../../../constant/theme';
 
 const EditScreen = () => {
   return (
@@ -62,7 +63,11 @@ const EditScreen = () => {
               <FlagContainer />
             </View>
           </View>
-          <View style={{marginTop: SIZES.width * 0.064, marginBottom: SIZES.width * 0.13}}>
+          <View
+            style={{
+              marginTop: SIZES.width * 0.064,
+              marginBottom: SIZES.width * 0.13,
+            }}>
             <Button placeholder={'Update'} />
           </View>
         </View>

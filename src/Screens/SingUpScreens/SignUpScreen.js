@@ -14,7 +14,7 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import CommonContainer from '../../../components/CommonContainer';
 import PasswordContainer from '../../../components/PasswordContainer';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import FlagContainer from '../../../components/FlagContainer';
 import Button from '../../../components/Button';
 
@@ -76,7 +76,11 @@ const SignUpScreen = () => {
             <Text style={styles.smallTitle}>Retype Password</Text>
             <PasswordContainer />
           </View>
-          <View style={{marginTop: SIZES.width * 0.064, marginBottom: SIZES.width * 0.026}}>
+          <View
+            style={{
+              marginTop: SIZES.width * 0.064,
+              marginBottom: SIZES.width * 0.026,
+            }}>
             <Button placeholder={'Sing Up'} screen={'SignUpOtpScreen'} />
           </View>
         </View>

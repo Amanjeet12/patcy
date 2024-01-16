@@ -13,7 +13,7 @@ import ImageUploader from '../../../components/ImageUploader';
 import PetList from '../../../components/PetList';
 import {pet} from '../../../constant/data';
 import CommonContainer from '../../../components/CommonContainer';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useNavigation} from '@react-navigation/native';
 import RBSheet from 'react-native-raw-bottom-sheet';
@@ -88,7 +88,11 @@ const AddPetScreen = ({navigation}) => {
               <ImageUploader />
             </View>
             <View style={{}}>
-              <Text style={[styles.title, {paddingHorizontal: SIZES.width * 0.041}]}>
+              <Text
+                style={[
+                  styles.title,
+                  {paddingHorizontal: SIZES.width * 0.041},
+                ]}>
                 Choose a pet
               </Text>
               <PetList data={pet} onSelectItem={handleSelectItem} />
@@ -225,7 +229,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: SIZES.width * 0.051,
   },
-  padding: {marginTop: SIZES.width * 0.051, paddingHorizontal: SIZES.width * 0.041},
+  padding: {
+    marginTop: SIZES.width * 0.051,
+    paddingHorizontal: SIZES.width * 0.041,
+  },
   button: {
     height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,

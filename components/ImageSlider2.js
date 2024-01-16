@@ -15,9 +15,9 @@ const ImageSlider2 = ({images}) => {
   const scrollViewRef = useRef(null);
   const totalImages = images.length;
   const imageWidth = SIZES.width / 2;
-  const imageHeight = 122;
-  const spacing = 10;
-  const paddingRightForFirstImage = 16;
+  const imageHeight = SIZES.width * 0.31;
+  const spacing = SIZES.width * 0.026;
+  const paddingRightForFirstImage = SIZES.width * 0.041;
 
   return (
     <View style={styles.sliderContainer}>
@@ -37,7 +37,7 @@ const ImageSlider2 = ({images}) => {
           <View
             key={id}
             style={{
-              width: 210,
+              width: SIZES.width * 0.54,
               marginLeft: index === 0 ? paddingRightForFirstImage : spacing,
               marginRight:
                 index === totalImages - 1 ? paddingRightForFirstImage : spacing,
@@ -47,7 +47,7 @@ const ImageSlider2 = ({images}) => {
             <View
               style={{
                 width: '100%',
-                height: 122,
+                height: SIZES.width * 0.31,
                 backgroundColor: color,
                 borderRadius: 10,
               }}>
@@ -55,7 +55,7 @@ const ImageSlider2 = ({images}) => {
                 style={{
                   width: '60%',
                   height: '100%',
-                  padding: 10,
+                  padding: SIZES.width * 0.026,
                   justifyContent: 'center',
                 }}>
                 <Text style={styles.title}>{title}</Text>
@@ -65,8 +65,8 @@ const ImageSlider2 = ({images}) => {
 
             <View
               style={{
-                width: 100,
-                height: 150,
+                width: SIZES.width * 0.26,
+                height: SIZES.width * 0.382,
                 position: 'absolute',
                 bottom: 0,
                 right: 0,
@@ -77,7 +77,7 @@ const ImageSlider2 = ({images}) => {
               <Image
                 source={image}
                 style={{
-                  width: 100,
+                  width: SIZES.width * 0.26,
                   height: '100%',
                   borderRadius: 10,
                   resizeMode: 'cover',
@@ -94,9 +94,9 @@ const ImageSlider2 = ({images}) => {
 const styles = StyleSheet.create({
   sliderContainer: {
     width: '100%',
-    height: 150,
+    height: SIZES.width * 0.382,
     position: 'relative',
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
   },
   image: {
     borderRadius: 10,
@@ -114,11 +114,11 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    padding: 10,
+    padding: SIZES.width * 0.026,
   },
   title: {
     color: '#252525',
-    fontSize: 20,
+    fontSize: SIZES.width * 0.051,
     fontWeight: '700',
     textAlign: 'left',
     fontFamily: 'Visby-Medium',
@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
   description: {
     fontFamily: 'Visby-Medium',
     color: '#3A3A3A',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     textAlign: 'left',
-    marginTop: 5,
+    marginTop: SIZES.width * 0.013,
     fontWeight: '400',
-    lineHeight: 15,
+    lineHeight: SIZES.width * 0.039,
   },
 });
 

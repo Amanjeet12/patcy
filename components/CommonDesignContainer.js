@@ -26,7 +26,7 @@ const CommonDesignContainer = ({data}) => {
   };
   const renderItem = ({item}) => (
     <View style={styles.itemContainer}>
-      <View style={{width: '100%', height: 110}}>
+      <View style={{width: '100%', height: SIZES.width * 0.282}}>
         <Image
           source={item.image}
           style={{
@@ -42,8 +42,8 @@ const CommonDesignContainer = ({data}) => {
               style={[
                 styles.title,
                 {
-                  paddingHorizontal: 10,
-                  paddingVertical: 4,
+                  paddingHorizontal: SIZES.width * 0.026,
+                  paddingVertical: SIZES.width * 0.01,
                   backgroundColor: '#FFC6C6',
                   borderRadius: 32,
                 },
@@ -53,11 +53,15 @@ const CommonDesignContainer = ({data}) => {
           </View>
         ) : null}
       </View>
-      <View style={{padding: 10}}>
+      <View style={{padding: SIZES.width * 0.026}}>
         <Text style={[styles.title, {color: '#000', fontWeight: '600'}]}>
           {item.name}
         </Text>
-        <View style={[styles.flexBoxContainer, {gap: 20, marginTop: 5}]}>
+        <View
+          style={[
+            styles.flexBoxContainer,
+            {gap: SIZES.width * 0.051, marginTop: SIZES.width * 0.013},
+          ]}>
           <View style={styles.flexBoxContainer}>
             <Location />
             <Text style={[styles.title, {fontWeight: '400', color: '#8C8C8C'}]}>
@@ -85,14 +89,14 @@ const CommonDesignContainer = ({data}) => {
             {likedItems.includes(item.id) ? (
               <UnLike
                 name="heart"
-                size={16}
+                size={SIZES.width * 0.041}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle(item.id)}
               />
             ) : (
               <Like
                 name="heart-o"
-                size={16}
+                size={SIZES.width * 0.041}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle(item.id)}
               />
@@ -119,21 +123,20 @@ export default CommonDesignContainer;
 
 const styles = StyleSheet.create({
   container: {
-    // padding: 16,
-    paddingBottom: 200,
-    paddingHorizontal: 10,
+    paddingBottom: SIZES.width * 0.51,
+    paddingHorizontal: SIZES.width * 0.026,
   },
   itemContainer: {
-    width: SIZES.width / 2 - 30, // Adjusted width
-    height: 180,
+    width: SIZES.width / 2 - 30,
+    height: SIZES.width * 0.46,
     backgroundColor: '#fff',
     borderRadius: 10,
-    margin: 10,
+    margin: SIZES.width * 0.026,
   },
   title: {
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     textAlign: 'left',
   },
@@ -143,17 +146,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   addStyle: {
-    width: 20,
-    height: 20,
+    width: SIZES.width * 0.051,
+    height: SIZES.width * 0.051,
     backgroundColor: '#8c8c8c',
     borderRadius: 32,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  flexBoxContainer: {flexDirection: 'row', alignItems: 'center', gap: 5},
+  flexBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SIZES.width * 0.013,
+  },
   OfferContainer: {
     position: 'absolute',
-    top: 10,
-    left: 10,
+    top: SIZES.width * 0.026,
+    left: SIZES.width * 0.026,
   },
 });

@@ -4,6 +4,7 @@ import Add from 'react-native-vector-icons/Ionicons';
 import Minus from 'react-native-vector-icons/AntDesign';
 import Like from 'react-native-vector-icons/FontAwesome';
 import UnLike from 'react-native-vector-icons/FontAwesome';
+import {SIZES} from '../constant/theme';
 
 const PriceCalculater = () => {
   const [count, setCount] = useState(1);
@@ -46,7 +47,7 @@ const PriceCalculater = () => {
           <TouchableOpacity
             style={[styles.addStyle, styles.specialStyle]}
             onPress={handleDecrease}>
-            <Minus name="minus" size={25} color={'#ffc6c6'} />
+            <Minus name="minus" size={SIZES.width * 0.064} color={'#ffc6c6'} />
           </TouchableOpacity>
         </View>
         <View style={[styles.whiteButtonContainer, {width: '30%'}]}>
@@ -59,7 +60,11 @@ const PriceCalculater = () => {
           <TouchableOpacity
             style={[styles.addStyle, styles.specialStyle]}
             onPress={handleincrease}>
-            <Add name="add-outline" size={25} color={'#ffc6c6'} />
+            <Add
+              name="add-outline"
+              size={SIZES.width * 0.064}
+              color={'#ffc6c6'}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -70,14 +75,14 @@ const PriceCalculater = () => {
         {liked === false ? (
           <Like
             name="heart-o"
-            size={20}
+            size={SIZES.width * 0.051}
             color={'#000'}
             onPress={handleLikeToggle}
           />
         ) : (
           <UnLike
             name="heart"
-            size={20}
+            size={SIZES.width * 0.051}
             color={'#F84040'}
             onPress={handleLikeToggle}
           />
@@ -91,22 +96,21 @@ export default PriceCalculater;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
     flexDirection: 'row',
     alignItems: 'center',
-    // justifyContent: 'space-between',
   },
   buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#ffc6c6',
     borderRadius: 32,
-    width: 120,
-    height: 40,
+    width: SIZES.width * 0.31,
+    height: SIZES.width * 0.102,
   },
   specialStyle: {
-    width: 25,
-    height: 25,
+    width: SIZES.width * 0.064,
+    height: SIZES.width * 0.064,
     borderRadius: 30,
     backgroundColor: '#fff',
   },
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#F84040',
-    fontSize: 20,
+    fontSize: SIZES.width * 0.051,
     fontWeight: '600',
     fontFamily: 'VisbyRound-Bold',
   },

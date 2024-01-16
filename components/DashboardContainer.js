@@ -4,6 +4,7 @@ import React from 'react';
 import image from '../constant/image';
 import {BellIcon} from '../src/Screens/SvgComponent/Logocomponent';
 import {useNavigation} from '@react-navigation/native';
+import {SIZES} from '../constant/theme';
 
 const DashboardContainer = () => {
   const Navigation = useNavigation();
@@ -12,7 +13,12 @@ const DashboardContainer = () => {
       <View style={{width: '20%'}}>
         <Image
           source={image.Profile}
-          style={{width: 60, height: 60, resizeMode: 'cover', borderRadius: 32}}
+          style={{
+            width: SIZES.width * 0.153,
+            height: SIZES.width * 0.153,
+            resizeMode: 'cover',
+            borderRadius: 32,
+          }}
         />
       </View>
       <View style={{width: '70%'}}>
@@ -25,7 +31,7 @@ const DashboardContainer = () => {
       <TouchableOpacity
         style={{
           width: '10%',
-          height: 54,
+          height: SIZES.width * 0.14,
           alignItems: 'center',
         }}
         onPress={() => Navigation.navigate('NotificationScreen')}>
@@ -39,24 +45,24 @@ export default DashboardContainer;
 
 const styles = StyleSheet.create({
   container: {
-    height: 150,
+    height: SIZES.width * 0.382,
     flexDirection: 'row',
     alignItems: 'center',
   },
   title: {
     color: '#fff',
-    fontSize: 22,
+    fontSize: SIZES.width * 0.057,
     fontWeight: '700',
-    lineHeight: 25,
+    lineHeight: SIZES.width * 0.064,
     fontFamily: 'Visby-Medium',
     textAlign: 'left',
   },
   description: {
-    fontSize: 14,
+    fontSize: SIZES.width * 0.036,
     fontWeight: '400',
-    lineHeight: 20,
+    lineHeight: SIZES.width * 0.051,
     fontFamily: 'Visby-Medium',
-    paddingTop: 5,
+    paddingTop: SIZES.width * 0.013,
     color: '#fff',
   },
 });

@@ -16,7 +16,7 @@ import {RedLocation, Star} from '../../SvgComponent/Logocomponent';
 import HomeScreenSizeSlider from '../../../../components/HomeScreenComponent/HomeScreenSizeSlider';
 import PriceCalculater from '../../../../components/PriceCalculater';
 import Button from '../../../../components/Button';
-import {COLORS} from '../../../../constant/theme';
+import {COLORS, SIZES} from '../../../../constant/theme';
 import {useNavigation} from '@react-navigation/native';
 import SuppliesBottomContainer from '../../../../components/SuppliesBottomContainer';
 
@@ -78,7 +78,11 @@ const SuppliesInnerScreen = () => {
           <View
             style={[
               styles.flexBox,
-              {marginTop: SIZES.width * 0.064, paddingHorizontal: SIZES.width * 0.041, gap: SIZES.width * 0.013},
+              {
+                marginTop: SIZES.width * 0.064,
+                paddingHorizontal: SIZES.width * 0.041,
+                gap: SIZES.width * 0.013,
+              },
             ]}>
             <Text style={[styles.description, {color: '#F84040'}]}>Size :</Text>
             <HomeScreenSizeSlider data={data} />
@@ -93,7 +97,11 @@ const SuppliesInnerScreen = () => {
       </ScrollView>
 
       {active === true ? (
-        <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026}}>
+        <View
+          style={{
+            paddingHorizontal: SIZES.width * 0.041,
+            bottom: SIZES.width * 0.026,
+          }}>
           <TouchableOpacity
             style={[
               styles.button,
@@ -114,7 +122,12 @@ const SuppliesInnerScreen = () => {
           </TouchableOpacity>
         </View>
       ) : (
-        <View style={{paddingHorizontal: SIZES.width * 0.041, bottom: SIZES.width * 0.026, gap: SIZES.width * 0.026}}>
+        <View
+          style={{
+            paddingHorizontal: SIZES.width * 0.041,
+            bottom: SIZES.width * 0.026,
+            gap: SIZES.width * 0.026,
+          }}>
           <Button placeholder={'Buy Now'} />
           <TouchableOpacity
             style={styles.button}
@@ -154,7 +167,11 @@ const styles = StyleSheet.create({
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
-  flexBox: {flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026},
+  flexBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SIZES.width * 0.026,
+  },
   whiteContainer: {
     alignItems: 'center',
     gap: SIZES.width * 0.013,

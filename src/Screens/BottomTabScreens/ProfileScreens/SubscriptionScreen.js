@@ -13,6 +13,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import PetCareComponent from '../../SvgComponent/PetCareComponent';
 import {PetcyLogo, PetcyRedLogo} from '../../SvgComponent/Logocomponent';
 import Button from '../../../../components/Button';
+import {SIZES} from '../../../../constant/theme';
 
 const SubscriptionScreen = () => {
   const navigation = useNavigation();
@@ -25,13 +26,20 @@ const SubscriptionScreen = () => {
             <TouchableOpacity
               style={styles.backButton}
               onPress={() => navigation.goBack()}>
-              <Icon name="arrowleft" size={SIZES.width * 0.062} color={'#121212'} />
+              <Icon
+                name="arrowleft"
+                size={SIZES.width * 0.062}
+                color={'#121212'}
+              />
             </TouchableOpacity>
           </View>
           <View style={styles.ImageContainer}>
             <PetCareComponent />
             <Text style={styles.description}>Upgrade to</Text>
-            <PetcyRedLogo width={SIZES.width * 0.205} height={SIZES.width * 0.102} />
+            <PetcyRedLogo
+              width={SIZES.width * 0.205}
+              height={SIZES.width * 0.102}
+            />
             <Text style={styles.subscription}>Subscription</Text>
           </View>
           <View style={styles.offerContainer}>
@@ -41,18 +49,29 @@ const SubscriptionScreen = () => {
                 <Text
                   style={[
                     styles.description,
-                    {paddingTop: 0, color: '#000', fontSize: SIZES.width * 0.031},
+                    {
+                      paddingTop: 0,
+                      color: '#000',
+                      fontSize: SIZES.width * 0.031,
+                    },
                   ]}>
                   / year
                 </Text>
               </View>
               <View
-                style={{width: '100%', paddingHorizontal: SIZES.width * 0.051, paddingTop: SIZES.width * 0.026}}>
+                style={{
+                  width: '100%',
+                  paddingHorizontal: SIZES.width * 0.051,
+                  paddingTop: SIZES.width * 0.026,
+                }}>
                 <Button placeholder={'Subscribe Now'} />
               </View>
               <View style={styles.innerTextContainer}>
                 <Text
-                  style={[styles.description, {fontSize: SIZES.width * 0.031, paddingTop: 0}]}>
+                  style={[
+                    styles.description,
+                    {fontSize: SIZES.width * 0.031, paddingTop: 0},
+                  ]}>
                   No hidden charges, No commitments!
                 </Text>
               </View>

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
@@ -11,6 +12,7 @@ import {
   ArrowLeft,
   ArrowRight,
 } from '../../src/Screens/SvgComponent/Logocomponent';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenImageSlider = ({data}) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -47,9 +49,9 @@ const HomeScreenImageSlider = ({data}) => {
 
       <View
         style={{
-          marginTop: 10,
+          marginTop: SIZES.width * 0.026,
           alignItems: 'center',
-          height: 100,
+          height: SIZES.width * 0.26,
           backgroundColor: '#fff',
         }}>
         <FlatList
@@ -59,10 +61,20 @@ const HomeScreenImageSlider = ({data}) => {
           renderItem={renderItem}
           style={styles.thumbnailContainer}
         />
-        <TouchableOpacity style={{position: 'absolute', left: 10, top: 40}}>
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            left: SIZES.width * 0.026,
+            top: SIZES.width * 0.102,
+          }}>
           <ArrowLeft />
         </TouchableOpacity>
-        <TouchableOpacity style={{position: 'absolute', right: 10, top: 40}}>
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            right: SIZES.width * 0.026,
+            top: SIZES.width * 0.102,
+          }}>
           <ArrowRight />
         </TouchableOpacity>
       </View>
@@ -75,22 +87,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   thumbnailContainer: {
-    height: 80,
-    marginTop: 10,
+    height: SIZES.width * 0.205,
+    marginTop: SIZES.width * 0.026,
   },
   thumbnail: {
-    width: 70,
-    height: 70,
-    marginRight: 10,
+    width: SIZES.width * 0.18,
+    height: SIZES.width * 0.18,
+    marginRight: SIZES.width * 0.026,
     justifyContent: 'center',
-    borderRadius: 10,
+    borderRadius: SIZES.width * 0.026,
   },
   selectedImageContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 250,
+    height: SIZES.width * 0.64,
     backgroundColor: '#fff',
-    padding: 25,
+    padding: SIZES.width * 0.064,
   },
   selectedImage: {
     width: '100%',

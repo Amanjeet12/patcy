@@ -14,6 +14,7 @@ import YourPet from '../../../components/YourPet';
 import {PetData} from '../../../constant/data';
 import InnerSectionProfile from '../../../components/InnerSectionProfile';
 import SupportProfile from '../../../components/SupportProfile';
+import {SIZES} from '../../../constant/theme';
 
 const ProfileScreen = () => {
   return (

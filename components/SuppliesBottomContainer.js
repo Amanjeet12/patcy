@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {ProductFeatures, ProductSpecification} from '../constant/data';
+import {SIZES} from '../constant/theme';
 
 const SuppliesBottomContainer = () => {
   const [activeTab, setActiveTab] = useState('description'); // 'description' or 'specification'
@@ -17,7 +18,7 @@ const SuppliesBottomContainer = () => {
           flexDirection: 'row',
           alignItems: 'center',
           backgroundColor: '#fff',
-          padding: 8,
+          padding: SIZES.width * 0.021,
         }}>
         <TouchableOpacity
           style={[
@@ -25,7 +26,7 @@ const SuppliesBottomContainer = () => {
             {
               width: '50%',
               backgroundColor: activeTab === 'description' ? '#FFC6C6' : '#fff',
-              borderRadius: 5,
+              borderRadius: SIZES.width * 0.013,
             },
           ]}
           onPress={() => handleTabPress('description')}>
@@ -47,20 +48,28 @@ const SuppliesBottomContainer = () => {
       </View>
       {activeTab === 'description' ? (
         <>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.039}}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Details
             </Text>
             <View
-              style={{backgroundColor: '#fff', padding: 15, borderRadius: 10}}>
+              style={{
+                backgroundColor: '#fff',
+                padding: SIZES.width * 0.039,
+                borderRadius: 10,
+              }}>
               <Text
                 style={[
                   styles.description,
-                  {fontSize: 10, color: '#8C8C8C', lineHeight: 16},
+                  {
+                    fontSize: SIZES.width * 0.026,
+                    color: '#8C8C8C',
+                    lineHeight: SIZES.width * 0.041,
+                  },
                 ]}>
                 PAWPEACE is a full-service animal care facility dedicated to
                 consistently providing high customer satisfaction by rendering
@@ -71,11 +80,11 @@ const SuppliesBottomContainer = () => {
               </Text>
             </View>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Product Features
             </Text>
@@ -86,18 +95,18 @@ const SuppliesBottomContainer = () => {
                 marginBottom: '10',
               }}>
               {ProductFeatures.map((item, index) => (
-                <View key={item.id} style={{marginRight: 10}}>
+                <View key={item.id} style={{marginRight: SIZES.width * 0.026}}>
                   <Text
                     style={[
                       styles.description,
                       {
-                        paddingHorizontal: 10,
+                        paddingHorizontal: SIZES.width * 0.026,
                         borderWidth: 0.3,
                         borderColor: '#FFC6C6',
                         backgroundColor: '#fff',
-                        marginBottom: 10,
+                        marginBottom: SIZES.width * 0.026,
                         paddingVertical: 3,
-                        borderRadius: 10,
+                        borderRadius: SIZES.width * 0.026,
                       },
                     ]}>
                     {item.title}
@@ -106,20 +115,20 @@ const SuppliesBottomContainer = () => {
               ))}
             </View>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Technical Details
             </Text>
             <View
               style={{
                 backgroundColor: '#fff',
-                paddingHorizontal: 16,
-                gap: 10,
-                padding: 10,
+                paddingHorizontal: SIZES.width * 0.041,
+                gap: SIZES.width * 0.026,
+                padding: SIZES.width * 0.026,
               }}>
               <View style={styles.flexBox}>
                 <Text style={[styles.description, {color: '#8C8C8C'}]}>
@@ -144,20 +153,24 @@ const SuppliesBottomContainer = () => {
               </View>
             </View>
           </View>
-          <View style={{marginTop: 20, marginBottom: 100}}>
+          <View
+            style={{
+              marginTop: SIZES.width * 0.051,
+              marginBottom: SIZES.width * 0.26,
+            }}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Additional Details
             </Text>
             <View
               style={{
                 backgroundColor: '#fff',
-                paddingHorizontal: 16,
-                gap: 10,
-                padding: 10,
+                paddingHorizontal: SIZES.width * 0.041,
+                gap: SIZES.width * 0.026,
+                padding: SIZES.width * 0.026,
               }}>
               <View style={styles.flexBox}>
                 <Text style={[styles.description]}>
@@ -184,11 +197,11 @@ const SuppliesBottomContainer = () => {
         </>
       ) : (
         <>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Ingradients
             </Text>
@@ -204,13 +217,13 @@ const SuppliesBottomContainer = () => {
                     style={[
                       styles.description,
                       {
-                        paddingHorizontal: 10,
+                        paddingHorizontal: SIZES.width * 0.026,
                         borderWidth: 0.3,
                         borderColor: '#FFC6C6',
                         backgroundColor: '#fff',
-                        marginBottom: 10,
+                        marginBottom: SIZES.width * 0.026,
                         paddingVertical: 3,
-                        borderRadius: 10,
+                        borderRadius: SIZES.width * 0.026,
                       },
                     ]}>
                     {item.title}
@@ -219,20 +232,20 @@ const SuppliesBottomContainer = () => {
               ))}
             </View>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: SIZES.width * 0.051}}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Nutritional Analysis
             </Text>
             <View
               style={{
                 backgroundColor: '#fff',
-                paddingHorizontal: 16,
-                gap: 10,
-                padding: 10,
+                paddingHorizontal: SIZES.width * 0.041,
+                gap: SIZES.width * 0.026,
+                padding: SIZES.width * 0.026,
               }}>
               <View style={styles.flexBox}>
                 <Text style={[styles.description, {color: '#8C8C8C'}]}>
@@ -273,20 +286,24 @@ const SuppliesBottomContainer = () => {
               </View>
             </View>
           </View>
-          <View style={{marginTop: 20, marginBottom: 100}}>
+          <View
+            style={{
+              marginTop: SIZES.width * 0.051,
+              marginBottom: SIZES.width * 0.26,
+            }}>
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 10},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
               ]}>
               Recommended Dose
             </Text>
             <View
               style={{
                 backgroundColor: '#fff',
-                paddingHorizontal: 16,
-                gap: 10,
-                padding: 10,
+                paddingHorizontal: SIZES.width * 0.041,
+                gap: SIZES.width * 0.026,
+                padding: SIZES.width * 0.026,
               }}>
               <View style={styles.flexBox}>
                 <Text style={styles.description}>
@@ -334,27 +351,27 @@ export default SuppliesBottomContainer;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
-    paddingHorizontal: 16,
+    marginTop: SIZES.width * 0.051,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   boxContainer: {
-    height: 45,
+    height: SIZES.width * 0.115,
     justifyContent: 'center',
     padding: 3,
-    paddingHorizontal: 5,
+    paddingHorizontal: SIZES.width * 0.013,
   },
   text: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
     paddingHorizontal: 30,
     textAlign: 'center',
-    paddingVertical: 10,
+    paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     color: '#121212',
     fontFamily: 'Visby-Medium',

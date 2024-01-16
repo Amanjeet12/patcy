@@ -23,6 +23,7 @@ import {
 } from '../../SvgComponent/Logocomponent';
 import image from '../../../../constant/image';
 import Button from '../../../../components/Button';
+import {SIZES} from '../../../../constant/theme';
 
 const CheckoutScreen = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -118,7 +119,11 @@ const CheckoutScreen = () => {
               </View>
             </View>
           </View>
-          <View style={[styles.flexBox, {marginTop: SIZES.width * 0.026, paddingHorizontal: 0}]}>
+          <View
+            style={[
+              styles.flexBox,
+              {marginTop: SIZES.width * 0.026, paddingHorizontal: 0},
+            ]}>
             <Text style={styles.text}>
               Date:{' '}
               <Text style={[styles.text, {color: '#F84040'}]}>
@@ -141,14 +146,21 @@ const CheckoutScreen = () => {
             <View
               style={[
                 styles.whiteContainer,
-                {paddingHorizontal: SIZES.width * 0.039, marginTop: SIZES.width * 0.026},
+                {
+                  paddingHorizontal: SIZES.width * 0.039,
+                  marginTop: SIZES.width * 0.026,
+                },
               ]}>
               <TouchableOpacity
                 style={styles.categoryHeader}
                 onPress={() => handleCategoryClick('Grooming')}>
                 <Text style={styles.text}>Grooming</Text>
                 <View
-                  style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.013}}>
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: SIZES.width * 0.013,
+                  }}>
                   <Text style={[styles.text, {color: '#000'}]}>
                     {services.length} items
                   </Text>
@@ -183,14 +195,22 @@ const CheckoutScreen = () => {
                         <Text
                           style={[
                             styles.text,
-                            {fontWeight: '400', fontSize: SIZES.width * 0.018, color: '#000'},
+                            {
+                              fontWeight: '400',
+                              fontSize: SIZES.width * 0.018,
+                              color: '#000',
+                            },
                           ]}>
                           {service.name}
                         </Text>
                         <Text
                           style={[
                             styles.text,
-                            {fontWeight: '400', fontSize: SIZES.width * 0.018, color: '#8C8C8C'},
+                            {
+                              fontWeight: '400',
+                              fontSize: SIZES.width * 0.018,
+                              color: '#8C8C8C',
+                            },
                           ]}>
                           {service.details}
                         </Text>
@@ -225,7 +245,11 @@ const CheckoutScreen = () => {
                 {justifyContent: 'space-between'},
               ]}>
               <View
-                style={{flexDirection: 'row', alignItems: 'center', gap: SIZES.width * 0.026}}>
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: SIZES.width * 0.026,
+                }}>
                 <Text style={styles.text}>Service</Text>
                 <RedService />
               </View>
@@ -249,7 +273,11 @@ const CheckoutScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <View style={{paddingHorizontal: 16, bottom: 10}}>
+      <View
+        style={{
+          paddingHorizontal: SIZES.width * 0.041,
+          bottom: SIZES.width * 0.026,
+        }}>
         <Button placeholder={'Place Order'} screen={'PaymentScreen'} />
       </View>
     </SafeAreaView>

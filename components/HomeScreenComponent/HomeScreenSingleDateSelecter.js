@@ -3,6 +3,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useRef, useState} from 'react';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import {Calendar} from 'react-native-calendars';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenSingleDateSelecter = () => {
   const refRBSheet = useRef();
@@ -31,7 +32,12 @@ const HomeScreenSingleDateSelecter = () => {
 
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: SIZES.width * 0.026,
+        }}>
         <Text style={styles.description}>Check In</Text>
         <TouchableOpacity onPress={() => handleOpenBottomSheet()}>
           <Text style={[styles.description, styles.selectedBox]}>
@@ -44,23 +50,23 @@ const HomeScreenSingleDateSelecter = () => {
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={400}
+        height={SIZES.height * 0.511}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
           },
           draggableIcon: {
             backgroundColor: '#D9D9D9',
-            width: 80,
-            height: 5,
+            width: SIZES.width * 0.205,
+            height: SIZES.width * 0.013,
           },
         }}>
         <View>
           <Calendar
             style={{
               borderColor: 'gray',
-              height: 380,
-              margin: 10,
+              height: SIZES.height * 0.486,
+              margin: SIZES.width * 0.026,
             }}
             theme={{
               backgroundColor: '#ffffff',
@@ -84,27 +90,27 @@ export default HomeScreenSingleDateSelecter;
 
 const styles = StyleSheet.create({
   container: {
-    height: 70,
+    height: SIZES.width * 0.18,
     backgroundColor: '#fff',
     borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 14,
+    padding: SIZES.width * 0.036,
   },
   description: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
     color: '#8C8C8C',
     fontFamily: 'Visby-Medium',
   },
   selectedBox: {
     color: '#000',
-    fontSize: 10,
-    lineHeight: 16,
-    paddingVertical: 5,
-    paddingHorizontal: 12,
+    fontSize: SIZES.width * 0.026,
+    lineHeight: SIZES.width * 0.041,
+    paddingVertical: SIZES.width * 0.013,
+    paddingHorizontal: SIZES.width * 0.031,
     backgroundColor: '#FFC6C6',
-    borderRadius: 5,
+    borderRadius: SIZES.width * 0.013,
     fontWeight: '700',
   },
 });

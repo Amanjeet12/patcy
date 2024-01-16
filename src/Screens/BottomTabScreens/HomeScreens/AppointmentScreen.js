@@ -10,13 +10,18 @@ import React from 'react';
 import BackChecker from '../../../../components/BackChecker';
 import Appointment from '../../../../components/Appointment';
 import {doctorData} from '../../../../constant/data';
+import {SIZES} from '../../../../constant/theme';
 
 const AppointmentScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <View>
-        <View style={{marginTop: SIZES.width * 0.026, marginHorizontal: SIZES.width * 0.041}}>
+        <View
+          style={{
+            marginTop: SIZES.width * 0.026,
+            marginHorizontal: SIZES.width * 0.041,
+          }}>
           <BackChecker placeholder={'Appontments'} />
         </View>
         <View

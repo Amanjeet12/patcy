@@ -67,8 +67,8 @@ const HomeScreenSuppliesItem = ({data}) => {
               style={[
                 styles.title,
                 {
-                  paddingHorizontal: 10,
-                  paddingVertical: 4,
+                  paddingHorizontal: SIZES.width * 0.026,
+                  paddingVertical: SIZES.width * 0.01,
                   backgroundColor: '#FFC6C6',
                   borderRadius: 32,
                 },
@@ -80,31 +80,40 @@ const HomeScreenSuppliesItem = ({data}) => {
             {likedItems.includes(item.id) ? (
               <UnLike
                 name="heart"
-                size={16}
+                size={SIZES.width * 0.041}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle(item.id)}
               />
             ) : (
               <Like
                 name="heart-o"
-                size={16}
+                size={SIZES.width * 0.041}
                 color={'#F84040'}
                 onPress={() => handleLikeToggle(item.id)}
               />
             )}
           </View>
         </View>
-        <View style={{width: '100%', height: 100, marginVertical: 5}}>
+        <View
+          style={{
+            width: '100%',
+            height: SIZES.width * 0.26,
+            marginVertical: SIZES.width * 0.01,
+          }}>
           <Image
             source={item.image}
             style={{width: '100%', height: '100%', resizeMode: 'contain'}}
           />
         </View>
         <Text style={styles.title}>{item.name}</Text>
-        <Text style={[styles.title, {color: '#8C8C8C', paddingTop: 5}]}>
+        <Text
+          style={[
+            styles.title,
+            {color: '#8C8C8C', paddingTop: SIZES.width * 0.01},
+          ]}>
           {item.type}
         </Text>
-        <View style={[styles.flexBox, {paddingTop: 5}]}>
+        <View style={[styles.flexBox, {paddingTop: SIZES.width * 0.01}]}>
           <View>
             <Text style={[styles.title, {color: '#F84040', fontWeight: '700'}]}>
               {item.price}
@@ -123,7 +132,11 @@ const HomeScreenSuppliesItem = ({data}) => {
                   <TouchableOpacity
                     style={[styles.addStyle, styles.specialStyle]}
                     onPress={() => handleDecreaseQuantity(item.id)}>
-                    <Minus name="minus" size={16} color={'#ffc6c6'} />
+                    <Minus
+                      name="minus"
+                      size={SIZES.width * 0.041}
+                      color={'#ffc6c6'}
+                    />
                   </TouchableOpacity>
                 </View>
                 <View style={[styles.whiteButtonContainer, {width: '30%'}]}>
@@ -133,7 +146,11 @@ const HomeScreenSuppliesItem = ({data}) => {
                   <TouchableOpacity
                     style={[styles.addStyle, styles.specialStyle]}
                     onPress={() => handleIncreaseQuantity(item.id)}>
-                    <Add name="add-outline" size={16} color={'#ffc6c6'} />
+                    <Add
+                      name="add-outline"
+                      size={SIZES.width * 0.041}
+                      color={'#ffc6c6'}
+                    />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -153,21 +170,21 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    paddingLeft: 12,
-    marginTop: 10,
+    paddingLeft: SIZES.width * 0.031,
+    marginTop: SIZES.width * 0.026,
   },
   itemContainer: {
     width: SIZES.width / 2 - 30, // Adjusted width
-    height: 230,
+    height: SIZES.width * 0.59,
     backgroundColor: '#fff',
-    padding: 14,
+    padding: SIZES.width * 0.036,
     borderRadius: 20,
-    margin: 10,
+    margin: SIZES.width * 0.026,
   },
   title: {
     color: '#121212',
     fontFamily: 'Visby-Medium',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     textAlign: 'left',
   },
@@ -177,8 +194,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   addStyle: {
-    width: 20,
-    height: 20,
+    width: SIZES.width * 0.051,
+    height: SIZES.width * 0.051,
     backgroundColor: '#8c8c8c',
     borderRadius: 32,
     alignItems: 'center',
@@ -187,17 +204,14 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    // gap: 8,
     backgroundColor: '#ffc6c6',
-    // paddingHorizontal: 5,
-    // paddingVertical: 3,
     borderRadius: 12,
-    width: 60,
-    height: 20,
+    width: SIZES.width * 0.153,
+    height: SIZES.width * 0.051,
   },
   specialStyle: {
-    width: 15,
-    height: 15,
+    width: SIZES.width * 0.039,
+    height: SIZES.width * 0.039,
     borderRadius: 30,
     backgroundColor: '#fff',
   },

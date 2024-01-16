@@ -20,7 +20,7 @@ import {
 } from '../../../constant/data';
 import CustomImageCarousal from '../../../components/CustomImageCarousal';
 import ImageSlider from '../../../components/ImageSlider';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import ImageSlider2 from '../../../components/ImageSlider2';
 import StoreContainer from '../../../components/StoreContainer';
 import Appointment from '../../../components/Appointment';
@@ -40,7 +40,11 @@ const DashboardScreen = () => {
             borderTopLeftRadius: SIZES.width * 0.102,
             borderTopRightRadius: SIZES.width * 0.102,
           }}>
-          <View style={{marginTop: SIZES.width * 0.077, paddingHorizontal: SIZES.width * 0.041}}>
+          <View
+            style={{
+              marginTop: SIZES.width * 0.077,
+              paddingHorizontal: SIZES.width * 0.041,
+            }}>
             <Text style={styles.title}>Pet Services</Text>
             <BoxContainer data={box} />
           </View>
@@ -52,7 +56,11 @@ const DashboardScreen = () => {
             />
           </View>
           <View style={{marginVertical: SIZES.width * 0.051}}>
-            <View style={{marginHorizontal: SIZES.width * 0.041, marginBottom: SIZES.width * 0.026}}>
+            <View
+              style={{
+                marginHorizontal: SIZES.width * 0.041,
+                marginBottom: SIZES.width * 0.026,
+              }}>
               <Text style={styles.title}>Top Deals</Text>
             </View>
             <ImageSlider images={data2} />
@@ -74,7 +82,11 @@ const DashboardScreen = () => {
             <ImageSlider2 images={data3} />
           </View>
           <View style={{marginVertical: SIZES.width * 0.051}}>
-            <View style={{marginHorizontal: SIZES.width * 0.041, marginBottom: SIZES.width * 0.026}}>
+            <View
+              style={{
+                marginHorizontal: SIZES.width * 0.041,
+                marginBottom: SIZES.width * 0.026,
+              }}>
               <Text style={styles.title}>Featured Stores</Text>
             </View>
             <StoreContainer data={store} />

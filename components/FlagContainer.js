@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {
   Image,
   StyleSheet,
@@ -9,6 +10,7 @@ import {
 import React from 'react';
 import image from '../constant/image';
 import Icon from 'react-native-vector-icons/Entypo';
+import {SIZES} from '../constant/theme';
 
 const FlagContainer = () => {
   return (
@@ -16,7 +18,11 @@ const FlagContainer = () => {
       <TouchableOpacity style={styles.imageContainer}>
         <Image
           source={image.Flag}
-          style={{width: 26, height: 17, resizeMode: 'cover'}}
+          style={{
+            width: SIZES.width * 0.067,
+            height: SIZES.width * 0.044,
+            resizeMode: 'cover',
+          }}
         />
         <Icon name="chevron-small-down" size={20} color={'#8C8C8C'} />
       </TouchableOpacity>
@@ -27,7 +33,7 @@ const FlagContainer = () => {
           maxLength={10}
           style={{
             color: '#000',
-            fontSize: 10,
+            fontSize: SIZES.width * 0.026,
             fontWeight: '600',
             fontFamily: 'Visby-Medium',
           }}
@@ -43,13 +49,13 @@ export default FlagContainer;
 const styles = StyleSheet.create({
   inputContainer: {
     width: '100%',
-    height: 49,
+    height: SIZES.width * 0.129,
     borderWidth: 0.3,
     backgroundColor: '#EAEAEA',
     borderRadius: 10,
     borderColor: '#8C8C8C',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
+    paddingHorizontal: SIZES.width * 0.039,
+    paddingVertical: SIZES.width * 0.013,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -57,6 +63,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '20%',
     alignItems: 'center',
-    gap: 10,
+    gap: SIZES.width * 0.026,
   },
 });

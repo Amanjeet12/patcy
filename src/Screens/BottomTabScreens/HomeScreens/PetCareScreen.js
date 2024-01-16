@@ -16,6 +16,7 @@ import {FilterIcon} from '../../SvgComponent/Logocomponent';
 import FilterIconComponent from '../../../../components/HomeScreenComponent/FilterIconComponent';
 import CommonDesignContainer from '../../../../components/CommonDesignContainer';
 import BoardingScrollComponent from '../../../../components/HomeScreenComponent/BoardingScrollComponent';
+import {SIZES} from '../../../../constant/theme';
 
 const PetCareScreen = () => {
   return (

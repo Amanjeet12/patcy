@@ -8,6 +8,7 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenPetSlider = ({data}) => {
   const [selectedItemId, setSelectedItemId] = useState(
@@ -54,25 +55,25 @@ const HomeScreenPetSlider = ({data}) => {
 
 const styles = StyleSheet.create({
   scrollContainer: {
-    paddingHorizontal: 10,
+    paddingHorizontal: SIZES.width * 0.026,
   },
   item: {
-    width: 75,
-    height: 125,
-    marginHorizontal: 8,
+    width: SIZES.width * 0.192,
+    height: SIZES.width * 0.32,
+    marginHorizontal: SIZES.width * 0.021,
     borderRadius: 50,
     alignItems: 'center',
-    padding: 8,
+    padding: SIZES.width * 0.021,
   },
   image: {
-    width: 60,
-    height: 60,
+    width: SIZES.width * 0.153,
+    height: SIZES.width * 0.153,
     borderRadius: 50,
   },
   text: {
     color: '#000',
-    paddingTop: 12,
-    fontSize: 12,
+    paddingTop: SIZES.width * 0.031,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
   },

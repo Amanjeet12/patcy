@@ -6,7 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import {COLORS} from '../constant/theme';
+import {COLORS, SIZES} from '../constant/theme';
 
 const FavouritesSlider = ({data, onSelectItem}) => {
   const [selectedItem, setSelectedItem] = useState(0); // Initialize with 0 for the first item
@@ -48,25 +48,25 @@ const FavouritesSlider = ({data, onSelectItem}) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
-    marginTop: 10,
+    paddingHorizontal: SIZES.width * 0.026,
+    marginTop: SIZES.width * 0.026,
   },
   petItem: {
     backgroundColor: '#fff',
-    marginHorizontal: 5,
+    marginHorizontal: SIZES.width * 0.01,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 0.5,
     borderColor: '#FFC6C6',
-    paddingHorizontal: 25,
+    paddingHorizontal: SIZES.width * 0.064,
     borderRadius: 32,
-    paddingVertical: 5,
+    paddingVertical: SIZES.width * 0.013,
   },
   text: {
     color: '#121212',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
-    lineHeight: 20,
+    lineHeight: SIZES.width * 0.051,
     fontFamily: 'Visby-Medium',
   },
 });

@@ -11,7 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import OtpContainer from '../../../components/OtpContainer';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 import SignUpScreen from './SignUpScreen';
 
 const SignUpOtpScreen = () => {

@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {PetSize2, PetSize1} from '../src/Screens/SvgComponent/Logocomponent';
+import {SIZES} from '../constant/theme';
 
 const data = [
   {
@@ -65,29 +66,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderRadius: 10,
-    paddingHorizontal: 14,
-    paddingVertical: 20,
+    paddingHorizontal: SIZES.width * 0.036,
+    paddingVertical: SIZES.width * 0.051,
     justifyContent: 'space-around',
   },
   itemContainer: {
-    marginHorizontal: 10,
+    marginHorizontal: SIZES.width * 0.026,
     alignItems: 'center',
-    padding: 10,
-    borderRadius: 12,
-    width: 69,
-    height: 69,
+    padding: SIZES.width * 0.026,
+    borderRadius: SIZES.width * 0.031,
+    width: SIZES.width * 0.18,
+    height: SIZES.width * 0.18,
     gap: 2,
     borderWidth: 0.5,
     borderColor: '#FFC6C6',
   },
   text: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     color: '#000',
     fontFamily: 'Visby-Medium',
   },
   large: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     color: '#000',
     fontFamily: 'VisbyRound-Bold',

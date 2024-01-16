@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {SIZES} from '../constant/theme';
 
 const StoreContainer = ({data}) => {
   const renderBox = item => (
@@ -36,23 +37,23 @@ const styles = StyleSheet.create({
   },
   box: {
     flexBasis: '23%', // Adjusted flexBasis to fit 4 boxes in a row with some spacing
-    padding: 10,
+    padding: SIZES.width * 0.026,
     alignItems: 'center',
   },
   image: {
-    width: 54,
-    height: 54,
+    width: SIZES.width * 0.141,
+    height: SIZES.width * 0.141,
     resizeMode: 'cover',
-    marginBottom: 7,
+    marginBottom: SIZES.width * 0.018,
     borderRadius: 32,
   },
   title: {
     textAlign: 'center',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
     color: '#000',
-    marginTop: 5,
+    marginTop: SIZES.width * 0.013,
   },
 });
 

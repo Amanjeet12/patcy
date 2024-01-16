@@ -8,6 +8,7 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
+import {SIZES} from '../../constant/theme';
 
 const HomeScreenSizeSlider = ({data}) => {
   const [selectedItemId, setSelectedItemId] = useState(
@@ -55,24 +56,24 @@ const HomeScreenSizeSlider = ({data}) => {
 
 const styles = StyleSheet.create({
   scrollContainer: {
-    paddingHorizontal: 10,
+    paddingHorizontal: SIZES.width * 0.026,
   },
   item: {
-    marginHorizontal: 8,
+    marginHorizontal: SIZES.width * 0.021,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
-    padding: 8,
-    paddingHorizontal: 15,
+    gap: SIZES.width * 0.026,
+    padding: SIZES.width * 0.021,
+    paddingHorizontal: SIZES.width * 0.039,
     borderRadius: 10,
   },
   image: {
-    width: 15,
-    height: 15,
+    width: SIZES.width * 0.039,
+    height: SIZES.width * 0.039,
   },
   text: {
     color: '#000',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
   },

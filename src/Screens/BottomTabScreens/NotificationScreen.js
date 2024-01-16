@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import BackChecker from '../../../components/BackChecker';
 import {Notifications} from '../../../constant/data';
+import {SIZES} from '../../../constant/theme';
 
 const NotificationScreen = () => {
   console.log(Notifications);

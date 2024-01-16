@@ -22,6 +22,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {useRoute} from '@react-navigation/native';
 import HomeBottomContainer from '../../../../components/HomeScreenComponent/HomeBottomContainer';
 import BottomPriceChecker from '../../../../components/HomeScreenComponent/BottomPriceChecker';
+import {SIZES} from '../../../../constant/theme';
 
 const BoardingInnerScreen = () => {
   const navigation = useNavigation();
@@ -116,28 +117,41 @@ const BoardingInnerScreen = () => {
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Booking Date
           </Text>
           <HomeScreenDateSelecter />
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Pet Size
           </Text>
           <PetSize />
         </View>
         <View style={styles.bookingDateContainer}>
           <Text
-            style={[styles.description, {color: '#8C8C8C', marginBottom: SIZES.width * 0.026}]}>
+            style={[
+              styles.description,
+              {color: '#8C8C8C', marginBottom: SIZES.width * 0.026},
+            ]}>
             Boarding Service
           </Text>
           <View style={styles.container2}>
             <TouchableOpacity
               style={styles.coloeContainer}
               onPress={() => handleNavigation()}>
-              <Icon name="options" size={SIZES.width * 0.051} color={'#212121'} />
+              <Icon
+                name="options"
+                size={SIZES.width * 0.051}
+                color={'#212121'}
+              />
               <Text style={styles.text}>
                 {selectedService ? selectedService.name : `Select Service`}
               </Text>

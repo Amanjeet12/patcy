@@ -15,7 +15,7 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import CommonContainer from '../../../components/CommonContainer';
 import PasswordContainer from '../../../components/PasswordContainer';
-import {COLORS} from '../../../constant/theme';
+import {COLORS, SIZES} from '../../../constant/theme';
 
 const MailAuthScreen = () => {
   const navigation = useNavigation();

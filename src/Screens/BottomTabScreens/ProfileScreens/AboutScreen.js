@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import BackChecker from '../../../../components/BackChecker';
+import {SIZES} from '../../../../constant/theme';
 
 const AboutScreen = () => {
   return (

@@ -15,6 +15,7 @@ import {
   Threedot,
 } from '../src/Screens/SvgComponent/Logocomponent';
 import RBSheet from 'react-native-raw-bottom-sheet';
+import {SIZES} from '../constant/theme';
 
 const DividerContent = ({title, des, color}) => {
   return (
@@ -65,13 +66,13 @@ const TransactionSlider = ({data}) => {
       <View style={{width: '20%'}}>
         <Image source={item.image} style={styles.image} />
       </View>
-      <View style={{width: '59%', gap: 5}}>
+      <View style={{width: '59%', gap: SIZES.width * 0.013}}>
         <Text style={[styles.title, {color: '#000', fontWeight: '700'}]}>
           {item.name}
         </Text>
         <Text style={[styles.title, {color: '#8C8C8C'}]}>{item.type}</Text>
         <View style={styles.flexBox}>
-          <View style={[styles.flexBox, {gap: 10}]}>
+          <View style={[styles.flexBox, {gap: SIZES.width * 0.026}]}>
             <Clock />
             <Text style={styles.title}>{item.timing}</Text>
           </View>
@@ -82,13 +83,13 @@ const TransactionSlider = ({data}) => {
         style={{
           width: '15%',
           justifyContent: 'center',
-          gap: 5,
+          gap: SIZES.width * 0.013,
           alignItems: 'center',
         }}>
         <Text
           style={[
             styles.title,
-            {color: '#000', fontWeight: '700', fontSize: 12},
+            {color: '#000', fontWeight: '700', fontSize: SIZES.width * 0.031},
           ]}>
           {item.actuallPrice}
         </Text>
@@ -118,28 +119,28 @@ const TransactionSlider = ({data}) => {
           data={data}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
-          contentContainerStyle={{paddingBottom: 100}}
+          contentContainerStyle={{paddingBottom: SIZES.width * 0.26}}
         />
       </View>
       <RBSheet
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={500}
+        height={SIZES.height * 0.64}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
           },
           draggableIcon: {
             backgroundColor: '#D9D9D9',
-            width: 80,
-            height: 5,
+            width: SIZES.width * 0.205,
+            height: SIZES.width * 0.013,
           },
         }}>
         <View style={styles.bottomContainer}>
           <View
             style={{
-              height: 50,
+              height: SIZES.width * 0.13,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
@@ -149,15 +150,19 @@ const TransactionSlider = ({data}) => {
           <View style={styles.tranctionIdContainer}>
             <View>
               <Text style={styles.title}>Outlet:</Text>
-              <Text style={[styles.title, {fontWeight: '700', paddingTop: 5}]}>
+              <Text
+                style={[
+                  styles.title,
+                  {fontWeight: '700', paddingTop: SIZES.width * 0.013},
+                ]}>
                 {selectedItem?.name}
               </Text>
               <View
                 style={{
                   flexDirection: 'row',
                   alignItems: 'center',
-                  gap: 10,
-                  paddingTop: 10,
+                  gap: SIZES.width * 0.026,
+                  paddingTop: SIZES.width * 0.026,
                 }}>
                 <Text style={[styles.title, {color: '#F84040'}]}>
                   Transaction ID:
@@ -172,15 +177,15 @@ const TransactionSlider = ({data}) => {
               <Text style={styles.successfull}>Successful</Text>
             </View>
           </View>
-          <View style={{marginTop: 25}}>
+          <View style={{marginTop: SIZES.width * 0.064}}>
             <Text style={styles.title}>Billing Details</Text>
             <View
               style={{
-                height: 150,
+                height: SIZES.width * 0.382,
                 backgroundColor: '#F6F6F6',
-                marginTop: 10,
-                paddingHorizontal: 15,
-                paddingVertical: 20,
+                marginTop: SIZES.width * 0.026,
+                paddingHorizontal: SIZES.width * 0.039,
+                paddingVertical: SIZES.width * 0.051,
               }}>
               <DividerContent title={'Bill Amount'} des={'AED 175'} />
               <DividerContent title={'Time'} des={'18 Oct 2023, 10:30pm'} />
@@ -196,10 +201,10 @@ const TransactionSlider = ({data}) => {
         <TouchableOpacity
           style={{
             alignItems: 'center',
-            marginTop: 24,
+            marginTop: SIZES.width * 0.062,
             flexDirection: 'row',
             justifyContent: 'center',
-            gap: 5,
+            gap: SIZES.width * 0.013,
           }}>
           <QuestionMark />
           <Text style={styles.redText}> Need Help</Text>
@@ -213,35 +218,39 @@ export default TransactionSlider;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 100,
+    marginBottom: SIZES.width * 0.26,
   },
   item: {
-    paddingHorizontal: 10,
-    marginVertical: 5,
-    marginHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.026,
+    marginVertical: SIZES.width * 0.013,
+    marginHorizontal: SIZES.width * 0.041,
     borderRadius: 10,
     backgroundColor: '#fff',
     flexDirection: 'row',
-    paddingVertical: 15,
+    paddingVertical: SIZES.width * 0.039,
   },
   image: {
-    width: 50,
-    height: 50,
+    width: SIZES.width * 0.13,
+    height: SIZES.width * 0.13,
     borderRadius: 12,
   },
   title: {
     color: '#121212',
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
   },
-  flexBox: {flexDirection: 'row', alignItems: 'center', gap: 20},
+  flexBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SIZES.width * 0.051,
+  },
   bottomContainer: {
-    paddingHorizontal: 20,
+    paddingHorizontal: SIZES.width * 0.051,
   },
   redText: {
     color: '#F84040',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '500',
     fontFamily: 'Visby-Medium',
   },
@@ -251,22 +260,22 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   tranctionIdContainer: {
-    height: 98,
+    height: SIZES.width * 0.25,
     backgroundColor: '#F6F6F6',
     borderRadius: 12,
-    marginTop: 30,
-    paddingHorizontal: 15,
-    paddingVertical: 20,
+    marginTop: SIZES.width * 0.077,
+    paddingHorizontal: SIZES.width * 0.039,
+    paddingVertical: SIZES.width * 0.051,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   successfull: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     color: '#000',
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
+    paddingHorizontal: SIZES.width * 0.039,
+    paddingVertical: SIZES.width * 0.013,
     backgroundColor: '#E6FFDF',
     borderRadius: 15,
   },

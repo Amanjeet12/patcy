@@ -17,7 +17,7 @@ import {
   CheckBox,
   CorrectCheckBox,
 } from '../../src/Screens/SvgComponent/Logocomponent';
-import {COLORS} from '../../constant/theme';
+import {COLORS, SIZES} from '../../constant/theme';
 import {useNavigation} from '@react-navigation/native';
 
 const SelectServiceForCareComponent = () => {
@@ -46,7 +46,7 @@ const SelectServiceForCareComponent = () => {
             <Text
               style={[
                 styles.description,
-                {color: '#8C8C8C', marginBottom: 13},
+                {color: '#8C8C8C', marginBottom: SIZES.width * 0.034},
               ]}>
               Select pet care services to add
             </Text>
@@ -60,14 +60,14 @@ const SelectServiceForCareComponent = () => {
                   <Image
                     source={service.image}
                     style={{
-                      width: 30,
-                      height: 30,
+                      width: SIZES.width * 0.077,
+                      height: SIZES.width * 0.077,
                       borderRadius: 30,
                       resizeMode: 'cover',
                     }}
                   />
                 </View>
-                <View style={{width: '75%', gap: 5}}>
+                <View style={{width: '75%', gap: SIZES.width * 0.013}}>
                   <Text style={styles.serviceName}>{service.name}</Text>
                   <Text style={styles.servicePrice}>{service.price}</Text>
                 </View>
@@ -86,9 +86,9 @@ const SelectServiceForCareComponent = () => {
       <View
         style={{
           position: 'absolute',
-          bottom: 10,
+          bottom: SIZES.width * 0.026,
           width: '100%',
-          paddingHorizontal: 16,
+          paddingHorizontal: SIZES.width * 0.041,
         }}>
         <TouchableOpacity
           style={[
@@ -117,29 +117,29 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: SIZES.width * 0.041,
   },
   description: {
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '400',
     color: '#121212',
     fontFamily: 'Visby-Medium',
   },
   bookingDateContainer: {
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
   },
   serviceContainer: {
-    marginBottom: 10,
-    padding: 10,
+    marginBottom: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
     backgroundColor: '#ffffff',
     borderRadius: 8,
     flexDirection: 'row',
-    height: 65,
+    height: SIZES.width * 0.166,
     alignItems: 'center',
-    gap: 5,
+    gap: SIZES.width * 0.013,
   },
   serviceName: {
-    fontSize: 10,
+    fontSize: SIZES.width * 0.026,
     fontWeight: '600',
     color: '#121212',
     fontFamily: 'VisbyRound-Bold',
@@ -148,19 +148,19 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#8C8C8C',
     fontFamily: 'Visby-Medium',
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
   },
   button: {
-    height: 50,
+    height: SIZES.width * 0.13,
     backgroundColor: COLORS.btn,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: SIZES.width * 0.026,
+    padding: SIZES.width * 0.026,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 12,
+    fontSize: SIZES.width * 0.031,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },

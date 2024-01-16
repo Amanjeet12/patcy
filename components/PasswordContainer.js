@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {EyeOff} from '../src/Screens/SvgComponent/Logocomponent';
+import {SIZES} from '../constant/theme';
 
 const PasswordContainer = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -24,7 +25,7 @@ const PasswordContainer = () => {
           secureTextEntry={!isPasswordVisible}
           style={{
             fontFamily: 'Visby-Medium',
-            fontSize: 12,
+            fontSize: SIZES.width * 0.031,
             fontWeight: '600',
             color: '#000',
             flex: 1,
@@ -53,13 +54,13 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: '100%',
-    height: 49,
+    height: SIZES.width * 0.129,
     backgroundColor: '#EAEAEA',
     borderWidth: 0.5,
     borderColor: '#8C8C8C',
-    marginTop: 10,
+    marginTop: SIZES.width * 0.026,
     alignItems: 'center',
-    paddingHorizontal: 15,
-    borderRadius: 10,
+    paddingHorizontal: SIZES.width * 0.039,
+    borderRadius: SIZES.width * 0.026,
   },
 });

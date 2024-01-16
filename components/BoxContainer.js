@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {SIZES} from '../constant/theme';
 
 const BoxContainer = ({data}) => {
   const navigation = useNavigation();
@@ -40,25 +41,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    marginTop: 15,
+    marginTop: SIZES.width * 0.039,
   },
   box: {
     flexBasis: '30%',
-    marginBottom: 19,
-    padding: 16,
+    marginBottom: SIZES.width * 0.049,
+    padding: SIZES.width * 0.041,
     borderRadius: 17,
     backgroundColor: '#e0e0e0',
     alignItems: 'center',
   },
   image: {
-    width: 54,
-    height: 54,
+    width: SIZES.width * 0.141,
+    height: SIZES.width * 0.141,
     resizeMode: 'cover',
-    marginBottom: 7,
+    marginBottom: SIZES.width * 0.018,
   },
   title: {
     textAlign: 'center',
-    fontSize: 11,
+    fontSize: SIZES.width * 0.029,
     fontWeight: '400',
     fontFamily: 'Visby-Medium',
     color: '#000',
