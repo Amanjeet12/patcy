@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
 import image from '../constant/image';
 import {BellIcon} from '../src/Screens/SvgComponent/Logocomponent';
@@ -33,6 +33,7 @@ const DashboardContainer = () => {
           width: '10%',
           height: SIZES.width * 0.14,
           alignItems: 'center',
+          justifyContent:'center'
         }}
         onPress={() => Navigation.navigate('NotificationScreen')}>
         <BellIcon />
@@ -45,7 +46,7 @@ export default DashboardContainer;
 
 const styles = StyleSheet.create({
   container: {
-    height: SIZES.width * 0.382,
+    height: Platform.OS === 'ios' ? 120  : SIZES.width * 0.382,
     flexDirection: 'row',
     alignItems: 'center',
   },

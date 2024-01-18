@@ -8,6 +8,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
 import {COLORS, SIZES} from '../../../constant/theme';
@@ -106,7 +107,11 @@ const OnboardingScreen = () => {
             </View>
           ))}
         </View>
-        <View style={[styles.titleContainer, {marginTop: SIZES.width * 0.072}]}>
+        <View
+          style={[
+            styles.titleContainer,
+            {marginTop: Platform.OS === 'ios' ? 0 : SIZES.width * 0.072},
+          ]}>
           {slides.map((item, index) => (
             <View
               key={index}
@@ -238,7 +243,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     paddingHorizontal: SIZES.width * 0.041,
-    marginTop: SIZES.width * 0.141,
+    marginTop: Platform.OS === 'ios' ? 0 : SIZES.width * 0.141,
   },
   titleContainer: {
     width: '100%',
@@ -256,14 +261,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: SIZES.width * 0.064,
-    fontWeight: '600',
+    fontWeight: '500',
     lineHeight: SIZES.width * 0.077,
     fontFamily: 'Visby-Medium',
     textAlign: 'center',
   },
   description: {
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     lineHeight: SIZES.width * 0.051,
     fontFamily: 'Visby-Medium',
     textAlign: 'center',

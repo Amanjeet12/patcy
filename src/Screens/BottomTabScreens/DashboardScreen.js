@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import {
+  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -27,9 +28,9 @@ import Appointment from '../../../components/Appointment';
 
 const DashboardScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} >
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.mainContainer}>
           <DashboardContainer />
         </View>
@@ -108,7 +109,7 @@ const DashboardScreen = () => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 

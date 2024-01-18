@@ -146,7 +146,6 @@ const FavouriteStack = () => {
 const AddPetStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      {/* <Stack.Screen name="AddScreen" component={AddScreen} /> */}
       <Stack.Screen name="AddPetScreen" component={AddPetScreen} />
     </Stack.Navigator>
   );
@@ -176,7 +175,6 @@ const BottomTabScreen = () => {
       style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : -SIZES.width * 0.245}>
-      <StatusBar backgroundColor={'#000'} barStyle={'light-content'} />
       <Tab.Navigator
         initialRouteName="DashboardScreen"
         screenOptions={{
@@ -185,9 +183,8 @@ const BottomTabScreen = () => {
           tabBarStyle: {
             position: 'relative',
             alignItems: 'center',
-            height: SIZES.height * 0.1,
+            height: Platform.OS === 'ios' ? 100 : SIZES.height * 0.1,
             borderRadius: 0,
-            // borderTopWidth: 0,
             elevation: Platform.OS === 'ios' ? 3 : 20,
             paddingHorizontal: SIZES.width * 0.028,
             shadowOffset: {

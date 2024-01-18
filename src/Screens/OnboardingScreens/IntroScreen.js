@@ -1,13 +1,21 @@
-import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
 import {COLORS, SIZES} from '../../../constant/theme';
 import image from '../../../constant/image';
 import Button from '../../../components/Button';
 
 const IntroScreen = () => {
-  console.log(SIZES.height * 0.5);
+  // console.log(SIZES.height * 0.5);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle={'dark-content'} />
       <View style={styles.mainContainer}>
         <View style={styles.textContainer}>
@@ -24,7 +32,7 @@ const IntroScreen = () => {
       <View style={styles.buttonContainer}>
         <Button placeholder={'Get Started'} screen={'OnboardingScreen'} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -44,9 +52,9 @@ const styles = StyleSheet.create({
   title: {
     color: COLORS.primary,
     fontSize: SIZES.width * 0.09,
-    fontWeight: '600',
+    fontWeight: '500',
     lineHeight: SIZES.width * 0.09,
-    fontFamily: 'VisbyRound-Bold',
+    fontFamily: 'Visby-Medium',
   },
   description: {
     color: COLORS.black,
@@ -67,8 +75,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'stretch',
-    borderBottomLeftRadius: 200,
-    borderBottomRightRadius: 200,
+    borderBottomLeftRadius: Platform.OS === 'ios' ? 180 : 200,
+    borderBottomRightRadius: Platform.OS === 'ios' ? 180 : 200,
   },
   buttonContainer: {
     // marginHorizontal: SIZES.width * 0.041,
@@ -76,6 +84,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     paddingHorizontal: SIZES.width * 0.041,
-    bottom: 20,
+    bottom: Platform.OS == 'ios' ? 30 : 20,
   },
 });
