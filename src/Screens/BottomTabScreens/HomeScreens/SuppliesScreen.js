@@ -11,23 +11,20 @@ import React, {useState} from 'react';
 import HomeScreenCartComponent from '../../../../components/HomeScreenComponent/HomeScreenCartComponent';
 import image from '../../../../constant/image';
 import HomeScreenPetSlider from '../../../../components/HomeScreenComponent/HomeScreenPetSlider';
-import {boardingFilter, pet, supples} from '../../../../constant/data';
+import {
+  boardingFilter,
+  pet,
+  pets,
+  supples,
+  suppliesFilter,
+} from '../../../../constant/data';
 import HomeScreenFilter from '../../../../components/HomeScreenComponent/HomeScreenFilter';
 import Searchbar from '../../../../components/Searchbar';
 import FilterIconComponent from '../../../../components/HomeScreenComponent/FilterIconComponent';
-import SuppliesContainer from '../../../../components/SuppliesContainer';
 import HomeScreenSuppliesItem from '../../../../components/HomeScreenComponent/HomeScreenSuppliesItem';
-import Slider from '@react-native-community/slider';
 import {SIZES} from '../../../../constant/theme';
 
 const SuppliesScreen = () => {
-  const [minValue, setMinValue] = useState(0);
-  const [maxValue, setMaxValue] = useState(100);
-
-  const handleSliderChange = values => {
-    setMinValue(values[0]);
-    setMaxValue(values[1]);
-  };
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
@@ -38,10 +35,10 @@ const SuppliesScreen = () => {
           icon={image.Cart}
         />
         <View>
-          <HomeScreenPetSlider data={pet} />
+          <HomeScreenPetSlider data={pets} />
         </View>
         <View style={{marginTop: SIZES.width * 0.064}}>
-          <HomeScreenFilter data={boardingFilter} />
+          <HomeScreenFilter data={suppliesFilter} />
         </View>
         <View
           style={{

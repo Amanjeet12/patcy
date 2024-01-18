@@ -26,7 +26,11 @@ const SuccessfullScreen = () => {
       <View style={styles.boxContainer}>
         <Image
           source={image.Clipboard}
-          style={{width: 124, height: 124, resizeMode: 'contain'}}
+          style={{
+            width: SIZES.width * 0.35,
+            height: SIZES.width * 0.35,
+            resizeMode: 'contain',
+          }}
         />
         <Text style={styles.title}>Congratulations ! </Text>
         <Text style={styles.discription}>
@@ -59,8 +63,8 @@ const styles = StyleSheet.create({
     marginHorizontal: SIZES.width * 0.041,
   },
   boxContainer: {
-    width: 356,
-    height: 366,
+    width: SIZES.height * 0.43,
+    height: SIZES.height * 0.4,
     backgroundColor: '#FFF0F0',
     paddingHorizontal: SIZES.width * 0.115,
     paddingVertical: SIZES.width * 0.077,
@@ -81,6 +85,7 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'center',
     paddingTop: SIZES.width * 0.026,
+    width: '100%',
   },
   button: {
     width: '100%',

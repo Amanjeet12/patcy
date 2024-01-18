@@ -152,7 +152,11 @@ const FilterIconComponent = () => {
                   }}
                   onPress={() => handleAvailabilty()}>
                   {availabilty === true ? (
-                    <Check name={'check'} color={'#fff'} size={24} />
+                    <Check
+                      name={'check'}
+                      color={'#fff'}
+                      size={SIZES.width * 0.062}
+                    />
                   ) : null}
                 </TouchableOpacity>
               </View>
@@ -180,7 +184,11 @@ const FilterIconComponent = () => {
                   }}
                   onPress={() => handleDistance()}>
                   {distance === true ? (
-                    <Check name={'check'} color={'#fff'} size={24} />
+                    <Check
+                      name={'check'}
+                      color={'#fff'}
+                      size={SIZES.width * 0.062}
+                    />
                   ) : null}
                 </TouchableOpacity>
               </View>

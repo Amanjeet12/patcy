@@ -24,19 +24,23 @@ const DividerContent = ({title, des, color}) => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingBottom: 15,
+        paddingBottom: SIZES.width * 0.039,
       }}>
       <Text
         style={[
           styles.title,
-          {color: color ? color : '#8C8C8C', fontSize: 12},
+          {color: color ? color : '#8C8C8C', fontSize: SIZES.width * 0.031},
         ]}>
         {title}
       </Text>
       <Text
         style={[
           styles.title,
-          {color: color ? color : '#121212', fontSize: 12, fontWeight: '600'},
+          {
+            color: color ? color : '#121212',
+            fontSize: SIZES.width * 0.031,
+            fontWeight: '600',
+          },
         ]}>
         {des}
       </Text>

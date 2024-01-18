@@ -77,7 +77,7 @@ const Loginscreen = () => {
             <Button placeholder={'Get OTP'} screen={'OtpScreen'} />
           </View>
           <TouchableOpacity
-            style={{marginTop: 100, alignItems: 'center'}}
+            style={{marginTop: SIZES.width * 0.3, alignItems: 'center'}}
             onPress={() => navigation.navigate('SignUpScreen')}>
             <Text style={styles.createTitle}>Create an account</Text>
           </TouchableOpacity>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
   },
   mainContainer: {
-    marginTop: 128,
+    marginTop: SIZES.width * 0.33,
     marginHorizontal: SIZES.width * 0.041,
   },
   title: {
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   },
   boxContainer: {
     width: '100%',
-    height: 49,
+    height: SIZES.width * 0.128,
     borderRadius: 8,
     borderWidth: 0.5,
     borderColor: '#FFC6C6',

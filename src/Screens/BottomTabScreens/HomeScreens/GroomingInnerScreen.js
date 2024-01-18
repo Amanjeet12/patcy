@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     marginTop: SIZES.width * 0.051,
   },
   container2: {
-    height: SIZES.width * 0.018,
+    height: SIZES.width * 0.18,
     backgroundColor: '#fff',
     borderRadius: 10,
     justifyContent: 'center',

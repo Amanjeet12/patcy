@@ -123,7 +123,9 @@ const AddPetScreen = ({navigation}) => {
                 <View style={{width: '50%'}}>
                   <CommonContainer placeholder={'Enter pet size'} />
                 </View>
-                <Text style={[styles.title, {fontSize: 16}]}>Kg</Text>
+                <Text style={[styles.title, {fontSize: SIZES.width * 0.041}]}>
+                  Kg
+                </Text>
               </View>
             </View>
             <View style={styles.padding}>

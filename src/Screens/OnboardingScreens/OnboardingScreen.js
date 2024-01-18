@@ -44,10 +44,11 @@ const OnboardingScreen = () => {
   };
 
   const skip = () => {
-    const lastSlideIndex = slides.length - 1;
-    const offset = lastSlideIndex * SIZES.width;
-    ref?.current.scrollToOffset({offset});
-    setCurrentSlideIndex(lastSlideIndex);
+    navigation.replace('Loginscreen');
+    // const lastSlideIndex = slides.length - 1;
+    // const offset = lastSlideIndex * SIZES.width;
+    // ref?.current.scrollToOffset({offset});
+    // setCurrentSlideIndex(lastSlideIndex);
   };
 
   const desiredOffsets = [33, 66, 100];
@@ -105,7 +106,7 @@ const OnboardingScreen = () => {
             </View>
           ))}
         </View>
-        <View style={[styles.titleContainer, {marginTop: 28}]}>
+        <View style={[styles.titleContainer, {marginTop: SIZES.width * 0.072}]}>
           {slides.map((item, index) => (
             <View
               key={index}
@@ -125,8 +126,8 @@ const OnboardingScreen = () => {
                 styles.indicator,
                 currentSlideIndex == index && {
                   backgroundColor: 'red',
-                  width: 8,
-                  height: 8,
+                  width: SIZES.width * 0.021,
+                  height: SIZES.width * 0.021,
                 },
               ]}
             />
@@ -140,7 +141,11 @@ const OnboardingScreen = () => {
     return (
       <View style={styles.footerContainer}>
         <TouchableOpacity onPress={skip}>
-          <Text style={[styles.title, {fontSize: 16, color: COLORS.primary}]}>
+          <Text
+            style={[
+              styles.title,
+              {fontSize: SIZES.width * 0.041, color: COLORS.primary},
+            ]}>
             Skip
           </Text>
         </TouchableOpacity>
@@ -172,7 +177,7 @@ const OnboardingScreen = () => {
             activeOpacity={0.8}
             onPress={goToNextSlide}
             style={styles.btn}>
-            <Icon name="right" size={30} color="#fff" />
+            <Icon name="right" size={SIZES.width * 0.077} color="#fff" />
           </TouchableOpacity>
         </View>
       </View>
@@ -181,6 +186,7 @@ const OnboardingScreen = () => {
 
   return (
     <View style={styles.container}>
+      {console.log(SIZES.height * 0.35)}
       <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
       <View style={{flex: 0.5}}>
         <FlatList
@@ -224,8 +230,8 @@ const styles = StyleSheet.create({
     right: SIZES.width * 0.13,
   },
   image: {
-    height: 300,
-    width: 300,
+    height: SIZES.height * 0.35,
+    width: SIZES.height * 0.35,
     resizeMode: 'contain',
     bottom: 0,
     position: 'absolute',
@@ -251,7 +257,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: SIZES.width * 0.064,
     fontWeight: '600',
-    lineHeight: 31,
+    lineHeight: SIZES.width * 0.077,
     fontFamily: 'Visby-Medium',
     textAlign: 'center',
   },

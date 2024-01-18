@@ -175,6 +175,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.width * 0.031,
     backgroundColor: '#FFC6C6',
     borderRadius: 5,
-    fontWeight: '700',
+    // fontWeight: '700',
   },
 });

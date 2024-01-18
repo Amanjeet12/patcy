@@ -25,7 +25,7 @@ const PaymentScreen = () => {
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={styles.mainContainer}>
-          <View style={{width: SIZES.width, height: 270}}>
+          <View style={{width: SIZES.width, height: SIZES.width * 0.64}}>
             <Image
               source={image.Cat1}
               style={{width: '100%', height: '100%', resizeMode: 'cover'}}
@@ -68,38 +68,21 @@ const PaymentScreen = () => {
                     styles.text,
                     {
                       fontSize: SIZES.width * 0.102,
-                      paddingTop: SIZES.width * 0.026,
+                      paddingTop: SIZES.width * 0.01,
                     },
                   ]}>
                   AED 1,000.69
                 </Text>
-                <LinearGradient
-                  colors={['#D9D9D9', '#f68585']}
-                  start={{x: 0, y: 0}}
-                  end={{x: 1, y: 0.5}}
-                  style={{
-                    height: SIZES.width * 0.13,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginTop: SIZES.width * 0.051,
-                    borderRadius: 12,
-                    width: '100%',
-                  }}>
-                  <View
-                    style={{position: 'absolute', top: -SIZES.width * 0.051}}>
-                    <Image
-                      source={image.Upper}
-                      style={{
-                        width: SIZES.width * 0.077,
-                        height: SIZES.width * 0.077,
-                        resizeMode: 'contain',
-                      }}
-                    />
-                  </View>
-                  <Text style={[styles.text, {fontSize: SIZES.width * 0.036}]}>
-                    Woah! you’re saving AED 25.69
-                  </Text>
-                </LinearGradient>
+                <View style={{marginTop: SIZES.width * 0.039}}>
+                  <Image
+                    source={image.Whoo}
+                    style={{
+                      width: SIZES.height * 0.4,
+                      height: SIZES.width * 0.153,
+                      resizeMode: 'stretch',
+                    }}
+                  />
+                </View>
               </View>
             </LinearGradient>
           </View>

@@ -5,7 +5,7 @@ import image from '../../../constant/image';
 import Button from '../../../components/Button';
 
 const IntroScreen = () => {
-  console.log(SIZES.width * 0.31);
+  console.log(SIZES.height * 0.5);
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle={'dark-content'} />
@@ -20,9 +20,9 @@ const IntroScreen = () => {
         <View style={styles.imageContainer}>
           <Image source={image.Dog} style={styles.image} />
         </View>
-        <View style={styles.buttonContainer}>
-          <Button placeholder={'Get Started'} screen={'OnboardingScreen'} />
-        </View>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button placeholder={'Get Started'} screen={'OnboardingScreen'} />
       </View>
     </View>
   );
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.width * 0.09,
     fontWeight: '600',
     lineHeight: SIZES.width * 0.09,
-    fontFamily: 'Visby-Medium',
+    fontFamily: 'VisbyRound-Bold',
   },
   description: {
     color: COLORS.black,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     position: 'relative',
     width: '100%',
-    height: 400,
+    height: SIZES.height * 0.5,
     overflow: 'hidden',
     marginTop: SIZES.width * 0.077,
   },
@@ -71,7 +71,11 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 200,
   },
   buttonContainer: {
-    marginHorizontal: SIZES.width * 0.041,
+    // marginHorizontal: SIZES.width * 0.041,
     marginTop: SIZES.width * 0.13,
+    position: 'absolute',
+    width: '100%',
+    paddingHorizontal: SIZES.width * 0.041,
+    bottom: 20,
   },
 });

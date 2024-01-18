@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   description: {
     color: COLORS.primary,
     fontSize: SIZES.width * 0.031,
-    fontWeight: '700',
+    fontWeight: '400',
     fontFamily: 'Visby-Medium',
   },
 });

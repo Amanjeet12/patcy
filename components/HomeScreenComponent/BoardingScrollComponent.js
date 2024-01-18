@@ -95,14 +95,14 @@ const CommonDesignContainer = ({data, screen}) => {
               {likedItems.includes(item.id) ? (
                 <UnLike
                   name="heart"
-                  size={16}
+                  size={SIZES.width * 0.041}
                   color={'#F84040'}
                   onPress={() => handleLikeToggle(item.id)}
                 />
               ) : (
                 <Like
                   name="heart-o"
-                  size={16}
+                  size={SIZES.width * 0.041}
                   color={'#F84040'}
                   onPress={() => handleLikeToggle(item.id)}
                 />
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   itemContainer: {
-    width: SIZES.width / 2 - 30,
+    width: SIZES.width / 2 - 35,
     height: SIZES.width * 0.46,
     backgroundColor: '#fff',
     borderRadius: SIZES.width * 0.026,

@@ -9,6 +9,7 @@ import Svg, {
   Circle,
   Ellipse,
 } from 'react-native-svg';
+import {SIZES} from '../../../constant/theme';
 
 export const PetcyLogo = ({width, height}) => {
   return (
@@ -118,8 +119,8 @@ export const BellIcon = () => {
   return (
     <View>
       <Svg
-        width="20"
-        height="22"
+        width={SIZES.width * 0.051}
+        height={SIZES.width * 0.057}
         viewBox="0 0 20 22"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -155,8 +156,8 @@ export const Backbutton = () => {
     <View>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="14"
+        width={SIZES.width * 0.041}
+        height={SIZES.width * 0.036}
         viewBox="0 0 16 14"
         fill="none">
         <Path

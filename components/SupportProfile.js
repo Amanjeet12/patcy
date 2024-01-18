@@ -38,8 +38,6 @@ const SupportProfile = () => {
         </View>
       </TouchableOpacity>
       <View style={styles.Border}></View>
-
-      {/* <View style={styles.Border} /> */}
       <TouchableOpacity style={styles.flexBox}>
         <View style={styles.innerContainer}>
           <FAQ />
@@ -50,8 +48,6 @@ const SupportProfile = () => {
         </View>
       </TouchableOpacity>
       <View style={styles.Border}></View>
-
-      {/* <View style={styles.Border} /> */}
       <TouchableOpacity
         style={styles.flexBox}
         onPress={() => navigation.navigate('AboutScreen')}>
@@ -88,6 +84,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: SIZES.width * 0.0893,
     marginVertical: 3,
+    backgroundColor: '#fff',
   },
   innerContainer: {
     flexDirection: 'row',

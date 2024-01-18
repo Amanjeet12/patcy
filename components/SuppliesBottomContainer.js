@@ -43,7 +43,9 @@ const SuppliesBottomContainer = () => {
             },
           ]}
           onPress={() => handleTabPress('specification')}>
-          <Text style={[styles.text]}>Specification</Text>
+          <Text style={[styles.text, {textAlign: 'center'}]}>
+            Specification
+          </Text>
         </TouchableOpacity>
       </View>
       {activeTab === 'description' ? (
@@ -365,8 +367,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
-    paddingHorizontal: 30,
-    textAlign: 'center',
+    paddingHorizontal: SIZES.width * 0.077,
+    // textAlign: 'center',
     paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },

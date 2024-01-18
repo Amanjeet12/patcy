@@ -62,7 +62,7 @@ export default Subscription;
 
 const styles = StyleSheet.create({
   container: {
-    height: 120,
+    height: SIZES.width * 0.32,
     width: '100%',
     borderRadius: SIZES.width * 0.026,
     paddingHorizontal: SIZES.width * 0.039,

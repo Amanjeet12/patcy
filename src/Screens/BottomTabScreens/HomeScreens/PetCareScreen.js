@@ -9,7 +9,13 @@ import {
 import React from 'react';
 import HomeScreenBackButton from '../../../../components/HomeScreenComponent/HomeScreenBackButton';
 import HomeScreenPetSlider from '../../../../components/HomeScreenComponent/HomeScreenPetSlider';
-import {Care, CareFilter, boardingFilter, pet} from '../../../../constant/data';
+import {
+  Care,
+  CareFilter,
+  boardingFilter,
+  pet,
+  pets,
+} from '../../../../constant/data';
 import HomeScreenFilter from '../../../../components/HomeScreenComponent/HomeScreenFilter';
 import Searchbar from '../../../../components/Searchbar';
 import {FilterIcon} from '../../SvgComponent/Logocomponent';
@@ -30,7 +36,7 @@ const PetCareScreen = () => {
             title={'AppointmentScreen'}
           />
           <View>
-            <HomeScreenPetSlider data={pet} />
+            <HomeScreenPetSlider data={pets} />
           </View>
           <View style={{marginTop: SIZES.width * 0.064}}>
             <HomeScreenFilter data={CareFilter} />

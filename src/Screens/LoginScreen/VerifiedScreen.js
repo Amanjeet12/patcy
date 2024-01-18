@@ -39,12 +39,15 @@ const VerifiedScreen = () => {
       <View style={styles.boxContainer}>
         <Image
           source={image.Verified}
-          style={{width: 124, height: 124, resizeMode: 'contain'}}
+          style={{
+            width: SIZES.width * 0.3,
+            height: SIZES.width * 0.3,
+            resizeMode: 'contain',
+          }}
         />
         <Text style={styles.title}>Verified!</Text>
-        <Text style={styles.discription}>
-          Congratulations, you have successfully verified{'\n'} your mobile
-          number
+        <Text style={[styles.discription, {width: '100%'}]}>
+          Congratulations, you have successfully verified your mobile number
         </Text>
       </View>
       <View style={{position: 'absolute', width: '100%', bottom: 25}}>
@@ -77,8 +80,8 @@ const styles = StyleSheet.create({
     marginHorizontal: SIZES.width * 0.041,
   },
   boxContainer: {
-    width: 356,
-    height: 366,
+    width: SIZES.height * 0.43,
+    height: SIZES.height * 0.4,
     backgroundColor: '#FFF0F0',
     paddingHorizontal: SIZES.width * 0.115,
     paddingVertical: SIZES.width * 0.077,

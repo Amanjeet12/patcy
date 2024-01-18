@@ -111,6 +111,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.width * 0.031,
     backgroundColor: '#FFC6C6',
     borderRadius: SIZES.width * 0.013,
-    fontWeight: '700',
+    // fontWeight: '700',
   },
 });

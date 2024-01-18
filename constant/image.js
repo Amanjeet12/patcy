@@ -22,6 +22,7 @@ const Cash = require('../assets/images/cashdeliviery.png');
 const Cart = require('../assets/images/cart.png');
 const Upper = require('../assets/images/upper.png');
 const Clipboard = require('../assets/images/clipboard.png');
+const Whoo = require('../assets/images/whoo.png');
 
 export default {
   Dog,
@@ -48,4 +49,5 @@ export default {
   Cart,
   Upper,
   Clipboard,
+  Whoo,
 };

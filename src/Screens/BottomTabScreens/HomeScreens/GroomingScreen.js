@@ -16,6 +16,7 @@ import {
   GroomingFilter,
   boardingFilter,
   pet,
+  pets,
 } from '../../../../constant/data';
 import HomeScreenFilter from '../../../../components/HomeScreenComponent/HomeScreenFilter';
 import Searchbar from '../../../../components/Searchbar';
@@ -37,7 +38,7 @@ const GroomingScreen = () => {
             title={'AppointmentScreen'}
           />
           <View>
-            <HomeScreenPetSlider data={pet} />
+            <HomeScreenPetSlider data={pets} />
           </View>
           <View style={{marginTop: SIZES.width * 0.064}}>
             <HomeScreenFilter data={GroomingFilter} />

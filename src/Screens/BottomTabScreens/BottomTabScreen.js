@@ -241,7 +241,7 @@ const BottomTabScreen = () => {
             tabBarShowLabel: false,
             tabBarHideOnKeyboard: true,
             tabBarIcon: ({color, size, focused}) =>
-              focused ? <TransactionIcon /> : <TransactionIcon />,
+              focused ? <TransactionFocusedIcon /> : <TransactionIcon />,
           }}
         />
         <Tab.Screen

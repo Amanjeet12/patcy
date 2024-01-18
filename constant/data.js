@@ -196,6 +196,15 @@ export const pet = [
   {id: '6', name: 'Reptile', image: require('../assets/images/pet1.png')},
 ];
 
+export const pets = [
+  {id: '1', name: 'Dog', image: require('../assets/images/s1.png')},
+  {id: '2', name: 'Cat', image: require('../assets/images/s2.png')},
+  {id: '3', name: 'Bird', image: require('../assets/images/s3.png')},
+  {id: '4', name: 'Small Pet', image: require('../assets/images/s4.png')},
+  {id: '5', name: 'Fish', image: require('../assets/images/s5.png')},
+  {id: '6', name: 'Reptile', image: require('../assets/images/s6.png')},
+];
+
 export const fav = [
   {id: '1', name: 'Supplies'},
   {id: '2', name: 'Care'},
@@ -387,6 +396,24 @@ export const boardingFilter = [
     id: '3',
     image: require('../assets/images/monthly.png'),
     name: 'Monthly',
+  },
+];
+
+export const suppliesFilter = [
+  {
+    id: '1',
+    image: require('../assets/images/daily.png'),
+    name: 'Foods',
+  },
+  {
+    id: '2',
+    image: require('../assets/images/weekly.png'),
+    name: 'Treats',
+  },
+  {
+    id: '3',
+    image: require('../assets/images/monthly.png'),
+    name: 'Accessories',
   },
 ];
 

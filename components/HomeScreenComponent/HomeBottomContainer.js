@@ -16,7 +16,13 @@ const HomeBottomContainer = () => {
           <Text style={styles.text}>Boarding Center Details</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.boxContainer, {width: '48%'}]}>
-          <Text style={[styles.text, {backgroundColor: '#fff'}]}>Offers</Text>
+          <Text
+            style={[
+              styles.text,
+              {backgroundColor: '#fff', textAlign: 'center'},
+            ]}>
+            Offers
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.bookingDateContainer}>
@@ -97,8 +103,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Visby-Medium',
     color: '#212121',
     backgroundColor: '#FFC6C6',
-    paddingHorizontal: SIZES.width * 0.0893,
-    textAlign: 'center',
+    paddingHorizontal: SIZES.width * 0.08,
+    // textAlign: 'center',
     paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },

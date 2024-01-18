@@ -72,7 +72,7 @@ const MailAuthScreen = () => {
             </TouchableOpacity>
           </View>
           <TouchableOpacity
-            style={{marginTop: 200, alignItems: 'center'}}
+            style={{marginTop: SIZES.width * 0.33, alignItems: 'center'}}
             onPress={() => navigation.navigate('SignUpScreen')}>
             <Text style={styles.createTitle}>Create an account</Text>
           </TouchableOpacity>

@@ -29,12 +29,17 @@ const AppointmentScreen = () => {
             flexDirection: 'row',
             alignItems: 'center',
             marginHorizontal: SIZES.width * 0.041,
+            height: 55,
           }}>
           <TouchableOpacity style={styles.boxContainer}>
             <Text style={styles.text}>Upcoming Appointments</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.boxContainer, {width: '48%'}]}>
-            <Text style={[styles.text, {backgroundColor: '#fff'}]}>
+            <Text
+              style={[
+                styles.text,
+                {backgroundColor: '#fff', textAlign: 'center'},
+              ]}>
               Completed
             </Text>
           </TouchableOpacity>
@@ -59,17 +64,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     width: '52%',
     justifyContent: 'center',
-    padding: 3,
+    // padding: 3,
     paddingHorizontal: SIZES.width * 0.013,
+    padding: 3,
   },
   text: {
-    fontSize: SIZES.width * 0.026,
+    fontSize: SIZES.width * 0.025,
     fontWeight: '600',
     fontFamily: 'Visby-Medium',
     color: '#212121',
     backgroundColor: '#FFC6C6',
     paddingHorizontal: SIZES.width * 0.077,
-    textAlign: 'center',
     paddingVertical: SIZES.width * 0.026,
     borderRadius: 5,
   },

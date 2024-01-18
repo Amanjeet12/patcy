@@ -102,7 +102,7 @@ const InnerSectionProfile = () => {
           draggableIcon: {
             backgroundColor: '#D9D9D9',
             width: SIZES.width * 0.205,
-            height: SIZES.width * 0.13,
+            height: SIZES.width * 0.013,
           },
         }}>
         <View style={styles.bottomContainer}>
