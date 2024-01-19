@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Image,
   Modal,
+  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
@@ -12,10 +13,10 @@ import {
 import React, {useState} from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useNavigation} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/AntDesign';
 import CommonContainer from '../../../components/CommonContainer';
 import PasswordContainer from '../../../components/PasswordContainer';
 import {COLORS, SIZES} from '../../../constant/theme';
+import { Backbutton } from '../SvgComponent/Logocomponent';
 
 const MailAuthScreen = () => {
   const navigation = useNavigation();
@@ -26,7 +27,7 @@ const MailAuthScreen = () => {
 
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
-      navigation.navigate('DashboardScreen');
+      navigation.navigate('BottomTabScreen');
     } catch (error) {
       console.error('Verification failed', error);
     } finally {
@@ -34,12 +35,12 @@ const MailAuthScreen = () => {
     }
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}>
-        <Icon name="arrowleft" size={SIZES.width * 0.051} color={'#121212'} />
+          < Backbutton />
       </TouchableOpacity>
       <KeyboardAwareScrollView
         contentContainerStyle={styles.scrollContainer}
@@ -85,7 +86,7 @@ const MailAuthScreen = () => {
           </Modal>
         </View>
       </KeyboardAwareScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -109,7 +110,7 @@ const styles = StyleSheet.create({
   description: {
     color: '#121212',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     paddingTop: SIZES.width * 0.026,
   },
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     fontSize: SIZES.width * 0.031,
     fontFamily: 'Visby-Medium',
-    fontWeight: '500',
+    fontWeight: '300',
   },
   button: {
     height: SIZES.width * 0.13,

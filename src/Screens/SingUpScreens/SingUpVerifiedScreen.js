@@ -34,11 +34,15 @@ const SingUpVerifiedScreen = () => {
       <View style={styles.boxContainer}>
         <Image
           source={image.Verified}
-          style={{width: 124, height: 124, resizeMode: 'contain'}}
+          style={{
+            width: SIZES.width * 0.3,
+            height: SIZES.width * 0.3,
+            resizeMode: 'contain',
+          }}
         />
         <Text style={styles.title}>Verified!</Text>
         <Text style={styles.discription}>
-          Congratulations, you have successfully verified{'\n'} your mobile
+          Congratulations, you have successfully verified your mobile
           number
         </Text>
       </View>

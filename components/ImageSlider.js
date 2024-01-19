@@ -46,7 +46,7 @@ const ImageSlider = ({images}) => {
               resizeMode="cover"
             />
             <LinearGradient
-              colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0.7)']}
+              colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0.4)']}
               style={styles.gradient}>
               <View style={styles.textContainer}>
                 <Text style={styles.title}>{title}</Text>

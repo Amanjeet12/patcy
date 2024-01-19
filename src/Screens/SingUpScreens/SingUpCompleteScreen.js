@@ -47,7 +47,7 @@ const SingUpCompleteScreen = () => {
           registered details
         </Text>
       </View>
-      <View style={{position: 'absolute', width: '100%', bottom: 25}}>
+      <View style={{position: 'absolute', width: '100%', bottom: 30}}>
         <TouchableOpacity
           style={styles.button}
           onPress={() => handleVerify()}
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
   discription: {
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     color: '#000',
     textAlign: 'center',

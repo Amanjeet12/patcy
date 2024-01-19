@@ -49,7 +49,7 @@ const DashboardScreen = () => {
             <Text style={styles.title}>Pet Services</Text>
             <BoxContainer data={box} />
           </View>
-          <View style={{marginVertical: SIZES.width * 0.064}}>
+          <View style={{marginVertical: SIZES.width * 0.02}}>
             <CustomImageCarousal
               data={NormalSlider}
               autoPlay={true}
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   title: {
     color: '#000',
     fontSize: SIZES.width * 0.036,
-    fontWeight: '700',
+    fontWeight: '600',
     fontFamily: 'Visby-Medium',
   },
   description: {

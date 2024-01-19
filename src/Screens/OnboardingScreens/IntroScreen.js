@@ -54,14 +54,15 @@ const styles = StyleSheet.create({
     fontSize: SIZES.width * 0.09,
     fontWeight: '500',
     lineHeight: SIZES.width * 0.09,
-    fontFamily: 'Visby-Medium',
+    fontFamily: 'Visby-Regular',
+    letterSpacing:0.4
   },
   description: {
     color: COLORS.black,
     fontSize: SIZES.width * 0.036,
-    fontWeight: '500',
+    fontWeight: '300',
     lineHeight: SIZES.width * 0.057,
-    fontFamily: 'Visby-Medium',
+    fontFamily: 'Visby-Regular',
     marginTop: SIZES.width * 0.049,
   },
   imageContainer: {

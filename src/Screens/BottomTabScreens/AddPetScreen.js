@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import {
+  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -71,7 +72,7 @@ const AddPetScreen = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
 
       <KeyboardAwareScrollView
@@ -204,7 +205,7 @@ const AddPetScreen = ({navigation}) => {
           </View>
         </View>
       </RBSheet>
-    </View>
+    </SafeAreaView>
   );
 };
 

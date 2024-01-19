@@ -47,7 +47,7 @@ const Appointment = ({data}) => {
             <Icon
               name={bellIcons[index] ? 'bell' : 'bell-fill'}
               size={SIZES.width * 0.041}
-              color={bellIcons[index] ? '#F84040' : '#F84040'} // Change color when filled
+              color={bellIcons[index] ? '#212121' : '#F84040'} // Change color when filled
             />
           </TouchableOpacity>
         </View>

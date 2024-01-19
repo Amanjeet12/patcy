@@ -38,23 +38,20 @@ const CommonDesignContainer = ({data}) => {
         />
         {item.offer ? (
           <View style={styles.OfferContainer}>
-            <Text
-              style={[
-                styles.title,
-                {
-                  paddingHorizontal: SIZES.width * 0.026,
-                  paddingVertical: SIZES.width * 0.01,
-                  backgroundColor: '#FFC6C6',
-                  borderRadius: 32,
-                },
-              ]}>
-              {item.offer}
-            </Text>
+            <View
+              style={{
+                paddingHorizontal: SIZES.width * 0.026,
+                paddingVertical: SIZES.width * 0.01,
+                backgroundColor: '#FFC6C6',
+                borderRadius: 30,
+              }}>
+              <Text style={[styles.title,{fontWeight:'300'}]}>{item.offer}</Text>
+            </View>
           </View>
         ) : null}
       </View>
       <View style={{padding: SIZES.width * 0.026}}>
-        <Text style={[styles.title, {color: '#000', fontWeight: '600'}]}>
+        <Text style={[styles.title, {color: '#000', fontWeight: '500'}]}>
           {item.name}
         </Text>
         <View
@@ -127,11 +124,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.width * 0.026,
   },
   itemContainer: {
-    width: SIZES.width / 2 - 30,
+    width: SIZES.width / 2 - 25,
     height: SIZES.width * 0.46,
     backgroundColor: '#fff',
     borderRadius: 10,
-    margin: SIZES.width * 0.026,
+    margin: SIZES.width * 0.02,
   },
   title: {
     color: '#121212',

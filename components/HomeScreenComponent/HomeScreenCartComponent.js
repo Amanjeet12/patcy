@@ -54,7 +54,7 @@ export default HomeScreenCartComponent;
 
 const styles = StyleSheet.create({
   maincontainer: {
-    height: SIZES.width * 0.205,
+    height: SIZES.width * 0.15,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: SIZES.width * 0.041,

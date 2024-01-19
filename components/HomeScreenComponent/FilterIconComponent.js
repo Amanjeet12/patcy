@@ -86,7 +86,7 @@ const FilterIconComponent = () => {
         ref={refRBSheet}
         closeOnDragDown={true}
         closeOnPressMask={false}
-        height={SIZES.height - SIZES.width * 0.051}
+        height={SIZES.height - 100}
         customStyles={{
           wrapper: {
             backgroundColor: 'rgba(0, 0, 0, 0.30)',
@@ -268,7 +268,7 @@ const FilterIconComponent = () => {
         <View
           style={{
             width: '100%',
-            bottom: SIZES.width * 0.026,
+            bottom: SIZES.width * 0.07,
             paddingHorizontal: SIZES.width * 0.041,
           }}>
           <TouchableOpacity

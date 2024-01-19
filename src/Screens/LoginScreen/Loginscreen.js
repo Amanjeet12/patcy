@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   description: {
     color: '#121212',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     paddingTop: SIZES.width * 0.026,
   },

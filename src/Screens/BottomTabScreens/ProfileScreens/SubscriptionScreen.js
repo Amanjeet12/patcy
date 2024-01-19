@@ -9,9 +9,12 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/AntDesign';
 import PetCareComponent from '../../SvgComponent/PetCareComponent';
-import {PetcyLogo, PetcyRedLogo} from '../../SvgComponent/Logocomponent';
+import {
+  Backbutton,
+  PetcyLogo,
+  PetcyRedLogo,
+} from '../../SvgComponent/Logocomponent';
 import Button from '../../../../components/Button';
 import {SIZES} from '../../../../constant/theme';
 
@@ -26,11 +29,7 @@ const SubscriptionScreen = () => {
             <TouchableOpacity
               style={styles.backButton}
               onPress={() => navigation.goBack()}>
-              <Icon
-                name="arrowleft"
-                size={SIZES.width * 0.062}
-                color={'#121212'}
-              />
+              <Backbutton />
             </TouchableOpacity>
           </View>
           <View style={styles.ImageContainer}>
@@ -77,7 +76,15 @@ const SubscriptionScreen = () => {
               </View>
             </View>
             <View style={styles.SpecialOfferContainer}>
-              <Text style={styles.SpecialText}>Welcome offer for you</Text>
+              <View
+                style={{
+                  paddingHorizontal: SIZES.width * 0.046,
+                  paddingVertical: SIZES.width * 0.013,
+                  backgroundColor: '#FFC6C6',
+                  borderRadius: SIZES.width * 0.031,
+                }}>
+                <Text style={styles.SpecialText}>Welcome offer for you</Text>
+              </View>
             </View>
           </View>
           <View style={{alignItems: 'center'}}>
@@ -87,8 +94,7 @@ const SubscriptionScreen = () => {
             <Text style={styles.blackText}>Enjoy discounts of up to </Text>
             <Text style={[styles.price, {paddingVertical: 5}]}>30%</Text>
             <Text style={styles.blackText}>
-              Gain entry to a network of more{'\n'}than 500 participating
-              businesses.
+              Gain entry to a network of more than 500 participating businesses.
             </Text>
           </View>
           <View style={{alignItems: 'center', marginTop: 20, marginBottom: 50}}>
@@ -134,7 +140,7 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'center',
     fontSize: SIZES.width * 0.036,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     paddingTop: SIZES.width * 0.051,
   },
@@ -168,12 +174,8 @@ const styles = StyleSheet.create({
   },
   SpecialText: {
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     color: '#000',
-    paddingHorizontal: SIZES.width * 0.046,
-    paddingVertical: SIZES.width * 0.013,
-    backgroundColor: '#FFC6C6',
-    borderRadius: SIZES.width * 0.031,
     fontFamily: 'Visby-Medium',
   },
   flexBox: {
@@ -201,16 +203,16 @@ const styles = StyleSheet.create({
   redText: {
     color: '#F84040',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
   },
   whiteTextContainer: {
-    height: SIZES.width * 0.31,
+    height: SIZES.width * 0.33,
     borderWidth: 1,
     borderColor: '#FFC6C6',
     backgroundColor: '#fff',
     borderRadius: 10,
-    paddingHorizontal: SIZES.width * 0.205,
+    paddingHorizontal: SIZES.width * 0.2,
     paddingVertical: SIZES.width * 0.039,
     marginTop: SIZES.width * 0.026,
     alignItems: 'center',
@@ -218,8 +220,9 @@ const styles = StyleSheet.create({
   blackText: {
     color: '#000',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '400',
+    fontWeight: '300',
     lineHeight: SIZES.width * 0.046,
     fontFamily: 'Visby-Medium',
+    textAlign: 'center',
   },
 });

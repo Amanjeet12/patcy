@@ -7,11 +7,13 @@ import {
   View,
   ActivityIndicator,
   Modal,
+  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import OtpContainer from '../../../components/OtpContainer';
 import {COLORS, SIZES} from '../../../constant/theme';
+import { Backbutton } from '../SvgComponent/Logocomponent';
 
 const OtpScreen = () => {
   const navigation = useNavigation();
@@ -31,7 +33,7 @@ const OtpScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         backgroundColor={isLoading ? 'rgba(255, 255, 255, 0.70)' : '#F6F6F6'}
         barStyle={'dark-content'}
@@ -40,7 +42,7 @@ const OtpScreen = () => {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
         disabled={isLoading}>
-        <Icon name="arrowleft" size={SIZES.width * 0.051} color={'#121212'} />
+          <Backbutton />
       </TouchableOpacity>
       <View style={{marginTop: SIZES.width * 0.077}}>
         <Text style={styles.title}>Enter OTP</Text>
@@ -69,7 +71,7 @@ const OtpScreen = () => {
           <ActivityIndicator size="large" color={COLORS.black} />
         </View>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -99,14 +101,14 @@ const styles = StyleSheet.create({
   description: {
     color: '#121212',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     paddingTop: SIZES.width * 0.026,
   },
   textTitle: {
     color: COLORS.primary,
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
   },
   button: {

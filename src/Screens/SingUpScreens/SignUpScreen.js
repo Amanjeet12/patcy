@@ -2,6 +2,7 @@ import {
   ActivityIndicator,
   Image,
   Modal,
+  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
@@ -17,6 +18,7 @@ import PasswordContainer from '../../../components/PasswordContainer';
 import {COLORS, SIZES} from '../../../constant/theme';
 import FlagContainer from '../../../components/FlagContainer';
 import Button from '../../../components/Button';
+import { Backbutton } from '../SvgComponent/Logocomponent';
 
 const SignUpScreen = () => {
   const navigation = useNavigation();
@@ -36,12 +38,12 @@ const SignUpScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'#F6F6F6'} barStyle={'dark-content'} />
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}>
-        <Icon name="arrowleft" size={SIZES.width * 0.051} color={'#121212'} />
+        <Backbutton />
       </TouchableOpacity>
       <KeyboardAwareScrollView
         contentContainerStyle={styles.scrollContainer}
@@ -78,14 +80,14 @@ const SignUpScreen = () => {
           </View>
           <View
             style={{
-              marginTop: SIZES.width * 0.064,
+              marginTop: SIZES.width * 0.075,
               marginBottom: SIZES.width * 0.026,
             }}>
-            <Button placeholder={'Sing Up'} screen={'SignUpOtpScreen'} />
+            <Button placeholder={'Sign Up'} screen={'SignUpOtpScreen'} />
           </View>
         </View>
       </KeyboardAwareScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
   description: {
     color: '#121212',
     fontSize: SIZES.width * 0.031,
-    fontWeight: '500',
+    fontWeight: '300',
     fontFamily: 'Visby-Medium',
     paddingTop: SIZES.width * 0.026,
   },
